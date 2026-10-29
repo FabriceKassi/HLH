@@ -31,3 +31,6 @@ fs.writeFileSync(group,groupJs);
 const demoScript=`function protectDemo(){for(const f of document.querySelectorAll('#group-contact-form,#newsletter')){for(const el of f.querySelectorAll('input,textarea,select,button'))el.disabled=true;const b=f.querySelector('button[type=submit],button');if(b&&b.textContent!=='Demo - envoi desactive')b.textContent='Demo - envoi desactive';}}new MutationObserver(protectDemo).observe(document.body,{childList:true,subtree:true});protectDemo();`;
 fs.writeFileSync(path.join(out,'demo-mode.js'),demoScript);
 fs.writeFileSync(path.join(out,'index.html'),fs.readFileSync(path.join(out,'index.html'),'utf8').replace('</body>','<script src="/demo-mode.js"></script></body>'));
+
+// Public, non-sensitive proof of the Git-triggered build.
+fs.writeFileSync(path.join(out,"preview-build.json"),JSON.stringify({version:17,verification:"HLH-V17-CD-20261029",commit:process.env.COMMIT_REF||null,branch:process.env.BRANCH||"local",builtAt:new Date().toISOString()},null,2)+"\n");
