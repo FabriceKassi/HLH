@@ -1,0 +1,254 @@
+{
+  "brand": {
+    "title": "HLH",
+    "logo": "/assets/hlh-logo.png",
+    "tagline": "Chaque séjour une expérience, chaque adresse une signature.",
+    "subtitle": "Trois adresses, trois façons de vivre Abidjan.",
+    "introTitle": "Des adresses différentes. Une même attention.",
+    "intro": "Hotel and Luxury Housing réunit trois établissements aux personnalités distinctes, pour vous accueillir au plus près de ce qui vous amène à Abidjan.",
+    "hero": "/assets/hero.png",
+    "color": "#0b0b0b",
+    "accent": "#bda38b",
+    "email": "",
+    "phone": "",
+    "whatsapp": "",
+    "privacy": "Les informations transmises permettent à HLH de traiter votre demande de séjour ou de contact. Les inscriptions à la newsletter sont facultatives. Pour exercer vos droits, contactez l’équipe HLH par le canal indiqué sur ce site. Cette notice devra être complétée avec l’identité du responsable, les coordonnées et la durée de conservation avant ouverture publique."
+  },
+  "hotels": [
+    {
+      "id": "wia",
+      "slug": "palais-wia",
+      "name": "Palais WIA",
+      "location": "Cocody · Quartier des Ambassades",
+      "address": "Rue des Hortensias, quartier des Ambassades, Cocody — Abidjan",
+      "description": "Un boutique-hôtel 5 étoiles pensé comme une demeure privée au cœur de Cocody.",
+      "details": "Au quartier des Ambassades, le Palais WIA accueille vos séjours dans une atmosphère intime. Découvrez ses neuf chambres premium et suites, le restaurant gastronomique, le bar et sa terrasse, un espace événementiel extérieur, le jardin, la piscine design et le fitness center.",
+      "image": "/assets/wia-room.jpg",
+      "logo": "/assets/palais-wia-logo.png",
+      "gallery": [
+        "/assets/wia-room.jpg"
+      ],
+      "amenities": [
+        "Restaurant gastronomique",
+        "Bar et terrasse",
+        "Espace événementiel extérieur",
+        "Jardin",
+        "Piscine design",
+        "Fitness center",
+        "Wi-Fi",
+        "Chaînes câblées",
+        "Sécurité 24h/24"
+      ],
+      "bookingUrl": "",
+      "mapUrl": "",
+      "email": "info@palaiswia.com",
+      "phone": "+225 05 44 04 38 38 / +225 27 22 59 04 74",
+      "whatsapp": ""
+    },
+    {
+      "id": "atta",
+      "slug": "atta",
+      "name": "Résidences ATTA",
+      "location": "Plateau · Abidjan",
+      "address": "Plateau — Abidjan",
+      "description": "Appartements meublés et non meublés au cœur du centre économique d’Abidjan.",
+      "details": "Les Résidences ATTA proposent 57 appartements premium (studios, 2 pièces et 3 pièces), meublés ou non meublés, au cœur du Plateau. La résidence dispose d’une cuisine équipée, du Wi-Fi, d’une piscine, d’une salle de sport, d’un espace de coworking, d’une vue sur la lagune, d’une navette hôtel-aéroport, d’un parking sécurisé sur demande et d’un site sécurisé 24h/24.",
+      "image": "/assets/atta-room.jpg",
+      "logo": "/assets/atta-logo.svg",
+      "gallery": [
+        "/assets/atta-room.jpg"
+      ],
+      "amenities": [
+        "57 appartements premium",
+        "Studios, 2 pièces et 3 pièces",
+        "Meublés et non meublés",
+        "Coworking",
+        "Piscine",
+        "Salle de sport",
+        "Vue sur la lagune",
+        "Navette aéroport",
+        "Parking sécurisé sur demande",
+        "Sécurité 24h/24"
+      ],
+      "bookingUrl": "",
+      "mapUrl": "",
+      "email": "info.atta@hotel-hlh.com",
+      "phone": "+225 05 66 07 37 36",
+      "whatsapp": ""
+    },
+    {
+      "id": "astral",
+      "slug": "hotel-astral",
+      "name": "Hôtel Astral",
+      "location": "Yopougon · Zone industrielle",
+      "address": "Zone industrielle de Yopougon — Abidjan",
+      "description": "Une adresse pour travailler, rencontrer et avancer. Bienvenue en classe affaires.",
+      "details": "Situé dans la zone industrielle de Yopougon, l’Hôtel Astral accompagne vos déplacements professionnels avec 25 chambres standard de 30 m², 4 appartements de 60 m², un restaurant proposant un menu du jour et un buffet, une salle de réunion connectée et une salle de sport équipée.",
+      "image": "/assets/astral-room.jpg",
+      "logo": "/assets/astral-logo.png",
+      "gallery": [
+        "/assets/astral-room.jpg"
+      ],
+      "amenities": [
+        "Restaurant",
+        "Menu du jour",
+        "Buffet",
+        "Salle de réunion connectée",
+        "Salle de sport équipée",
+        "Wi-Fi",
+        "Parking sécurisé",
+        "Navette hôtel-aéroport"
+      ],
+      "bookingUrl": "",
+      "mapUrl": "",
+      "email": "info.astral@hotel-hlh.com",
+      "phone": "+225 27 23 40 02 39 / +225 05 86 86 94 50",
+      "whatsapp": ""
+    }
+  ],
+  "rooms": [
+    {
+      "id": "wia-classique",
+      "hotel": "wia",
+      "name": "Chambre Classique",
+      "description": "Modibo Keita et Maurice Yaméogo.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "short",
+      "image": "/assets/wia-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "wia-executive",
+      "hotel": "wia",
+      "name": "Chambre Exécutive",
+      "description": "Sédar Senghor, Kwame N’Krumah, Haile Selassie et Mobutu Sese Seko.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "short",
+      "image": "/assets/wia-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "wia-junior",
+      "hotel": "wia",
+      "name": "Suite Junior",
+      "description": "Omar Bongo et Nelson Mandela.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "short",
+      "image": "/assets/wia-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "wia-presidentielle",
+      "hotel": "wia",
+      "name": "Suite Présidentielle",
+      "description": "La suite FHB.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "short",
+      "image": "/assets/wia-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "atta-meuble",
+      "hotel": "atta",
+      "name": "Appartement meublé",
+      "description": "Pour quelques nuits, quelques semaines ou plusieurs mois.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "both",
+      "image": "/assets/atta-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "atta-non-meuble",
+      "hotel": "atta",
+      "name": "Appartement non meublé",
+      "description": "Pour faire durablement du Plateau votre adresse.",
+      "surface": null,
+      "capacity": null,
+      "rate": null,
+      "minNights": 30,
+      "type": "long",
+      "image": "/assets/atta-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "astral-classique",
+      "hotel": "astral",
+      "name": "Chambre standard",
+      "description": "Une chambre standard de 30 m² pour vos déplacements à Yopougon.",
+      "surface": 30,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "short",
+      "image": "/assets/astral-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    },
+    {
+      "id": "astral-appartement",
+      "hotel": "astral",
+      "name": "Appartement 2 pièces",
+      "description": "Un appartement de 60 m² pour prolonger votre séjour.",
+      "surface": 60,
+      "capacity": null,
+      "rate": null,
+      "minNights": 1,
+      "type": "both",
+      "image": "/assets/astral-room.jpg",
+      "amenities": [],
+      "active": true,
+      "seasons": []
+    }
+  ],
+  "offers": [],
+  "services": [],
+  "reviews": [],
+  "articles": [],
+  "faqs": [
+    {
+      "question": "Quelle adresse choisir à Abidjan ?",
+      "answer": "Palais WIA pour un boutique-hôtel à Cocody, ATTA pour un appartement au Plateau, Astral pour un déplacement en zone industrielle de Yopougon."
+    },
+    {
+      "question": "Peut-on s’installer plusieurs mois à ATTA ?",
+      "answer": "ATTA propose des appartements meublés et non meublés. Les conditions et disponibilités sont à confirmer avec l’équipe commerciale."
+    },
+    {
+      "question": "Les entreprises peuvent-elles demander une offre ?",
+      "answer": "Oui. Précisez les dates, le nombre de collaborateurs et l’établissement souhaité."
+    },
+    {
+      "question": "Comment ma demande est-elle confirmée ?",
+      "answer": "Votre demande est enregistrée et examinée par l’équipe. Elle ne constitue pas une réservation confirmée. Les disponibilités et le tarif sont validés par l’établissement."
+    }
+  ],
+  "translations": {}
+}

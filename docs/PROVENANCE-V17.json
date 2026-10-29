@@ -1,0 +1,218 @@
+{
+  "retrieval_date": "2026-10-28",
+  "project": {
+    "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d",
+    "title": "HLH — Reprise privée V48",
+    "url": "https://hlh-reprise-v48.fabricetoussaintkass.chatgpt.site",
+    "latest_saved_version": 17,
+    "site_updated_at": "2026-10-25T19:42:28.542892+00:00",
+    "access_mode": "custom"
+  },
+  "latest": {
+    "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_a582e4230ea88191a68ac3761d4a3203",
+    "version_number": 17,
+    "commit_sha": "a0fd05923b3e237dc8061dca0a221fc48103c333",
+    "deployment_id": "appgdep_6ade5b35873c8191a1d4855bf48b9f1a",
+    "hosted_archive": {
+      "format": "tar",
+      "sha256": "sha256:6df57cee9f41ea51ba3634c965cb833e8a75f0c45481f30ebbb7e88a590e7c31",
+      "file_count": 110,
+      "size_bytes": 45905920
+    }
+  },
+  "history": [
+    {
+      "version": 17,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_a582e4230ea88191a68ac3761d4a3203",
+      "commit_sha": "a0fd05923b3e237dc8061dca0a221fc48103c333",
+      "deployment_id": "appgdep_6ade5b35873c8191a1d4855bf48b9f1a",
+      "archive_hash": "sha256:6df57cee9f41ea51ba3634c965cb833e8a75f0c45481f30ebbb7e88a590e7c31"
+    },
+    {
+      "version": 16,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_742242195d8481919344a07553144110",
+      "commit_sha": "7f51d1feeeaffa00cb7f12413e5e80f36afa6a8c",
+      "deployment_id": "appgdep_6ade57f7a7188191b7889c499d2f8cdd",
+      "archive_hash": "sha256:949998948a722180743ed548aaf872a8238b5f151ded633ba7d875724d86a58f"
+    },
+    {
+      "version": 15,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_3ca6eb87a6e481919ed15050b77223f1",
+      "commit_sha": "37c225a150ac20618c98afbaf8d99c45bac7c1f7",
+      "deployment_id": "appgdep_6ade4d729fdc819180275a4b21fb43bc",
+      "archive_hash": "sha256:7e74453ac83b66aef8871a1f77bc28e7edb234050ff99754fe210e99be676ebc"
+    },
+    {
+      "version": 14,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_f2698aac9f088191abb6d30a42d2287d",
+      "commit_sha": "641d8ecee4bc748f6ae435eb9113cff39d64bc11",
+      "deployment_id": "appgdep_6ade3a23f1ac81918c5740dfe112f8e7",
+      "archive_hash": "sha256:e60be90e734426083895a42aac82947378fc960a796065b19b2da01a0dd4b172"
+    },
+    {
+      "version": 13,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_6a9092f157c88191b36190a6476b076d",
+      "commit_sha": "f3e2b46dcf592630f6b156376605a6d6abbcd94b",
+      "deployment_id": "appgdep_6add433082e48191a072bcb4541592ce",
+      "archive_hash": "sha256:636bb36462f8e4fdaff9e3dcced2aa9227611f4a42fc9514892645375f87f708"
+    },
+    {
+      "version": 12,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_ebbeba32802c81918589eef7e737cd16",
+      "commit_sha": "9d98f0306f74a219b83743af7285002aa61ca9ac",
+      "deployment_id": "appgdep_6add3df6b32881918e5f825d2f79925a",
+      "archive_hash": "sha256:f95354278db7c8d6081d393b4a9b894b23780b6526f86019b2aac92002d81f84"
+    },
+    {
+      "version": 11,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_5784fdcaca288191a583dc50023e5c31",
+      "commit_sha": "6d7ae6c87b221fa5350e06c472215e55c809b0b1",
+      "deployment_id": "appgdep_6add3384988c8191a3dbc9bac2db91fb",
+      "archive_hash": "sha256:1911f6f6142e21cb0add8846bd4abab7a6c8af661849d2551818b3bdad39fe43"
+    },
+    {
+      "version": 10,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_ac13a9c43dd08191876715c3e10139ae",
+      "commit_sha": "ddab5f3c41a0577f817961fadf3507c3491584dd",
+      "deployment_id": "appgdep_6adce43277548191873bee6df65a2508",
+      "archive_hash": "sha256:0e080294222b03f853addc638d9f9ea4483eba1faaf3e3165f83d0f600fac337"
+    },
+    {
+      "version": 9,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_3599c4c620a081919d628d084f3412ee",
+      "commit_sha": "04e21edcc0c816181a451a10ce71eacec760e9a0",
+      "deployment_id": "appgdep_6adce362e24881918def16b3a1254c09",
+      "archive_hash": "sha256:52d9ee1ab18935ae0a3ba2a9a6b7901d789b93f5d63b0d4c391f236a9d1fa019"
+    },
+    {
+      "version": 8,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_4a43cb010d8c8191ba0f61782ef97332",
+      "commit_sha": "484c0a960c63594c6dbd7549a3dc1d49af9d89a4",
+      "deployment_id": "appgdep_6adce202d9c081918559af4f0da390fa",
+      "archive_hash": "sha256:ce039ad691484f0f27f1e76e0f4bad189c4c4acea1817e43290aad5a57fcbfaa"
+    },
+    {
+      "version": 7,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_05d714f60808819195cc94492086f1fe",
+      "commit_sha": "abf79cb100a078e1f5f218c264d73fab3321ea94",
+      "deployment_id": "appgdep_6adce0b9cb60819180e618c115ccd7c3",
+      "archive_hash": "sha256:e6e13f6c588b8e2218922e6897e9a260f9407ae7f9d4491e17de4f290ee05d93"
+    },
+    {
+      "version": 6,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_260d7b8e47688191813f0cc7cbe00175",
+      "commit_sha": "4d1b074ebae21633ebdf550793ac41f35995890b",
+      "deployment_id": "appgdep_6adcdbe45b9881919277a8c64ee0446e",
+      "archive_hash": "sha256:c9d7ca1ac907f925392a7d1e8b4094f234f971ca1469abb592f3b885d1e82132"
+    },
+    {
+      "version": 5,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_3da44f42a6448191bf14e6e004a2d6e3",
+      "commit_sha": "bba71c9523b7605557f5315138d927c1787fb42c",
+      "deployment_id": "appgdep_6adcd6d228a481918f2a13f006d81edc",
+      "archive_hash": "sha256:ed63babb39421e009efebd83eac31fa6669209c57e4dfd1422bc26f7c34ede44"
+    },
+    {
+      "version": 4,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_ab2669c16f008191b0e60dddda78de8e",
+      "commit_sha": "558dafc0b9de08dc047f6bdb5d594a19cc423826",
+      "deployment_id": "appgdep_6adbce6f1da88191b25290900892be03",
+      "archive_hash": "sha256:ca0c845c277a567d1fa462de34b17a62f326ddb04213939337ba9dfc9fa70511"
+    },
+    {
+      "version": 3,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_aa00cc9f4fec8191977e5c3de6699cc4",
+      "commit_sha": "a72945f0ec39823596108d024d5b418602c1d15e",
+      "deployment_id": "appgdep_6adbcc8e0f148191affbf7879da1d0a2",
+      "archive_hash": "sha256:dd8daa355387efd944754c012321bf757c1caa2d0f3cf575279527d84a0244f2"
+    },
+    {
+      "version": 2,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_1665e4ada8bc81919bbc0660f16060cc",
+      "commit_sha": "99cea75d47ba844f3a6f56094411f8773bf8daa9",
+      "deployment_id": "appgdep_6adb11e3e0008191a4ff9ffeef07d3e3",
+      "archive_hash": "sha256:f2eb575b595f4c6817c47f309f2c0730061642d4ab4c91738d066ed5159662a3"
+    },
+    {
+      "version": 1,
+      "id": "appgprj_6ad2ba2aa8288191bfe36887a498608d~appgver_114515d522c0819196da3eb6a0f8c4f7",
+      "commit_sha": "9fb7b5addfe7bdc350cccdcd12e64dae7dba9611",
+      "deployment_id": "appgdep_6ad2baaaeb00819198dab679d49e1dfa",
+      "archive_hash": "sha256:c1666faf5c4736954d03bab1468ef9c365a810848058166d29b1ca156b52ae44"
+    }
+  ],
+  "previous_backups": [
+    {
+      "name": "HLH-PORTAIL-AVANT-REFONTE-MOTEUR-V11.zip",
+      "library_file_id": "libfile_fa506e079668819194d5c7171d7d6531",
+      "bytes": 43559316
+    },
+    {
+      "name": "HLH-PORTAIL-AVANT-REFONTE-MOTEUR-V12.zip",
+      "library_file_id": "libfile_210513c73c5c8191b736be5fc1706e7e",
+      "bytes": 43570889
+    }
+  ],
+  "database": {
+    "binding": "DB",
+    "tables": [
+      "atta_inventory",
+      "atta_reservations",
+      "content",
+      "rate_limits",
+      "requests",
+      "subscribers"
+    ],
+    "content": {
+      "columns": [
+        "id",
+        "json",
+        "revision",
+        "updated"
+      ],
+      "rows": [],
+      "model_projection": {
+        "truncated": false,
+        "truncated_values": 0,
+        "omitted_columns": 0,
+        "omitted_rows": 0,
+        "next_offset": null
+      }
+    },
+    "inventory": {
+      "columns": [
+        "room_id",
+        "category",
+        "date",
+        "units",
+        "rate_xof",
+        "updated"
+      ],
+      "rows": [],
+      "model_projection": {
+        "truncated": false,
+        "truncated_values": 0,
+        "omitted_columns": 0,
+        "omitted_rows": 0,
+        "next_offset": null
+      }
+    },
+    "excluded_without_reading": [
+      "requests",
+      "subscribers",
+      "atta_reservations",
+      "rate_limits"
+    ]
+  },
+  "source_files": 178,
+  "privacy_redacted_files": [
+    "lib/api.ts",
+    "public/downloads/HLH-source.zip"
+  ],
+  "source_changed_on_host": false,
+  "native_versions_changed": false,
+  "new_deployment_created": false,
+  "source_inventory": "documentation/INVENTAIRE-SOURCES-V17.json",
+  "dependency_lock": "projet/pnpm-lock.yaml",
+  "note": "The V17 source is complete. Only the personal administrator address is neutralized in this export and its nested old source ZIP; the hosted source is not modified. Installed dependencies, secrets, production clients and private runtime buckets are not copied."
+}

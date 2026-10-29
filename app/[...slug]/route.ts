@@ -1,0 +1,4 @@
+import html from '../../public/index.html?raw';
+import { privateRobotsHeader, withSiteSeo } from '../../lib/seo';
+const allowed=/^\/(nos-hotels|chambres-suites|restaurants|salles-reunion|salles-de-sport|contacts|palais-wia|atta|atta\/reserver|hotel-astral|hebergements|chambre\/[^/]+|recherche|reservation|galerie|offres|experiences|entreprises|long-sejour|coworking|a-propos|actualites|article\/[^/]+|contact|faq|mon-compte|suivi|confidentialite|gestion|guide)\/?$/;
+export async function GET(request:Request){const pathname=new URL(request.url).pathname;if(!allowed.test(pathname))return new Response(withSiteSeo(html,pathname),{status:404,headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-cache','X-Robots-Tag':privateRobotsHeader}});return new Response(withSiteSeo(html,pathname),{headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-cache','X-Robots-Tag':privateRobotsHeader}})}

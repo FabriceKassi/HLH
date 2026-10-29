@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@400;500;600;700&display=swap');
+:root{--ink:#0B0B0B;--gold:#BDA38B;--muted:#4A4A4A;--line:#E6D6C8;--surface:#F5F2EE}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;color:var(--ink);font:16px/1.65 'Inter',Arial,sans-serif}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}button,a,input,select,summary,textarea{outline-offset:5px}h1,h2,h3{font-family:'Poppins',Arial,sans-serif;font-weight:400;line-height:1.12;margin:0 0 24px}h1{font-size:clamp(42px,4.5vw,76px)}h2{font-size:clamp(34px,3.5vw,54px)}h3{font-size:30px}h4{font-weight:500}p{margin:0 0 22px}i{font-weight:400}img{width:100%;height:100%;object-fit:cover}.container{width:min(1240px,88%);margin:auto;padding:100px 0}.eyebrow{font-size:12px;letter-spacing:2.5px;font-weight:600;margin-bottom:26px}.dark,.gold,.outline{display:inline-flex;align-items:center;justify-content:center;padding:17px 28px;border:1px solid transparent;font-size:14px;font-weight:500}.dark{background:var(--ink);color:white}.gold{background:var(--gold);color:var(--ink)}.outline{border-color:currentColor;background:transparent;color:inherit}.small{padding:12px 20px}.logo{display:flex;align-items:center;line-height:1}.logo img{display:block;width:164px;height:auto;object-fit:contain;filter:brightness(0) invert(1)}.logo span{display:none}#header{height:108px;position:absolute;z-index:10;top:0;width:100%;padding:0 5%;display:flex;align-items:center;gap:22px;color:white;border-bottom:1px solid #ffffff38}#header nav{display:flex;gap:28px;margin-left:auto;font-size:14px}#header .menu{display:none;color:inherit;background:none;border:0;font-size:26px}.hero{height:850px;min-height:80vh;position:relative;color:white}.heroimg{position:absolute;object-position:center 45%}.shade{position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0bd9,#0b0b0b60),linear-gradient(0deg,#0b0b0b80,transparent)}.herocopy{position:absolute;left:8%;top:32%;right:5%}.herocopy>p:not(.eyebrow){font-size:18px;margin:32px 0}.herobottom{position:absolute;bottom:75px;left:8%;right:8%;display:flex;justify-content:space-between;font-size:12px;letter-spacing:2px}.booking{position:relative;margin:-38px auto 0;width:88%;max-width:1240px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr auto;background:white;box-shadow:0 10px 45px #072c3910;padding:25px;gap:20px}.booking label{font-size:11px;letter-spacing:1.3px;border-right:1px solid var(--line);padding:0 12px}.booking input,.booking select{display:block;width:100%;font-size:15px;border:0;color:var(--ink);background:transparent;padding:10px 0;letter-spacing:0}.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:100px;padding-top:115px}.intro>div:last-child{padding-top:20px;color:var(--muted)}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:44px}.sectionhead p{color:var(--muted)}.hotelgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.hotelimage{height:390px;position:relative;overflow:hidden}.hotelimage img{transition:transform .6s}.hotelcard:hover img{transform:scale(1.035)}.hotelimage span{position:absolute;bottom:20px;left:20px;padding:6px 12px;background:white;font-size:11px;letter-spacing:1px}.hotelcard .location{font-size:11px;letter-spacing:1.5px;margin:25px 0 12px;color:var(--muted)}.hotelcard h3{margin-bottom:14px}.hotelcard>p{color:var(--muted)}.textbutton{color:var(--ink);padding:0 0 7px;border:0;border-bottom:1px solid var(--gold);background:none;font-size:14px}.mood{background:var(--surface)}.experiencegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:55px}.experiencegrid button{background:transparent;border:0;border-top:1px solid #b8c9ca;text-align:left;color:var(--ink);padding:30px 0}.experiencegrid span,.offergrid span{font-size:12px;letter-spacing:1.5px}.experiencegrid h3{margin-top:28px}.experiencegrid p{color:var(--muted)}.editorial{display:grid;grid-template-columns:1.1fr 1fr;gap:100px;align-items:center}.imageframe{height:600px;position:relative}.imageframe span{position:absolute;bottom:12px;left:15px;color:white;font-size:12px;background:#0007;padding:3px 8px}.editorial p:not(.eyebrow){color:var(--muted)}.herocopy h1,.intro h2,.editorial h2,.direct h2,.pagebanner h1{font-family:'Playfair Display',Georgia,serif}.filters{display:flex;gap:10px;flex-wrap:wrap}.filters button{border:0;border-bottom:1px solid transparent;background:none;color:var(--muted);padding:8px;font-size:14px}.filters .active{color:var(--ink);border-color:var(--ink)}.offergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.offergrid article{border-top:1px solid var(--line);padding:28px 10px 0 0}.offergrid h3{margin:25px 0 18px}.offergrid p{color:var(--muted)}.corporate{background:var(--ink);color:white}.corporate h2{max-width:900px}.corporaterow{display:flex;align-items:center;justify-content:space-between;gap:60px}.corporaterow p{max-width:620px;color:#cbd6d6}.businessgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;border-top:1px solid #ffffff30;margin-top:55px;padding-top:40px}.businessgrid h3{font-size:26px}.businessgrid p{color:#cbd6d6}.direct{text-align:center}.benefits{display:flex;justify-content:center;gap:40px;margin:40px 0;color:var(--muted)}.faq{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer}details p{color:var(--muted);margin-top:20px}.newsletter{background:var(--surface);text-align:center;padding:70px 6%}.newsletter h2{font-size:38px}.newsletter form{display:flex;max-width:550px;margin:30px auto 0}.newsletter input{min-width:0;flex:1;border:0;background:white;padding:16px}.newsletter button{white-space:nowrap}footer{background:#0B0B0B;color:white}.footergrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;padding:70px 0 45px}footer p{color:#b6c6c6;font-size:14px;margin-top:26px}footer button,footer a:not(.logo){display:block;color:#b6c6c6;background:none;border:0;padding:5px 0;font-size:14px;text-align:left}.footerbottom{border-top:1px solid #ffffff20;padding:24px 0;display:flex;justify-content:space-between;font-size:12px;color:#a9bcbc}.mobilebook{display:none}.sr{position:absolute;clip:rect(0,0,0,0)}dialog{width:min(920px,92%);max-height:90vh;border:0;padding:50px;color:var(--ink);overflow:auto}dialog::backdrop{background:#001c26bb}.close{position:absolute;right:15px;top:8px;border:0;background:white;font-size:32px;color:var(--ink)}.detailphoto{height:290px;margin:-50px -50px 40px;width:calc(100% + 100px)}.tags{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.tags span{padding:8px 14px;border:1px solid var(--line);font-size:14px}.modalform{display:grid;grid-template-columns:1fr 1fr;gap:18px}.modalform label{font-size:14px}.modalform input,.modalform select,.modalform textarea{display:block;width:100%;border:1px solid var(--line);padding:12px;margin-top:6px}.full{grid-column:1/-1}.note{padding:16px;background:#eaf0f0;font-size:14px;margin:20px 0}.resultcard{padding:20px 0;border-bottom:1px solid var(--line)}.resultcard h3{font-size:26px}.resultcard p{font-size:14px;color:var(--muted)}@media(max-width:1000px){#header nav{gap:15px}.intro,.editorial{gap:45px}.booking{grid-template-columns:repeat(2,1fr)}.booking button{grid-column:1/-1}.hotelimage{height:300px}.sectionhead{align-items:start;flex-direction:column}.hero{height:760px}.footergrid{gap:30px}}@media(max-width:740px){#header{height:80px;padding:0 6%;gap:15px}#header .logo{margin-right:auto}header .logo img{width:124px}#header nav{display:none;position:absolute;top:80px;left:0;right:0;background:var(--ink);padding:24px;flex-direction:column}header nav.open{display:flex}#header .menu{display:block}.small{padding:9px 12px}#header .gold{display:none}.hero{height:710px;min-height:0}.herocopy{top:24%;left:6%;right:6%}h1{font-size:44px}.eyebrow{font-size:11px;letter-spacing:1.7px}.herobottom{bottom:60px;left:6%;font-size:10px}.herobottom span:last-child{display:none}.booking{padding:20px;gap:12px;width:88%;margin-top:-30px}.booking label{border:0;padding:0}.container{padding:65px 0}.intro,.editorial,.faq{grid-template-columns:1fr;gap:25px}.hotelgrid,.experiencegrid,.offergrid,.businessgrid{grid-template-columns:1fr;gap:40px}.hotelimage{height:400px}.hotelcard>p{margin-bottom:15px}.imageframe{height:400px}.corporaterow{display:block}.businessgrid{margin-top:40px;gap:25px}.benefits{display:block;margin:25px 0}.footergrid{grid-template-columns:1fr 1fr;gap:30px}.footergrid>div:first-child{grid-column:1/-1}.footerbottom{display:block;padding-bottom:90px}.footerbottom span{display:block}.mobilebook{display:block;position:fixed;bottom:14px;left:6%;width:88%;z-index:9;box-shadow:0 6px 20px #0003}.newsletter form{display:block}.newsletter input,.newsletter button{width:100%}dialog{padding:32px 24px}.detailphoto{margin:-32px -24px 30px;width:calc(100% + 48px);height:230px}.modalform{grid-template-columns:1fr}.full{grid-column:auto}.close{z-index:2}.filters{gap:4px}}
+.booking{grid-template-columns:1fr 1fr .8fr 1.25fr 1.35fr auto;gap:10px;padding:28px 20px}.bookingfield{border-right:1px solid var(--line);padding:0 12px}.bookingfield>span{display:block;font-size:11px;letter-spacing:1.3px}.fieldbutton{background:none;border:0;text-align:left;color:var(--ink);font-size:14px;padding:12px 16px 6px 0;position:relative;width:100%;white-space:normal}.fieldbutton:after{content:'⌄';position:absolute;right:0;top:12px}.booking label{padding:0 10px}.booking select{font-size:14px}.booking>.dark{padding:16px 20px}.bookingclose{position:absolute;right:15px;top:8px;background:none;border:0;color:var(--ink);font-size:32px}.calendarDialog{width:min(900px,94%);padding:38px}.calendarDialog h2{font-size:34px}.counterDialog{width:min(480px,94%);padding:40px}.counterDialog h2{font-size:34px}.datetabs{display:flex;gap:10px;margin:20px 0}.datetabs button{flex:1;padding:13px;background:#f0f4f4;border:1px solid transparent;color:var(--ink);font-size:14px}.datetabs .selected{border-color:var(--ink)}.calendarcontrols{display:flex;align-items:center;justify-content:space-between;margin:20px 0;color:var(--muted);font-size:14px}.calendarcontrols button{border:0;background:none;color:var(--ink);font-size:34px;padding:0 12px}.months{display:grid;grid-template-columns:1fr 1fr;gap:35px}.months h3{font-family:'DM Sans',Arial,sans-serif;text-transform:capitalize;text-align:center;font-size:18px;margin-bottom:22px}.weekdays,.daygrid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}.weekdays{font-size:13px;color:var(--muted);margin-bottom:12px}.daygrid button{aspect-ratio:1;border:0;background:none;color:var(--ink);border-radius:50%;font-size:14px;padding:0}.daygrid button:hover:not(:disabled){background:#e3eded}.daygrid button.range{background:#e3eded;border-radius:0}.daygrid button.chosen{background:var(--ink);color:white}.daygrid button:disabled,.calendarcontrols button:disabled,.counterrow button:disabled{opacity:.28;cursor:default}.calendarapply{display:flex;margin:28px 0 0 auto}.counterrow{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0;gap:20px}.counterrow>div{display:flex;align-items:center;gap:20px}.counterrow button{border:1px solid var(--line);background:white;color:var(--ink);width:38px;height:38px;font-size:24px}.counterrow output{font-size:22px;min-width:25px;text-align:center}@media(max-width:1000px){.booking{grid-template-columns:repeat(3,1fr)}.booking>.dark{grid-column:auto}}@media(max-width:740px){.booking{grid-template-columns:1fr 1fr;padding:22px;gap:20px}.booking>.dark{grid-column:1/-1}.bookingfield{border:0;padding:0}.booking label{padding:0}.calendarDialog{padding:35px 18px}.calendarDialog h2{font-size:28px}.months{gap:16px;grid-template-columns:1fr}.months section+section{margin-top:12px}.daygrid button{aspect-ratio:auto;height:36px}.datetabs{gap:6px}.datetabs button{padding:10px 6px;font-size:13px}.calendarcontrols{margin:12px 0}.months h3{margin-bottom:12px}}
+[hidden]{display:none!important}#header{position:fixed;transition:background .3s}#header.scrolled,.innerpage #header{background:var(--ink);border-bottom:1px solid #ffffff20}.accountlink{font-size:13px;white-space:nowrap}.innerpage .mobilebook{display:none}.pagebanner{background:var(--ink);color:white;padding-top:90px}.pagebanner .container{padding:65px 0}.pagebanner h1{font-size:clamp(36px,4vw,60px)}.pagecontent{padding-top:70px}.pagecontent h2{margin-top:20px}.pagecontent>p{max-width:850px}.lead{font-size:21px;line-height:1.6}.hotelimage{display:block}.roomgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.roomcard{border:1px solid var(--line)}.roomcard>a{display:block;height:240px}.roomcard>div{padding:24px}.roomcard h3{font-size:27px}.roomcard p{color:var(--muted)}.roommeta{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.roomprice{margin-top:20px!important}.actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.hotelintro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:90px}.hotelintro>img{height:550px}.hotelintro h2{font-size:40px}.featurestrip{padding:65px 0;margin:40px 0;border-top:1px solid var(--line)}.roomdetail{display:grid;grid-template-columns:1.7fr 1fr;gap:60px}.roomhero{height:430px;margin-bottom:30px}.summary{background:#edf2f2;padding:30px;align-self:start;position:sticky;top:120px}.summary h3{font-size:30px}.summary button{display:block;margin-bottom:15px}.searchfilters{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.searchfilters label,.modalform label{font-size:14px}.searchfilters input,.searchfilters select,.inlineform input,.adminpanel input{display:block;width:100%;border:1px solid var(--line);padding:12px;margin-top:6px;min-width:0}.searchfilters .dark{align-self:end}.basketbar{background:var(--ink);color:white;display:flex;align-items:center;justify-content:space-between;position:sticky;bottom:20px;z-index:5;margin:35px 0;padding:20px}.basketbar:empty{display:none}.basketbar button{background:var(--gold);color:var(--ink)}.steps{display:flex;gap:30px;padding:20px 0 40px;color:var(--muted);font-size:14px}.steps strong{color:var(--ink)}.checkoutgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}.cartline{display:grid;grid-template-columns:100px 1fr auto;gap:20px;padding:25px 0;border-bottom:1px solid var(--line)}.cartline img{height:100px}.cartline h3{font-size:25px;margin:0}.cartline p{margin:10px 0}.cartline input{width:75px;padding:8px;border:1px solid var(--line)}.servicecheck{display:block;padding:12px 0}.inlineform{display:flex;gap:12px;align-items:end;margin:25px 0}.pricelines p{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding:10px 0;font-size:14px}.pricelines .total{font-size:20px}.fine{font-size:13px;line-height:1.6;color:var(--muted)}.consent{display:block!important;font-size:14px!important}.consent input{display:inline!important;width:auto!important;margin:0 8px 0 0!important}.honeypot{position:absolute;left:-10000px;opacity:0;width:1px;height:1px}.formerror{color:#a72929}.receipt{max-width:780px;margin:auto;border:1px solid var(--line);padding:45px}.receipt dd{margin:10px 0 25px;overflow-wrap:anywhere}.receipt dt{font-size:13px;color:var(--muted)}.secretcode{font-family:monospace;font-size:14px}.narrow{max-width:650px}.requestline{padding:30px 0;border-bottom:1px solid var(--line)}.requestline h3{font-size:26px}.gallerygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.gallerytile{background:none;border:0;padding:0;text-align:left;color:var(--ink)}.gallerytile img{height:330px}.gallerytile span{display:block;padding:12px 0;font-size:14px}.lightboxphoto{height:min(58vh,580px);object-fit:contain;background:#edf2f2;margin-bottom:20px}.offergrid article>img{height:250px;margin-bottom:25px}.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.contactgrid article{border:1px solid var(--line);padding:30px}.contactgrid a{display:block;margin:12px 0}.contactgrid button{margin-top:15px}.staytype{grid-column:1/-1;display:flex!important;align-items:center;gap:20px;border:0!important}.staytype select{width:auto!important;font-size:14px!important;padding:0!important}.newsletterconsent{font-size:13px;display:block;margin:20px auto 0;max-width:600px}.newsletterconsent a{text-decoration:underline}.newsletterconsent input{width:auto}.whatsapp{position:fixed;bottom:20px;right:22px;background:var(--ink);color:white;padding:13px 20px;z-index:8;font-size:14px}#notice{position:fixed;top:110px;right:30px;z-index:100;background:var(--ink);color:white;padding:16px 25px;max-width:min(500px,90vw);opacity:0;transform:translateY(-20px);transition:.25s;pointer-events:none}#notice.visible{opacity:1;transform:translateY(0)}.empty{padding:30px;background:#edf2f2;grid-column:1/-1}.footerbottom a{display:inline!important}.adminlayout{display:grid;grid-template-columns:230px 1fr;gap:45px}.adminnav{display:flex;flex-direction:column;gap:7px;align-self:start;position:sticky;top:120px}.adminnav button{border:0;background:#eef2f2;color:var(--ink);text-align:left;padding:12px 15px;font-size:14px}.adminnav button.selected{background:var(--ink);color:white}.adminbar{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:30px}.adminbar p{font-size:14px}.editcard{padding:25px 0;margin-bottom:20px;border-bottom:1px solid var(--line)}.editcard h3{font-size:28px}.photoedit{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center}.photoedit img{width:120px;height:100px}.uploadlabel{display:inline-block;padding:12px 15px;border:1px solid var(--line);font-size:14px;cursor:pointer}.uploadlabel input{display:block;width:100%;font-size:13px;margin-top:12px}.checkline{display:flex;gap:10px;align-items:center}.checkline input{width:auto!important;margin:0!important}.translationlabel{display:block;margin-bottom:30px}.translationlabel span{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}.translationlabel textarea{width:100%;padding:12px;border:1px solid var(--line);font-size:16px}.tablewrap{overflow:auto;margin:25px 0}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid var(--line);padding:12px;text-align:left}.guide{max-width:920px}.guide h2{font-size:34px;margin-top:60px}.guide li{margin-bottom:15px}.guide a:not(.dark):not(.outline){text-decoration:underline}.guide code{background:#edf2f2;padding:3px 6px;font-size:14px}.articlebody{white-space:normal;font-size:18px;line-height:1.8}button:disabled{opacity:.55;cursor:wait}@media(max-width:1000px){.roomgrid{grid-template-columns:repeat(2,1fr)}.hotelintro{gap:35px}.checkoutgrid,.roomdetail{gap:30px}.adminlayout{grid-template-columns:180px 1fr;gap:25px}.adminbar{display:block}.searchfilters{grid-template-columns:repeat(3,1fr)}}@media(max-width:740px){#header .accountlink{display:none}.pagebanner{padding-top:80px}.pagebanner .container{padding:45px 0}.hotelintro,.checkoutgrid,.roomdetail,.adminlayout{grid-template-columns:1fr;gap:30px}.roomgrid,.contactgrid,.gallerygrid{grid-template-columns:1fr}.hotelintro>img{height:340px}.hotelintro h2{font-size:32px}.summary{position:static}.searchfilters{grid-template-columns:1fr 1fr}.searchfilters .dark{grid-column:1/-1}.cartline{grid-template-columns:65px 1fr;gap:15px}.cartline img{height:75px}.cartline>button{grid-column:2}.steps{gap:15px;flex-wrap:wrap}.receipt{padding:25px}.adminnav{position:static;display:grid;grid-template-columns:1fr 1fr}.photoedit{grid-template-columns:1fr}.whatsapp{bottom:80px}.innerpage .whatsapp{bottom:15px}.gallerytile img{height:300px}.basketbar{bottom:10px}.guide h2{font-size:29px}.staytype{display:block!important}.staytype select{margin-top:8px;width:100%!important}}
+/* Compact booking panels anchored to their fields. */
+#bookingdialog.bookingpopover{position:fixed;inset:auto;margin:0;box-sizing:border-box;width:min(760px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:28px 30px 20px;border:1px solid #e9ecec;border-radius:16px;background:#fff;box-shadow:0 12px 42px #102b3024;color:var(--ink);z-index:120;overflow:auto}
+#bookingdialog.bookingpopover::backdrop{background:transparent}
+#bookingdialog .bookingclose{right:13px;top:8px;font-size:24px;line-height:1;width:30px;height:30px;cursor:pointer}
+#bookingdialog .visuallyhidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#bookingdialog .datetabs{display:flex;align-items:center;gap:8px;margin:10px 8px 24px;padding:10px 16px;border-radius:10px;background:#f5f6f6}
+#bookingdialog .datetabs button{padding:5px 0;flex:1;border:0;background:transparent;font:600 15px/1.5 Arial,sans-serif;color:#6f787b;border-radius:6px}
+#bookingdialog .datetabs button span{display:block;font-size:12px;font-weight:400;line-height:1.6}
+#bookingdialog .datetabs button.selected{color:var(--ink);background:#fff;box-shadow:0 1px 4px #142e3010}
+#bookingdialog .date-divider{color:#a7adae}
+#bookingdialog .calendarcontrols{position:absolute;top:132px;left:26px;right:26px;margin:0;pointer-events:none}
+#bookingdialog .calendarcontrols button{pointer-events:auto;font:28px/1 Arial,sans-serif;width:30px;height:30px;padding:0;border-radius:6px}
+#bookingdialog .months{gap:26px;grid-template-columns:1fr 1fr}
+#bookingdialog .months h3,#bookingdialog .monthpicker{height:32px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 14px/1.4 Arial,sans-serif;color:var(--ink);margin:0 0 20px;text-transform:capitalize}
+#bookingdialog .monthpicker select{border:0;background:transparent;color:var(--ink);font:600 14px/1.4 Arial,sans-serif;max-width:125px;padding:4px;cursor:pointer;text-transform:capitalize}
+#bookingdialog .weekdays{font:600 12px/1.5 Arial,sans-serif;margin:0 0 12px;color:#7d878a;gap:0}
+#bookingdialog .daygrid{gap:5px 0}
+#bookingdialog .daygrid button{width:min(40px,100%);height:40px;aspect-ratio:auto;justify-self:center;font:600 14px/1 Arial,sans-serif;border-radius:50%;padding:0}
+#bookingdialog .daygrid button.range{width:100%;border-radius:0;background:#edf3f3}
+#bookingdialog .calendarfooter{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid #eef0f0;margin-top:20px;padding-top:14px}
+#bookingdialog .calendarfooter p{font:14px/1.5 Arial,sans-serif;color:#778186;margin:0}
+#bookingdialog .calendarapply{font:600 14px/1.4 Arial,sans-serif;padding:10px 18px;margin:0;border-radius:6px}
+#bookingdialog.counterDialog{width:min(320px,calc(100vw - 24px));padding:24px}
+#bookingdialog.counterDialog h2{font:600 16px/1.4 Arial,sans-serif;margin:0 0 8px;padding-right:20px}
+#bookingdialog .counterrow{padding:16px 0;gap:12px;font:14px/1.5 Arial,sans-serif}
+#bookingdialog .counterrow>div{gap:12px}
+#bookingdialog .counterrow button{width:32px;height:32px;border-radius:50%;font:20px/1 Arial,sans-serif}
+#bookingdialog .counterrow output{font:600 15px/1 Arial,sans-serif;min-width:18px}
+#bookingdialog.counterDialog .calendarapply{margin:16px 0 0 auto}
+#bookingdialog button:focus-visible,#bookingdialog select:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.fieldbutton[aria-expanded=true]{color:var(--ink);font-weight:600}
+@media(max-width:620px){#bookingdialog.bookingpopover{width:calc(100vw - 24px);padding:26px 18px 16px}#bookingdialog .months{grid-template-columns:1fr}#bookingdialog .months section+section{display:none}#bookingdialog .calendarcontrols{left:16px;right:16px;top:130px}#bookingdialog .months h3,#bookingdialog .monthpicker{margin-bottom:16px}#bookingdialog .datetabs{margin:10px 0 24px}#bookingdialog .daygrid button{width:min(40px,100%);height:40px}#bookingdialog.counterDialog{width:min(320px,calc(100vw - 24px));padding:24px}}
+
+
+.property-page{--property-ink:#0B0B0B;--property-accent:#BDA38B;--property-surface:#F5F2EE;color:var(--ink)}
+.property-hero{height:min(760px,88vh);min-height:600px;position:relative;overflow:hidden;background:var(--property-ink);color:#fff}
+.property-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%}
+.property-shade{position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--property-ink) 92%,transparent),color-mix(in srgb,var(--property-ink) 40%,transparent) 65%,transparent),linear-gradient(0deg,color-mix(in srgb,var(--property-ink) 55%,transparent),transparent 55%)}
+.property-copy{position:absolute;left:max(6vw,calc((100vw - 1240px)/2));right:6%;top:50%;transform:translateY(-38%);max-width:760px}
+.property-copy h1{font:500 clamp(44px,6vw,84px)/1.03 'Playfair Display',Georgia,serif;margin:16px 0 20px;max-width:780px}
+.property-copy .eyebrow{color:var(--property-accent);font-family:'Poppins',sans-serif;letter-spacing:2px}
+.property-copy>p:not(.eyebrow){font-size:18px;max-width:580px;color:#ffffffea;margin-bottom:30px}
+.property-mark{width:150px;height:150px;display:flex;align-items:center;justify-content:center;background:var(--property-mark-bg,#fff);padding:14px;margin-bottom:25px}
+.property-mark img{width:100%;height:100%;object-fit:contain}
+.property-hero .outline{border-color:#ffffffa8}
+.property-hero .gold{background:var(--property-accent);color:var(--property-cta-text,#111)}
+.property-caption{position:absolute;right:5%;bottom:18px;font-size:12px;letter-spacing:.04em;color:#ffffffd0}
+.property-contactbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 6%;background:var(--property-ink);color:#fff;font-size:14px;flex-wrap:wrap}
+.property-contactbar a{color:#fff}
+.property-contactbar span:first-child{color:var(--property-accent);font-family:'Poppins',sans-serif;letter-spacing:.06em}
+.property-subnav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px max(6vw,calc((100vw - 1240px)/2));border-bottom:1px solid var(--line);background:#fff}
+.property-subnav .property-links{display:flex;gap:32px;flex-wrap:wrap;font-size:14px}
+.property-subnav a:hover{color:var(--property-ink)}
+.property-subnav .dark{background:var(--property-ink);color:#fff;white-space:nowrap}
+.property-intro{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start;padding:95px 0 55px}
+.property-intro h2{font:400 clamp(34px,4vw,54px)/1.12 'Playfair Display',Georgia,serif;margin:0}
+.property-intro p{color:var(--muted)}
+.property-page .tags span{border-color:var(--property-accent)}
+.property-section{padding:42px 0 90px}
+.property-section .sectionhead h2{font-family:'Playfair Display',Georgia,serif}
+.property-section .roomcard .dark{background:var(--property-ink);color:#fff}
+.property-cta{padding:55px 6%;background:var(--property-ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:35px;margin:10px auto 80px;max-width:1240px}
+.property-cta h2{font:400 clamp(30px,4vw,48px)/1.1 'Playfair Display',Georgia,serif;margin:0}
+.property-cta p{color:#ffffffd0;margin:10px 0 0}
+.property-contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:55px 0 95px;border-top:1px solid var(--line)}
+.property-contact h2{font:400 36px/1.15 'Playfair Display',Georgia,serif}
+.property-contact .contactdata{display:grid;gap:14px;color:var(--muted)}
+.property-contact .contactdata a{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.property-page .property-reviews{padding-top:35px}
+@media(max-width:740px){.property-hero{height:680px;min-height:600px}.property-copy{left:6%;right:6%;top:48%;transform:translateY(-28%)}.property-copy h1{font-size:48px}.property-copy>p:not(.eyebrow){font-size:16px}.property-mark{width:116px;height:116px}.property-contactbar{font-size:13px;padding:15px 6%}.property-subnav{align-items:flex-start;flex-direction:column;padding:18px 6%}.property-subnav .property-links{gap:18px}.property-intro,.property-contact{grid-template-columns:1fr;gap:24px;padding-top:60px}.property-section{padding:20px 0 60px}.property-cta{display:block;margin:0 auto 55px;padding:40px 6%}.property-cta .actions{margin-top:24px}}
+
+/* Résidences ATTA: apartment types, inventory and residence services. */
+.atta-formats{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center;padding:55px 0 70px;border-bottom:1px solid var(--line)}
+.atta-formats h2,.atta-services h2{font:400 clamp(32px,4vw,48px)/1.12 'Playfair Display',Georgia,serif;margin:8px 0 14px}
+.atta-formats p{color:var(--muted);max-width:560px}
+.atta-format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.atta-format-grid article{min-height:190px;padding:22px 18px;border:1px solid var(--line);border-top:3px solid var(--property-ink)}
+.atta-format-grid article>span,.atta-service-grid article>span{font-size:12px;letter-spacing:.1em;color:var(--property-ink)}
+.atta-format-grid h3{font:500 22px/1.2 'Playfair Display',Georgia,serif;margin:24px 0 10px}
+.atta-format-grid article p{font-size:14px;line-height:1.5;margin:0}
+.atta-apartments .sectionhead{align-items:end}
+.atta-apartments .sectionhead>div>p:last-child{color:var(--muted);max-width:580px}
+.atta-services{padding:40px 0 85px}
+.atta-services .sectionhead{margin-bottom:30px}
+.atta-service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.atta-service-grid article{padding:20px 22px;min-height:112px;background:var(--property-surface);border-bottom:2px solid color-mix(in srgb,var(--property-accent) 72%,white)}
+.atta-service-grid h3{font:500 17px/1.35 'Poppins',Arial,sans-serif;margin:15px 0 0}
+.atta-services+.property-cta{margin-top:0}
+@media(max-width:900px){.atta-formats{grid-template-columns:1fr;gap:25px}.atta-service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.atta-format-grid{grid-template-columns:1fr}.atta-format-grid article{min-height:auto}.atta-format-grid h3{margin:15px 0 8px}.atta-service-grid{grid-template-columns:1fr 1fr;gap:8px}.atta-service-grid article{padding:16px 14px;min-height:100px}.atta-service-grid h3{font-size:15px}.atta-apartments .sectionhead{align-items:flex-start}}
+
+/* Hôtel Astral service directory: dining, meetings and fitness. */
+.astral-services{padding:50px 0 85px}
+.astral-services .sectionhead>div>p:last-child{color:var(--muted)}
+.astral-service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.astral-service-grid article{padding:30px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--property-accent);scroll-margin-top:30px}
+.astral-service-grid article>span{font-size:12px;letter-spacing:.09em;color:var(--property-ink)}
+.astral-service-grid h3{font:500 27px/1.2 'Playfair Display',Georgia,serif;margin:25px 0 14px}
+.astral-service-grid p{min-height:82px;color:var(--muted)}
+.astral-service-grid .textbutton{color:var(--property-ink)}
+@media(max-width:900px){.astral-service-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.astral-service-grid{grid-template-columns:1fr}.astral-service-grid p{min-height:0}}
+
+/* Palais WIA service directory: dining, bar, brunch and events. */
+.wia-services{padding:48px 0 82px}
+.wia-services .sectionhead>div>p:last-child{color:var(--muted)}
+.wia-schedule{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+.wia-schedule article{padding:25px;border-right:1px solid var(--line)}
+.wia-schedule article:last-child{border-right:0}
+.wia-schedule article>span,.wia-moments-grid article>span{font-size:12px;letter-spacing:.09em;color:var(--property-ink)}
+.wia-schedule h3,.wia-moments-grid h3{font:500 24px/1.25 'Playfair Display',Georgia,serif;margin:22px 0 10px}
+.wia-schedule p,.wia-moments-grid p{color:var(--muted)}
+.wia-service-note{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-top:18px;padding:22px 26px;background:var(--property-surface)}
+.wia-service-note h3{font:500 22px/1.3 'Playfair Display',Georgia,serif;margin:4px 0}
+.wia-service-note p{margin:4px 0;color:var(--muted)}
+.wia-moments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wia-moments-grid article{padding:28px;border:1px solid var(--line);border-top:3px solid var(--property-accent)}
+.wia-event-copy{max-width:750px}
+.wia-event-copy h2{font:400 clamp(32px,4vw,48px)/1.12 'Playfair Display',Georgia,serif;margin:10px 0 18px}
+.wia-event-copy>p:not(.eyebrow){color:var(--muted);max-width:680px;margin-bottom:24px}
+.wia-event-facts{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;padding:22px 26px;border-left:2px solid var(--property-accent);background:var(--property-surface)}
+.wia-event-facts strong{font:500 22px 'Playfair Display',Georgia,serif}
+.wia-event-facts span{color:var(--muted);margin-right:14px}
+@media(max-width:900px){.wia-schedule{grid-template-columns:repeat(2,1fr)}.wia-schedule article:nth-child(2){border-right:0}.wia-schedule article:nth-child(-n+2){border-bottom:1px solid var(--line)}.wia-moments-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.wia-schedule{grid-template-columns:1fr}.wia-schedule article{border-right:0;border-bottom:1px solid var(--line)}.wia-schedule article:last-child{border-bottom:0}.wia-moments-grid{grid-template-columns:1fr}.wia-service-note{align-items:flex-start;flex-direction:column}}
+
+.wia-bar-note{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:16px;padding:22px 26px;border:1px solid var(--line);border-left:3px solid var(--property-accent)}
+.wia-bar-note h3{font:500 23px/1.25 'Playfair Display',Georgia,serif;margin:4px 0}
+.wia-bar-note p{color:var(--muted);margin:4px 0}
+.wia-brunch{max-width:920px;margin:0 auto;padding:45px clamp(24px,6vw,70px);background:var(--property-surface);border-top:3px solid var(--property-accent)}
+.wia-brunch h2{font:400 clamp(32px,4vw,48px)/1.12 'Playfair Display',Georgia,serif;margin:10px 0 15px}
+.wia-brunch>p:not(.eyebrow){max-width:650px;color:var(--muted);margin-bottom:24px}
+#restaurant,#animations,#events,#brunch{scroll-margin-top:24px}
+@media(max-width:560px){.wia-bar-note{align-items:flex-start;flex-direction:column}}
+
+/* Each hotel keeps its own identity on its dedicated page. */
+body[data-property] #header{background:var(--ink);border-bottom-color:#ffffff28}
+body[data-property] #header .logo{background:var(--property-logo-bg,#fff);padding:3px;border:1px solid #ffffff35;overflow:hidden}
+body[data-property="wia"] #header .logo,body[data-property="wia"] footer .property-footergrid .logo{--property-logo-bg:#000}
+body[data-property="atta"] #header .logo,body[data-property="atta"] footer .property-footergrid .logo{--property-logo-bg:transparent}
+body[data-property="astral"] #header .logo,body[data-property="astral"] footer .property-footergrid .logo{--property-logo-bg:transparent}
+body[data-property] #header .logo img{width:56px;height:56px;filter:none;object-fit:contain;transform:scale(1.65)}
+body[data-property] #header .accountlink{display:none}
+body[data-property] #header nav{font-size:13px;gap:clamp(12px,1.5vw,24px)}
+body[data-property] #header .gold{background:var(--gold);color:var(--ink)}
+body[data-property] .property-page{color:var(--ink)}
+.property-hero .property-poster,.property-hero .property-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.property-hero .property-poster{z-index:0}
+.property-hero .property-hero-video{z-index:1}
+.property-hero .property-shade{z-index:2}
+.property-hero .property-copy,.property-hero .property-caption{z-index:3}
+body[data-property="wia"] .property-mark{background:#000!important;padding:3px;border:1px solid #d8b55d66}
+.property-mark{overflow:hidden}
+.property-mark img{object-fit:contain;transform:scale(1.35)}
+body[data-property] footer{background:var(--ink);color:#fff}
+body[data-property] footer .footergrid{padding-top:65px;padding-bottom:45px}
+body[data-property] footer .property-footergrid .logo{display:inline-flex;background:var(--property-logo-bg,#fff);padding:3px;border:1px solid #ffffff35;overflow:hidden}
+body[data-property] footer .property-footergrid .logo img{width:64px;height:64px;filter:none;object-fit:contain;transform:scale(1.65)}
+body[data-property] footer .property-footergrid h4{color:var(--gold)}
+body[data-property] footer .property-footergrid a:not(.logo),body[data-property] footer .property-footergrid button{display:block;margin:0 0 12px;padding:0;border:0;background:none;color:#fff;text-align:left;font-size:14px}
+body[data-property] footer .property-footergrid a:hover,body[data-property] footer .property-footergrid button:hover{color:var(--gold)}
+body[data-property] footer .property-footergrid p{color:#ffffffbf}
+body[data-property] footer .footerbottom{border-top:1px solid #ffffff30;padding-top:22px}
+@media(prefers-reduced-motion:reduce){.property-hero .property-hero-video{display:none}}
+@media(max-width:740px){body[data-property] #header .logo img{width:48px;height:48px}.property-mark{width:116px;height:116px}body[data-property] footer .property-footergrid{grid-template-columns:1fr 1fr}body[data-property] footer .property-footergrid>div:first-child{grid-column:1/-1}}
+.astral-offer-list{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.astral-offer-label{display:inline-block;padding:5px 10px;border:1px solid var(--property-accent);color:var(--property-ink);font-size:13px;font-weight:600}
+body[data-property="atta"] #header .logo img,body[data-property="atta"] footer .property-footergrid .logo img,body[data-property="atta"] .property-mark img{transform:none}
+.atta-formats{display:block;max-width:1240px;border-bottom:0;text-align:center}
+.atta-formats-heading{max-width:760px;margin:0 auto 34px}
+.atta-format-grid{max-width:1080px;margin:0 auto;gap:28px;text-align:left}
+.atta-format-grid article{min-height:0;padding:0;border:0;background:transparent}
+.atta-format-photo{display:block;height:270px;overflow:hidden}
+.atta-format-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.atta-format-photo:hover img{transform:scale(1.035)}
+.atta-format-copy{padding:18px 0 0}
+.atta-format-copy h3{margin:12px 0 16px}
+.atta-format-copy .textbutton{font-size:14px}
+.atta-service-feature{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.atta-service-feature .atta-service-copy{max-width:540px}
+.atta-service-image{display:block;width:100%;height:430px;object-fit:cover}
+.atta-service-feature .atta-service-grid{display:block}
+.atta-service-feature .atta-service-grid article{padding:0;min-height:auto;background:transparent;border:0}
+.atta-apartments .roomgrid-compact{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1020px;margin:0 auto;gap:48px}
+.atta-apartments .roomcard-compact{border:0}
+.atta-apartments .roomcard-compact>a{display:block;height:340px;overflow:hidden}
+.atta-apartments .roomcard-compact>a img{transition:transform .55s}
+.atta-apartments .roomcard-compact>a:hover img{transform:scale(1.025)}
+.atta-apartments .roomcard-compact>div{padding:20px 0}
+.atta-apartments .roomcard-compact h3{margin:8px 0 20px}
+.atta-apartments .roomcard-compact .actions{gap:24px}
+@media(max-width:900px){.atta-format-grid{gap:20px}.atta-format-photo{height:230px}.atta-service-feature{gap:36px}.atta-service-image{height:360px}.atta-apartments .roomgrid-compact{gap:32px}}
+@media(max-width:560px){.atta-format-grid{grid-template-columns:1fr;max-width:460px}.atta-format-photo{height:250px}.atta-service-feature{grid-template-columns:1fr;gap:28px}.atta-service-reverse .atta-service-image{order:2}.atta-service-image{height:300px}.atta-apartments .roomgrid-compact{grid-template-columns:1fr;max-width:460px}.atta-apartments .roomcard-compact>a{height:280px}.atta-apartments .roomcard-compact .actions{gap:18px}}
+body[data-property="atta"] .atta-page-subheading{max-width:1020px;margin:70px auto 32px;font:400 clamp(28px,3vw,40px)/1.2 'Playfair Display',Georgia,serif}
+.atta-format-grid-page{max-width:1040px;margin:35px auto 70px}
+body[data-property="atta"] .roomgrid-compact{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1020px;margin:0 auto;gap:48px}
+body[data-property="atta"] .roomcard-compact{border:0}
+body[data-property="atta"] .roomcard-compact>a{display:block;height:340px;overflow:hidden}
+body[data-property="atta"] .roomcard-compact>a img{transition:transform .55s}
+body[data-property="atta"] .roomcard-compact>a:hover img{transform:scale(1.025)}
+body[data-property="atta"] .roomcard-compact>div{padding:20px 0}
+body[data-property="atta"] .roomcard-compact h3{margin:8px 0 20px}
+@media(max-width:560px){body[data-property="atta"] .roomgrid-compact{grid-template-columns:1fr;max-width:460px;gap:30px}body[data-property="atta"] .roomcard-compact>a{height:280px}.atta-page-subheading{margin-top:48px}}
+
+/* ATTA hero carousel: let the photography lead while keeping the slogan clear. */
+.atta-hero-slider{position:absolute;inset:0;overflow:hidden;background:#263b49}
+.atta-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 52%;opacity:0;transition:opacity .9s ease}
+.atta-slide.is-active{opacity:1}
+.atta-slide:nth-child(3){object-position:center 68%}
+.atta-slide-dots{position:absolute;z-index:4;right:6%;bottom:30px;display:flex;gap:11px}
+.atta-slide-dots button{width:13px;height:13px;padding:0;border:1px solid #fff;border-radius:50%;background:#132b3b55;cursor:pointer;box-shadow:0 1px 8px #0005}
+.atta-slide-dots button.active{background:#FCDF90;border-color:#FCDF90}
+body[data-property="atta"] .property-shade{background:linear-gradient(90deg,rgba(8,28,46,.72) 0%,rgba(8,28,46,.48) 44%,rgba(8,28,46,.12) 100%),linear-gradient(0deg,rgba(8,28,46,.34),transparent 60%)}
+body[data-property="atta"] .property-copy h1{max-width:950px;font-size:clamp(42px,5.35vw,76px);line-height:1.08;text-shadow:0 2px 20px rgba(0,0,0,.48)}
+body[data-property="atta"] .property-copy>p:not(.eyebrow){text-shadow:0 1px 12px rgba(0,0,0,.55)}
+body[data-property="atta"] .property-copy .eyebrow{color:#FCDF90;text-shadow:0 1px 8px #0008}
+@media(max-width:740px){.atta-slide-dots{right:6%;bottom:20px}.atta-slide{object-position:center 50%}body[data-property="atta"] .property-copy h1{font-size:clamp(38px,9vw,56px);line-height:1.08}}
+@media(prefers-reduced-motion:reduce){.atta-slide{transition:none}}
+
+/* Final ATTA slogan and photo treatment. */
+.atta-slide{filter:brightness(1.12) saturate(1.14) contrast(1.04)}
+body[data-property="atta"] .property-shade{background:linear-gradient(90deg,rgba(0,0,0,.48) 0%,rgba(0,0,0,.30) 46%,rgba(0,0,0,.05) 100%),linear-gradient(0deg,rgba(0,0,0,.22),transparent 62%)}
+body[data-property="atta"] .property-copy{max-width:min(1080px,88vw)}
+body[data-property="atta"] .property-copy h1{max-width:1080px;font-size:clamp(40px,4.8vw,68px);line-height:1.12;white-space:pre-line;text-shadow:0 2px 12px rgba(0,0,0,.62),0 0 28px rgba(0,0,0,.26)}
+@media(max-width:740px){body[data-property="atta"] .property-copy{max-width:88vw}body[data-property="atta"] .property-copy h1{font-size:clamp(38px,8.5vw,54px)}}
+
+/* ATTA residence introduction with the supplied equipped-kitchen photo. */
+.atta-property-intro{grid-template-columns:.95fr 1.12fr .82fr;gap:38px;align-items:center;padding:82px 0 66px}
+.atta-property-intro h2{font-size:clamp(32px,3.25vw,46px);line-height:1.13}
+.atta-intro-details p{font-size:17px;line-height:1.75;color:var(--muted)}
+.atta-intro-details strong{color:var(--property-ink);font-weight:600}
+.atta-property-intro figure{margin:0}
+.atta-intro-image{display:block;width:100%;height:300px;object-fit:cover;object-position:center 55%}
+.atta-property-intro figcaption{margin-top:10px;color:var(--muted);font-size:13px}
+@media(max-width:1000px){.atta-property-intro{grid-template-columns:1fr 1.2fr;gap:28px}.atta-property-intro figure{grid-column:1/-1}.atta-intro-image{height:330px;object-position:center 58%}}
+@media(max-width:740px){.atta-property-intro{grid-template-columns:1fr;gap:14px;padding:58px 0 46px}.atta-property-intro figure{grid-column:auto;margin-top:12px}.atta-intro-image{height:280px}.atta-intro-details p{font-size:16px}}
+
+/* ATTA introduction: copy on the left, generous kitchen image on the right. */
+.atta-property-intro{grid-template-columns:1.04fr .96fr;gap:clamp(40px,6vw,88px);align-items:center;padding:82px 0 70px}
+.atta-intro-copy{max-width:680px}
+.atta-property-intro h2{font-size:clamp(36px,3.6vw,56px);line-height:1.12;margin:0 0 24px}
+.atta-intro-details p{font-size:17px;line-height:1.75;color:var(--muted);margin:0}
+.atta-intro-details strong{color:var(--property-ink);font-weight:600}
+.atta-property-intro figure{width:100%;margin:0}
+.atta-intro-image{display:block;width:100%;height:clamp(360px,34vw,520px);object-fit:cover;object-position:center 56%}
+@media(max-width:1000px){.atta-property-intro{gap:34px}.atta-intro-image{height:400px}}
+@media(max-width:740px){.atta-property-intro{grid-template-columns:1fr;gap:28px;padding:58px 0 46px}.atta-intro-copy{max-width:none}.atta-property-intro h2{font-size:clamp(34px,8vw,48px)}.atta-intro-image{height:320px}.atta-intro-details p{font-size:16px}}
+
+/* Restore ATTA's inline availability engine beneath its hero image. */
+.atta-booking{grid-template-columns:1fr 1fr .65fr 1.28fr auto;gap:8px;margin:-42px auto 0;padding:14px;position:relative;z-index:6;background:#fff;box-shadow:0 12px 42px rgba(4,25,39,.18)}
+.atta-booking .bookingfield{padding:8px 14px;border-right:1px solid #d9dee2;min-width:0}
+.atta-booking .bookingfield>span{font-size:13px;letter-spacing:.02em;color:#686868;text-transform:none}
+.atta-booking .fieldbutton{font-size:15px;font-weight:600;letter-spacing:.04em;padding-top:9px;white-space:nowrap}
+.atta-booking>.dark{padding:18px 24px;white-space:nowrap;background:#101010;color:white}
+body[data-property="atta"] .property-contactbar{margin-top:0}
+@media(max-width:1000px){.atta-booking{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:-34px}.atta-booking>.dark{grid-column:1/-1}.atta-booking .bookingfield{border-right:0;border-bottom:1px solid #d9dee2}}
+@media(max-width:740px){.atta-booking{grid-template-columns:1fr 1fr;width:88%;padding:18px;margin-top:-24px;gap:10px}.atta-booking>.dark{grid-column:1/-1}.atta-booking .bookingfield{padding:8px 6px}.atta-booking .fieldbutton{font-size:13px;white-space:normal}}
+
+/* ATTA accommodation showcase: four photo-led booking choices. */
+body[data-property="atta"] .atta-room-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 42px;max-width:1080px;margin:0 auto}
+body[data-property="atta"] .atta-stay-card{min-width:0}
+body[data-property="atta"] .atta-stay-photo{display:block;height:340px;overflow:hidden;background:#edf0f1}
+body[data-property="atta"] .atta-stay-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+body[data-property="atta"] .atta-stay-photo:hover img{transform:scale(1.025)}
+body[data-property="atta"] .atta-stay-caption{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:19px 0 0}
+body[data-property="atta"] .atta-stay-caption h3{margin:0;font:400 clamp(23px,2.4vw,30px)/1.2 'Playfair Display',Georgia,serif}
+body[data-property="atta"] .atta-room-rate{margin:7px 0 0;color:var(--muted);font-size:14px;line-height:1.4}
+body[data-property="atta"] .atta-stay-caption .dark{flex:0 0 auto;min-width:126px;text-align:center}
+@media(max-width:760px){body[data-property="atta"] .atta-room-showcase{gap:34px 24px}body[data-property="atta"] .atta-stay-photo{height:290px}}
+@media(max-width:560px){body[data-property="atta"] .atta-room-showcase{grid-template-columns:1fr;max-width:460px;gap:28px}body[data-property="atta"] .atta-stay-photo{height:280px}body[data-property="atta"] .atta-stay-caption h3{font-size:25px}}
+body[data-property="atta"] .atta-apartments .sectionhead{justify-content:center;text-align:center;align-items:center}
+body[data-property="atta"] .atta-apartments .sectionhead>div{margin-inline:auto}
+
+/* ATTA: tighten the transition from stays to services and align service rows. */
+body[data-property="atta"] .property-section.atta-apartments{padding-bottom:34px}
+body[data-property="atta"] .atta-services.atta-service-feature{padding:34px 0;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(34px,5vw,64px);align-items:start}
+body[data-property="atta"] .atta-service-feature .atta-service-copy{max-width:560px;padding-top:8px}
+body[data-property="atta"] .atta-service-feature .atta-service-copy .eyebrow{margin-bottom:18px}
+body[data-property="atta"] .atta-service-feature .atta-service-copy h2{margin:0 0 18px;line-height:1.12}
+body[data-property="atta"] .atta-service-feature .atta-service-copy>p:not(.eyebrow){max-width:500px;line-height:1.7}
+body[data-property="atta"] .atta-service-feature .atta-service-image{height:clamp(340px,32vw,440px);object-fit:cover}
+@media(max-width:740px){body[data-property="atta"] .property-section.atta-apartments{padding-bottom:26px}body[data-property="atta"] .atta-services.atta-service-feature{padding:28px 0 34px;grid-template-columns:1fr;gap:22px}body[data-property="atta"] .atta-service-feature .atta-service-copy{padding-top:0}body[data-property="atta"] .atta-service-feature .atta-service-image{height:300px}}
+
+/* Give the ATTA coworking area its own calm, full-width visual band. */
+body[data-property="atta"] .property-section.atta-apartments{padding-bottom:64px}
+body[data-property="atta"] #coworking.atta-service-feature{position:relative;isolation:isolate;padding:58px 0 62px;align-items:start}
+body[data-property="atta"] #coworking.atta-service-feature::before{content:"";position:absolute;z-index:-1;left:50%;top:0;bottom:0;width:100vw;transform:translateX(-50%);background:#F3F6F7;border-top:1px solid #E2E9EC;border-bottom:1px solid #E2E9EC}
+body[data-property="atta"] #coworking .atta-service-copy{padding:0}
+body[data-property="atta"] #coworking .atta-service-image{height:clamp(350px,31vw,430px)}
+@media(max-width:740px){body[data-property="atta"] .property-section.atta-apartments{padding-bottom:42px}body[data-property="atta"] #coworking.atta-service-feature{padding:38px 0 42px;gap:22px}body[data-property="atta"] #coworking .atta-service-image{height:300px}}
+body[data-property="atta"] .atta-booking>.dark{background:#1D4E6E;color:#fff;border-color:#1D4E6E;transition:background .2s ease,color .2s ease,border-color .2s ease}
+body[data-property="atta"] .atta-booking>.dark:hover{background:#FCDF90;color:#1D4E6E;border-color:#FCDF90}
+body[data-property="atta"] .atta-apartments .sectionhead{display:flex;justify-content:center;text-align:center}
+body[data-property="atta"] .atta-apartments .sectionhead>div{width:min(100%,920px);margin:0 auto}
+body[data-property="atta"] .atta-apartments .sectionhead>div>.eyebrow{width:100%;text-align:center}
+body[data-property="atta"] .atta-apartments .sectionhead h2{width:100%;text-align:center}
+body[data-property="atta"] .atta-apartments .sectionhead>div>p:last-child{max-width:760px;margin-left:auto;margin-right:auto;text-align:center}
+
+/* ATTA contact page: wide Google Maps embed matching the reference layout */
+body[data-property="atta"] .atta-contact-map{width:92vw;margin:50px 0 24px calc(50% - 46vw);padding:0}
+body[data-property="atta"] .atta-contact-map iframe{display:block;width:100%;height:clamp(360px,37vw,750px);border:0;background:#eef2f3}
+@media(max-width:740px){body[data-property="atta"] .atta-contact-map{width:94vw;margin:38px 0 20px calc(50% - 47vw)}body[data-property="atta"] .atta-contact-map iframe{height:360px}}
+
+/* Balance the two columns on ATTA's contact page */
+body[data-property="atta"] .contactgrid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+body[data-property="atta"] .contactgrid h3{font-size:clamp(25px,2.5vw,32px)}
+@media(max-width:740px){body[data-property="atta"] .contactgrid{grid-template-columns:1fr}}
+
+/* ATTA apartment landing: centered selector and balanced two-by-two cards */
+body.atta-apartment-page #header{position:relative;top:auto}
+body[data-property="atta"] .pagecontent.atta-apartment-landing{padding-top:38px;padding-bottom:90px}
+body[data-property="atta"] .atta-premium-chooser>header{text-align:center;max-width:980px;margin:0 auto 54px}
+body[data-property="atta"] .atta-premium-chooser>header h1{font:400 clamp(38px,4vw,62px)/1.12 'Playfair Display',Georgia,serif;color:var(--ink);margin:0 0 18px}
+body[data-property="atta"] .atta-premium-chooser>header p{font-size:18px;color:var(--muted);margin:0}
+body[data-property="atta"] .atta-premium-roomgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:44px 42px;max-width:1140px;margin:0 auto}
+body[data-property="atta"] .atta-premium-room{min-width:0}
+body[data-property="atta"] .atta-premium-room-photo{display:block;overflow:hidden;background:#f3f5f6}
+body[data-property="atta"] .atta-premium-room-photo img{display:block;width:100%;height:clamp(240px,24vw,360px);object-fit:cover;transition:transform .45s ease}
+body[data-property="atta"] .atta-premium-room-photo:hover img{transform:scale(1.025)}
+body[data-property="atta"] .atta-premium-room-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:18px;min-height:86px}
+body[data-property="atta"] .atta-premium-room-caption h2{font:400 clamp(24px,2.4vw,34px)/1.15 'Playfair Display',Georgia,serif;margin:0}
+body[data-property="atta"] .atta-premium-room-caption .dark{flex:0 0 auto;min-width:142px}
+body[data-property="atta"] #header nav a{position:relative;display:inline-block;padding:12px 0;color:#fff;white-space:nowrap;transition:color .22s ease,transform .22s ease}
+body[data-property="atta"] #header nav a{text-transform:uppercase}
+body[data-property="atta"] #header nav a::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left center;transition:transform .22s ease}
+body[data-property="atta"] #header nav a:hover,body[data-property="atta"] #header nav a:focus-visible,body[data-property="atta"] #header nav a.is-active{color:var(--gold)}
+body[data-property="atta"] #header nav a:hover,body[data-property="atta"] #header nav a:focus-visible{transform:translateY(-2px)}
+body[data-property="atta"] #header nav a:hover::after,body[data-property="atta"] #header nav a:focus-visible::after,body[data-property="atta"] #header nav a.is-active::after{transform:scaleX(1)}
+body[data-property="atta"] #header nav a.is-active{font-weight:600}
+@media(prefers-reduced-motion:reduce){body[data-property="atta"] #header nav a,body[data-property="atta"] #header nav a::after{transition:none}}
+html[data-route-loading="true"] body{overflow:hidden}
+html[data-route-loading="true"] body>:not(#route-loader){visibility:hidden}
+#route-loader{display:none}
+html[data-route-loading="true"] #route-loader{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#fff;color:#1D4E6E;font-size:13px;letter-spacing:.08em}
+html[data-route-property="atta"][data-route-loading="true"] #route-loader{background:#1D4E6E;color:#FCDF90}
+html[data-route-property="wia"][data-route-loading="true"] #route-loader{background:#104844;color:#D8B55D}
+html[data-route-property="astral"][data-route-loading="true"] #route-loader{background:#76121D;color:#fff}
+.route-loader-spinner{width:34px;height:34px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:route-loader-spin .75s linear infinite}
+@keyframes route-loader-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.route-loader-spinner{animation:none}}
+@media(max-width:760px){body[data-property="atta"] .pagecontent.atta-apartment-landing{padding-top:34px}body[data-property="atta"] .atta-premium-chooser>header{margin-bottom:36px}body[data-property="atta"] .atta-premium-chooser>header p{font-size:16px}body[data-property="atta"] .atta-premium-roomgrid{gap:34px 26px}}
+@media(max-width:560px){body[data-property="atta"] .atta-premium-roomgrid{grid-template-columns:1fr;max-width:460px;gap:32px}body[data-property="atta"] .atta-premium-room-photo img{height:300px}body[data-property="atta"] .atta-premium-room-caption h2{font-size:25px}body[data-property="atta"] .atta-premium-room-caption .dark{min-width:125px;padding:14px 18px}}
+.atta-booking-shell{max-width:1120px;margin:0 auto}.atta-booking-intro{max-width:720px;margin:0 auto 34px;text-align:center}.atta-booking-intro h2{font-size:clamp(30px,4vw,44px);margin:10px 0 14px}.atta-booking-intro p{font-size:17px;line-height:1.65}.atta-availability-card{max-width:900px;margin:34px auto 0;padding:clamp(22px,4vw,40px);background:#fff;border:1px solid #D9DEE2;border-radius:16px;box-shadow:0 12px 36px #17384b0b}.atta-availability-card h2{font-size:30px;margin:6px 0}.atta-total{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-top:1px solid #D9DEE2;font-size:18px}.atta-total strong{font-size:24px;color:#1D4E6E}.atta-availability-card>.dark{margin-top:8px}.atta-booking-status{max-width:720px;margin:0 auto;padding:clamp(24px,5vw,48px);border:1px solid #D9DEE2;border-radius:16px;background:#fff}.atta-booking-status h2{font-size:28px}.atta-booking-status p{line-height:1.65}.atta-booking-shell .note,.atta-booking-status .note{margin:16px 0;padding:14px 18px;background:#F3F7F9;border-left:3px solid #1D4E6E}@media(max-width:650px){.atta-availability-card{padding:20px 16px}.atta-availability-card .tablewrap{margin-inline:-10px}.atta-total{align-items:flex-start;flex-direction:column;gap:8px}}
+.atta-searchfilters{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:24px;background:#fff;border:1px solid #D9DEE2;border-radius:14px;box-shadow:0 8px 26px #17384b0b}.atta-results-heading{margin:42px 0 20px}.atta-results-heading h2{font-size:clamp(27px,3.2vw,38px);margin:8px 0}.atta-results-heading>p:last-child{color:var(--muted)}.atta-room-results{display:grid;gap:18px}.atta-result-card{display:grid;grid-template-columns:minmax(190px,260px) minmax(220px,1fr) minmax(190px,230px);gap:24px;align-items:center;padding:20px;background:#fff;border:1px solid #D9DEE2;border-radius:14px;box-shadow:0 8px 24px #17384b09}.atta-result-card.is-preferred{border-color:#1D4E6E;box-shadow:0 0 0 1px #1D4E6E}.atta-result-photo img{display:block;width:100%;height:210px;object-fit:cover;border-radius:9px}.atta-result-info .eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;color:#1D4E6E}.atta-result-info h3{font:400 25px/1.2 'Playfair Display',Georgia,serif;margin:8px 0}.atta-result-info>p:not(.eyebrow){margin:8px 0;color:var(--muted);font-size:14px}.atta-result-info details{margin-top:14px;font-size:13px}.atta-result-info summary{cursor:pointer;color:#1D4E6E;font-weight:600}.atta-result-info ul{list-style:none;padding:0;margin:8px 0 0}.atta-result-info li{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px solid #edf0f2}.atta-result-price{display:grid;gap:8px;align-content:center;text-align:right;border-left:1px solid #D9DEE2;padding-left:20px}.atta-result-price p,.atta-result-price strong{margin:0;color:#1D4E6E;font-size:19px}.atta-result-price strong{font-size:24px}.atta-result-price small{display:block;margin-top:3px;font-size:12px;font-weight:400;color:var(--muted)}.atta-result-price .dark,.atta-result-price .outline{margin-top:8px;text-align:center}.atta-loading{margin:28px 0;padding:24px;background:#fff;border-radius:10px;text-align:center;color:var(--muted)}
+@media(max-width:900px){.atta-result-card{grid-template-columns:190px minmax(180px,1fr);gap:18px}.atta-result-price{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;text-align:left;border-left:0;border-top:1px solid #D9DEE2;padding:16px 0 0}.atta-result-price .dark,.atta-result-price .outline{margin:0}}
+@media(max-width:650px){.atta-searchfilters{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px}.atta-result-card{grid-template-columns:1fr;padding:16px;gap:14px}.atta-result-photo img{height:220px}.atta-result-price{flex-wrap:wrap}.atta-result-price .dark,.atta-result-price .outline{width:100%}.atta-result-info li{font-size:12px}}

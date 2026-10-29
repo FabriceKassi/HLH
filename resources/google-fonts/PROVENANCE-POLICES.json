@@ -1,0 +1,126 @@
+{
+  "retrieved_at": "2026-10-28",
+  "note": "Copies of font files actually returned by the original Google Fonts CSS URL. Original site CSS and rendering are not changed. Three OFL licenses from the Google Fonts repository accompany the files.",
+  "items": [
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+      "path": "files/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+      "bytes": 326468,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "path": "files/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "bytes": 326048,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "path": "files/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "bytes": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "path": "files/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_pqTbtY.ttf",
+      "path": "files/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_pqTbtY.ttf",
+      "bytes": 111168,
+      "sha256": "ef1515fa19156794b36e5f362c677f78837c38ccdd6fa1fa76d1dd918ea7abbe",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf",
+      "path": "files/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf",
+      "bytes": 110816,
+      "sha256": "6021680663c58b344d8404c289c755aadc662a02189ffe4f5ca79378f9e97840",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vUDQ.ttf",
+      "path": "files/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vUDQ.ttf",
+      "bytes": 123608,
+      "sha256": "b60ffb0ee2b4e09d71d67ff3ea16d6a23cf2e0cf637c5f4e36fff2e3b1465252",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf",
+      "path": "files/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf",
+      "bytes": 123240,
+      "sha256": "1609a54fa3ad1abc8d0037132f73700333241ea0b65672079998e352f151dea7",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+      "path": "files/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+      "bytes": 150292,
+      "sha256": "1984efdda0fbe207d7ac20feac2ba7c2768c92a90094b02a206c9d58cc30ff2e",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+      "path": "files/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+      "bytes": 151516,
+      "sha256": "dae40ca7b35fe7501bda2e4140a6860b1db47330be5d3c8ab6971fd83a70e9a5",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf",
+      "path": "files/pxiByp8kv8JHgFVrLGT9V1s.ttf",
+      "bytes": 152860,
+      "sha256": "fcff04f4bec2b3636f05ed894dc1f9a752c4cb587ee49857ec7a82abaf6ca016",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf",
+      "path": "files/pxiEyp8kv8JHgFVrFJA.ttf",
+      "bytes": 154628,
+      "sha256": "cdedb1729acac414ed01744a11da7badb86adf13108e7bd3fa161b9323f7fe54",
+      "status": "downloaded",
+      "mime": "font/ttf"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+      "path": "licenses/inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "status": "downloaded",
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/playfairdisplay/OFL.txt",
+      "path": "licenses/playfairdisplay-OFL.txt",
+      "bytes": 4449,
+      "sha256": "566be814f8e96e93dfa16101331557eb6b5467e9e03f627c0910fe93ca12300e",
+      "status": "downloaded",
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/OFL.txt",
+      "path": "licenses/poppins-OFL.txt",
+      "bytes": 4385,
+      "sha256": "6be04893d770899a015649c7aa3b582f871b272f8747a92b78b17c3e5c8b2573",
+      "status": "downloaded",
+      "mime": "text/plain; charset=utf-8"
+    }
+  ]
+}

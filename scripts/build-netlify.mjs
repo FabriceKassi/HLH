@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import ts from 'typescript';
+const root=path.resolve(import.meta.dirname,'..');
+const out=path.join(root,'dist-netlify');
+fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(out,{recursive:true});
+fs.cpSync(path.join(root,'public'),out,{recursive:true,filter:p=>!p.endsWith('.zip')&&!p.includes('/downloads')&&!p.endsWith('hlh-local-preview.js')});
+const generated=path.join(root,'netlify/generated');fs.mkdirSync(generated,{recursive:true});
+const api=fs.readFileSync(path.join(root,'lib/api.ts'),'utf8');
+const quote=api.split('\n').find(l=>l.startsWith('export function quote('));
+const schema=api.split('\n').find(l=>l.startsWith('export const requestSchema='));
+const date=api.split('\n').find(l=>l.startsWith('const validDate='));
+if(!quote||!schema||!date)throw Error('Structure de la source V17 inattendue : réexaminer le devis avant intégration.');
+const helpers="import {z} from 'zod';const text=z.string().trim().max(12000),short=z.string().trim().max(250),id=z.string().regex(/^[a-z0-9-]{1,80}$/);\n";
+fs.writeFileSync(path.join(generated,'quote.mjs'),ts.transpileModule(helpers+date+'\n'+schema+'\n'+quote,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText);
+fs.writeFileSync(path.join(generated,'search.mjs'),ts.transpileModule(fs.readFileSync(path.join(root,'lib/hlh-search.ts'),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText);
+const content=JSON.parse(fs.readFileSync(path.join(root,'lib/recovery-content.json'),'utf8'));
+fs.writeFileSync(path.join(generated,'content.mjs'),'export default '+JSON.stringify(content)+';\n');
+let html=fs.readFileSync(path.join(out,'index.html'),'utf8');
+html=html.replace('<script src="/hlh-local-preview.js"></script>','');
+html=html.replace('</body>','<aside role="note" style="position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#173c43;color:#fff;padding:7px 12px;text-align:center;font:12px system-ui">Prévisualisation HLH V17 · réservations et paiements réels non activés</aside></body>');
+fs.writeFileSync(path.join(out,'index.html'),html);
+fs.writeFileSync(path.join(out,'robots.txt'),'User-agent: *\nDisallow: /\n');
+console.log('Démo Netlify V17 construite : interface et médias d’origine ; API de lecture, devis et validation ; écritures et paiements désactivés.');
+
+// Disable personal-data collection on the public demonstration.
+const group=path.join(out,'group-pages.js');
+let groupJs=fs.readFileSync(group,'utf8');
+groupJs=groupJs.replace('Votre demande sera enregistrée sur le portail pour examen par l’équipe. Aucune notification automatique n’est envoyée dans cette version ; la demande ne constitue pas une réservation confirmée.','Démonstration : aucune demande enregistrée ni transmise. Contactez directement votre établissement.').replace('Your enquiry will be recorded on the portal for the team to review.','Demonstration: no enquiry recorded or transmitted.');
+fs.writeFileSync(group,groupJs);
+const demoScript=`function protectDemo(){for(const f of document.querySelectorAll('#group-contact-form,#newsletter')){for(const el of f.querySelectorAll('input,textarea,select,button'))el.disabled=true;const b=f.querySelector('button[type=submit],button');if(b&&b.textContent!=='Demo - envoi desactive')b.textContent='Demo - envoi desactive';}}new MutationObserver(protectDemo).observe(document.body,{childList:true,subtree:true});protectDemo();`;
+fs.writeFileSync(path.join(out,'demo-mode.js'),demoScript);
+fs.writeFileSync(path.join(out,'index.html'),fs.readFileSync(path.join(out,'index.html'),'utf8').replace('</body>','<script src="/demo-mode.js"></script></body>'));
