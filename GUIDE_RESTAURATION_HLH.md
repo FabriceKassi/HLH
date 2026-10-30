@@ -147,3 +147,7 @@ Inventaire séparé à protéger : archives ZIP historiques V11/V12/V17 ; évent
 ## Résultat du test de reprise
 
 Clone vierge de develop au commit fb27bd19e79e290c2c87c7ef50ac52de5067d56b ; aucune source, aucun média ni node_modules copié depuis l’ancien atelier. Outils Node 24.19.0 téléchargés depuis nodejs.org, empreinte vérifiée ; pnpm 11.25.0. Installation de 641 dépendances depuis le réseau, build Vinext et build Netlify réussis ; 115 + 10 contrôles réussis. Deux migrations appliquées à une base neuve. Huit pages et deux routes API répondent HTTP 200. Trente-six médias servis correspondent aux fichiers Git, dont le MP4. Accueil et calendrier vérifiés visuellement. Ce test a été réalisé dans un nouveau dossier sur le même Mac : il ne certifie pas Windows/Linux ; la préparation Cloud fournit un contrôle distant complémentaire.
+
+### Limite Cloud constatée à la fin de la mission
+
+Deux tentatives de publication de l’environnement HLH ont échoué avec « Impossible de publier l’environnement ». Les paramètres sont enregistrés et les tests de préparation réussissent, mais aucune nouvelle tâche depuis un environnement publié n’a pu être vérifiée. La cause n’est pas exposée par les outils accessibles. Codex Cloud reste donc préparé, non opérationnel. Reprendre dans le chat « Configurer HLH » et réessayer après résolution côté plateforme ; ne pas recréer la liaison GitHub → Netlify pour ce problème. La reprise sur un nouvel ordinateur depuis GitHub et le site Netlify restent disponibles indépendamment de cette limite.
