@@ -1,19 +1,19 @@
 /* HLH group portal: six focused destinations, property links and accessible interactions. */
 window.HLH_SITE_LINKS = Object.freeze({
-  portal: "https://hlh-reprise-v48.fabricetoussaintkass.chatgpt.site/",
+  portal: "https://hlh-portail-v17-preview.netlify.app/",
   wia: {
-    site: "https://palais-wia-nouvelle-conception-v1.fabricetoussaintkass.chatgpt.site/",
-    reservation: "https://palais-wia-nouvelle-conception-v1.fabricetoussaintkass.chatgpt.site/reservation/",
+    site: "https://palais-wia-preview.netlify.app/",
+    reservation: "https://palais-wia-preview.netlify.app/reservation/",
     bookingParams: { arrival: "arrival", departure: "departure", rooms: "rooms", adults: "adults", children: "children" }
   },
   atta: {
-    site: "https://atta-reprise-v10.fabricetoussaintkass.chatgpt.site/atta",
-    reservation: "https://atta-reprise-v10.fabricetoussaintkass.chatgpt.site/atta/reserver",
+    site: "https://residences-atta-preview.netlify.app/atta",
+    reservation: "https://residences-atta-preview.netlify.app/atta/reserver",
     bookingParams: { arrival: "arrival", departure: "departure", rooms: "rooms", adults: "adults", children: "children" }
   },
   astral: {
-    site: "https://astral-reprise-v22.fabricetoussaintkass.chatgpt.site/hotel-astral",
-    reservation: "https://astral-reprise-v22.fabricetoussaintkass.chatgpt.site/hotel-astral/reserver",
+    site: "https://hotel-astral-preview.netlify.app/hotel-astral",
+    reservation: "https://hotel-astral-preview.netlify.app/hotel-astral/reserver",
     bookingParams: { arrival: "arrival", departure: "departure", rooms: "quantity", adults: "adults", children: "children" },
     fixedBookingParams: { phase: "dates" }
   }
