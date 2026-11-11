@@ -1,0 +1,30 @@
+/* Local review only: exact Astral font stacks; no licensed font files distributed.
+ * Fallback rendering depends on installed fonts, exactly as on the Astral source.
+ */
+:root{
+  --hlh-font-heading: "FuturaStd", "Futura", "Avenir Next", Arial, sans-serif;
+  --hlh-font-body: "AvenirNextLTPro", "Avenir Next", Arial, sans-serif;
+  --hlh-type-body-size: 16px;
+  --hlh-type-body-leading: 1.65;
+  --hlh-type-heading-leading: 1.15;
+  --hlh-type-heading-weight: 500;
+}
+html{font-synthesis:none}
+body,body.group-portal-page{font-family:var(--hlh-font-body);font-size:var(--hlh-type-body-size);line-height:var(--hlh-type-body-leading)}
+button,input,select,textarea{font-family:var(--hlh-font-body)}
+body.group-portal-page :is(h1,h2,h3,h4,h5,h6){font-family:var(--hlh-font-heading)}
+body.group-portal-page :is(h1,h2,h3){font-weight:var(--hlh-type-heading-weight);line-height:var(--hlh-type-heading-leading)}
+body.group-portal-page h1{letter-spacing:-.035em}
+body.group-portal-page h2{font-size:clamp(30px,3.3vw,48px);letter-spacing:-.03em}
+body.group-portal-page h3{font-size:26px}
+body.group-portal-page .portal-page-head h1{font-size:clamp(36px,4vw,58px)}
+body.group-portal-page .portal-hero-copy h1{line-height:1.08}
+body.group-portal-page .eyebrow{font-family:var(--hlh-font-body);font-size:11px;line-height:1.7;letter-spacing:2.3px}
+body.group-portal-page :is(.portal-button,.portal-link-button){font-family:var(--hlh-font-body);font-size:13px;line-height:1.4;letter-spacing:.055em}
+body.group-portal-page .portal-hero-copy>.portal-button{font-family:var(--hlh-font-body)}
+body.group-portal-page .portal-footer-motto{font-style:normal}
+body.group-portal-page .portal-footer-col h2{font-family:var(--hlh-font-body);font-size:11px;line-height:1.4}
+body.group-portal-page .portal-contact-form :is(input,textarea,select){font-family:var(--hlh-font-body);font-size:16px;line-height:1.5}
+body.group-portal-page .hlh-booking-section{font-family:var(--hlh-font-body)}
+body.group-portal-page .hlh-booking-section :is(button,select,input,output,.hlh-calendar-month h4){font-family:var(--hlh-font-body)}
+@media(max-width:740px){body.group-portal-page h2{font-size:30px}}

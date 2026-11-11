@@ -1,15 +1,15 @@
 /* HLH institutional portal refresh: shared editorial grid, accessible motion and responsive layouts. */
 :root{--hlh-ink:#101010;--hlh-paper:#f7f5f0;--hlh-white:#fff;--hlh-beige:#bba188;--hlh-gray:#666;--hlh-line:#ded9d0;--hlh-gutter:clamp(22px,4vw,52px);--hlh-max:1280px}
 html{scroll-padding-top:110px}
-body.group-portal-page{background:var(--hlh-paper);color:var(--hlh-ink);font:400 15px/1.7 Inter,Arial,sans-serif;overflow-x:hidden}
-body.group-portal-page h1,body.group-portal-page h2,body.group-portal-page h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;letter-spacing:-.025em}
+body.group-portal-page{background:var(--hlh-paper);color:var(--hlh-ink);font:400 15px/1.7 var(--hlh-font-body);overflow-x:hidden}
+body.group-portal-page h1,body.group-portal-page h2,body.group-portal-page h3{font-family:var(--hlh-font-heading);font-weight:400;letter-spacing:-.025em}
 body.group-portal-page h1{font-size:clamp(38px,5.1vw,68px);line-height:1.06;margin:0 0 20px}
 body.group-portal-page h2{font-size:clamp(30px,3.4vw,47px);line-height:1.12;margin:0 0 22px}
 body.group-portal-page h3{font-size:clamp(22px,2vw,29px);line-height:1.2;margin:0 0 13px}
 body.group-portal-page p{margin:0 0 18px}
 body.group-portal-page em{font-weight:400;color:var(--hlh-beige)}
 body.group-portal-page .container{width:min(var(--hlh-max),calc(100% - 2*var(--hlh-gutter)));max-width:var(--hlh-max);margin-inline:auto;padding:0}
-body.group-portal-page .eyebrow{font:600 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.19em;text-transform:uppercase;color:#87715b;margin:0 0 17px}
+body.group-portal-page .eyebrow{font:600 10px/1.4 var(--hlh-font-body);letter-spacing:.19em;text-transform:uppercase;color:#87715b;margin:0 0 17px}
 body.group-portal-page button,body.group-portal-page a{transition:color .2s ease,background-color .2s ease,border-color .2s ease,transform .25s ease,box-shadow .25s ease}
 body.group-portal-page :focus-visible{outline:2px solid #9b7546;outline-offset:4px}
 
@@ -49,14 +49,14 @@ body.group-portal-page .portal-section-heading>p{max-width:330px;color:var(--hlh
 body.group-portal-page .portal-section-heading h2{margin-bottom:0}
 body.group-portal-page .portal-link{display:inline-flex;gap:12px;align-items:center;padding:7px 0 6px;border-bottom:1px solid var(--hlh-beige);color:#262522;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 body.group-portal-page .portal-link:hover{color:#8d6a43;border-color:#8d6a43;gap:17px}
-body.group-portal-page .portal-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 20px;border:1px solid transparent;text-align:center;font:600 10px/1.3 Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+body.group-portal-page .portal-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 20px;border:1px solid transparent;text-align:center;font:600 10px/1.3 var(--hlh-font-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 body.group-portal-page .portal-button--gold{background:var(--hlh-beige);border-color:var(--hlh-beige);color:#171614}
 body.group-portal-page .portal-button--gold:hover{background:#a98a69;border-color:#a98a69;transform:translateY(-2px);box-shadow:0 9px 20px rgba(16,16,16,.11)}
 body.group-portal-page .portal-button--outline{border-color:#dfd2c2;background:transparent;color:#f7f5f0}
 body.group-portal-page .portal-button--outline:hover{background:#fff;color:#111}
 body.group-portal-page .portal-button--outline-dark{border-color:#c8baa8;background:transparent;color:#272521}
 body.group-portal-page .portal-button--outline-dark:hover{border-color:#a98a69;background:#f0ede6}
-body.group-portal-page .portal-link-button{padding:4px 0;border:0;border-bottom:1px solid var(--hlh-beige);background:transparent;color:#292722;font:600 10px Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+body.group-portal-page .portal-link-button{padding:4px 0;border:0;border-bottom:1px solid var(--hlh-beige);background:transparent;color:#292722;font:600 10px var(--hlh-font-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 
 /* Home hero */
 body.group-portal-page .portal-hero{height:clamp(390px,50vh,600px);min-height:0;position:relative;overflow:hidden;background:#282520;color:#fff}
@@ -70,8 +70,8 @@ body.group-portal-page .portal-hero-slide--business img{object-position:48% 53%}
 body.group-portal-page .portal-hero-slide--relax img{object-position:68% 53%}
 body.group-portal-page .portal-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,10,9,.44),rgba(9,10,9,.27) 56%,rgba(9,10,9,.14)),linear-gradient(0deg,rgba(0,0,0,.18),rgba(0,0,0,.04) 56%,rgba(255,255,255,.045))}
 body.group-portal-page .portal-hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-top:8px}
-body.group-portal-page .portal-hero-copy h1{max-width:100%;color:white;font:500 clamp(36px,4vw,56px)/1.14 "Poppins",Arial,sans-serif;letter-spacing:-.035em;margin:0 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.34),0 1px 2px rgba(0,0,0,.3)}
-body.group-portal-page .portal-hero-copy>.portal-button{font-family:"Poppins",Arial,sans-serif}
+body.group-portal-page .portal-hero-copy h1{max-width:100%;color:white;font:500 clamp(36px,4vw,56px)/1.14 var(--hlh-font-heading);letter-spacing:-.035em;margin:0 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.34),0 1px 2px rgba(0,0,0,.3)}
+body.group-portal-page .portal-hero-copy>.portal-button{font-family:var(--hlh-font-heading)}
 body.group-portal-page .portal-hero-copy h1 span{display:block;white-space:nowrap}
 body.group-portal-page .portal-hero-foot{position:absolute;left:var(--hlh-gutter);right:var(--hlh-gutter);bottom:25px;display:flex;justify-content:flex-end;align-items:center;gap:10px;color:white}
 body.group-portal-page .portal-slide-controls{display:flex;gap:7px;align-items:center}
@@ -83,7 +83,7 @@ body.group-portal-page .portal-slide-controls button.is-active::after,body.group
 body.group-portal-page .portal-media{position:relative;min-width:0;margin:0;overflow:hidden;background:#e5e0d7;aspect-ratio:183/120}
 body.group-portal-page .portal-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s ease}
 body.group-portal-page .portal-hotel-card:hover .portal-media img,body.group-portal-page .portal-room-card:hover .portal-media img,body.group-portal-page .portal-property-row:hover .portal-media img{transform:scale(1.035)}
-body.group-portal-page .portal-media figcaption{position:absolute;left:12px;bottom:10px;padding:4px 8px;background:rgba(16,16,16,.62);color:#fff;font:400 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.04em}
+body.group-portal-page .portal-media figcaption{position:absolute;left:12px;bottom:10px;padding:4px 8px;background:rgba(16,16,16,.62);color:#fff;font:400 9px/1.4 var(--hlh-font-body);letter-spacing:.04em}
 body.group-portal-page .portal-intro-grid,body.group-portal-page .portal-editorial-grid{display:grid;grid-template-columns:1fr .92fr;gap:clamp(48px,8vw,112px);align-items:center}
 body.group-portal-page .portal-intro-photo{max-width:610px}
 body.group-portal-page .portal-intro-copy{max-width:540px;padding:12px 0}
@@ -106,7 +106,7 @@ body.group-portal-page .portal-split-heading .portal-link{margin-top:4px}
 body.group-portal-page .portal-stay-strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:52px;border-top:1px solid var(--hlh-line);border-bottom:1px solid var(--hlh-line)}
 body.group-portal-page .portal-stay-strip article{padding:24px 24px 25px 0}
 body.group-portal-page .portal-stay-strip article+article{padding-left:25px;border-left:1px solid var(--hlh-line)}
-body.group-portal-page .portal-stay-strip article>span,.portal-experience-grid article>span{display:block;color:#9c825f;font:500 10px Inter,Arial,sans-serif;letter-spacing:.14em;margin-bottom:13px}
+body.group-portal-page .portal-stay-strip article>span,.portal-experience-grid article>span{display:block;color:#9c825f;font:500 10px var(--hlh-font-body);letter-spacing:.14em;margin-bottom:13px}
 body.group-portal-page .portal-stay-strip h3{font-size:23px;margin:0 0 7px}
 body.group-portal-page .portal-stay-strip p{margin:0;color:#716d66;font-size:12px}
 body.group-portal-page .portal-dining-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(50px,9vw,125px);align-items:center}
@@ -178,7 +178,7 @@ body.group-portal-page .portal-astral-dining>div:first-child{max-width:590px}
 body.group-portal-page .portal-astral-dining p:not(.eyebrow){color:#66625b}
 body.group-portal-page .portal-astral-note{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:18px;padding:24px;background:#f0ede6;border-left:2px solid #bba188}
 body.group-portal-page .portal-astral-note span{color:#917958;font-size:9px;letter-spacing:.12em}
-body.group-portal-page .portal-astral-note p{margin:0 0 8px;font:400 18px "Playfair Display",Georgia,serif}
+body.group-portal-page .portal-astral-note p{margin:0 0 8px;font:400 18px var(--hlh-font-heading)}
 body.group-portal-page .portal-venue-list .portal-property-row:nth-child(even){background:#f0ede6}
 body.group-portal-page .portal-contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 body.group-portal-page .portal-contact-card{min-width:0;padding:25px 24px 23px;background:#fff;border-top:2px solid #bba188;box-shadow:0 5px 18px rgba(20,18,14,.03)}
@@ -194,7 +194,7 @@ body.group-portal-page .portal-contact-form-layout>div:first-child>p:not(.eyebro
 body.group-portal-page .portal-contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 18px;padding:28px;background:#fff;border:1px solid rgba(16,16,16,.06)}
 body.group-portal-page .portal-contact-form label{display:flex;flex-direction:column;gap:7px;min-width:0;color:#48453f;font-size:11px;font-weight:500}
 body.group-portal-page .portal-contact-form label.full,body.group-portal-page .portal-contact-form .full{grid-column:1/-1}
-body.group-portal-page .portal-contact-form input,body.group-portal-page .portal-contact-form textarea,body.group-portal-page .portal-contact-form select{width:100%;min-height:45px;padding:11px 12px;border:1px solid #ddd7cd;background:#fdfcf9;color:#211f1b;font:400 13px Inter,Arial,sans-serif}
+body.group-portal-page .portal-contact-form input,body.group-portal-page .portal-contact-form textarea,body.group-portal-page .portal-contact-form select{width:100%;min-height:45px;padding:11px 12px;border:1px solid #ddd7cd;background:#fdfcf9;color:#211f1b;font:400 13px var(--hlh-font-body)}
 body.group-portal-page .portal-contact-form textarea{min-height:110px;resize:vertical}
 body.group-portal-page .portal-contact-form input:focus,body.group-portal-page .portal-contact-form textarea:focus,body.group-portal-page .portal-contact-form select:focus{border-color:#a98a69;outline:2px solid rgba(169,138,105,.16);outline-offset:0}
 body.group-portal-page .portal-contact-form .consent{display:block;font-size:11px;line-height:1.6}
@@ -225,9 +225,9 @@ body.group-portal-page .portal-footer-main{display:grid;grid-template-columns:1.
 body.group-portal-page .portal-footer-brand .logo{width:145px;height:auto;padding:0;background:none;border:0}
 body.group-portal-page .portal-footer-brand .logo img{width:100%;height:auto;filter:brightness(0) invert(1);transform:none}
 body.group-portal-page .portal-footer-brand>p{max-width:270px;margin:20px 0 10px;color:#d3d0c9;font-size:12px;line-height:1.7}
-body.group-portal-page .portal-footer-brand .portal-footer-motto{color:#bba188;font:italic 17px/1.5 "Playfair Display",Georgia,serif}
+body.group-portal-page .portal-footer-brand .portal-footer-motto{margin:32px 0 0;color:#bba188;font:italic 17px/1.5 var(--hlh-font-heading)}
 body.group-portal-page .portal-footer-col{display:flex;align-items:flex-start;flex-direction:column;gap:9px}
-body.group-portal-page .portal-footer-col h2{margin:0 0 9px;color:#cfb38f;font:600 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase}
+body.group-portal-page .portal-footer-col h2{margin:0 0 9px;color:#cfb38f;font:600 10px/1.4 var(--hlh-font-body);letter-spacing:.17em;text-transform:uppercase}
 body.group-portal-page .portal-footer-col>a{display:block;color:#e4e1da;font-size:11px;line-height:1.5}
 body.group-portal-page .portal-footer-col>a:hover{color:#cfb38f}
 body.group-portal-page .portal-footer-address{display:flex!important;flex-direction:column;gap:3px;margin-bottom:4px}
@@ -350,14 +350,14 @@ body.group-portal-page .portal-booking-heading .eyebrow{margin:0;color:#8b7559;f
 body.group-portal-page .portal-booking-heading h2{margin:0;font-size:22px;line-height:1.2}
 body.group-portal-page .portal-booking-form{position:relative;display:grid;grid-template-columns:1.2fr .95fr .95fr .72fr 1.05fr 1.6fr;gap:8px;align-items:stretch;margin:0;padding:0}
 body.group-portal-page .portal-booking-field{position:relative;display:flex;min-width:0;flex-direction:column;gap:5px;padding:8px 11px;background:#fff;border:1px solid #e3ded4}
-body.group-portal-page .portal-booking-field>span{color:#777168;font:600 8px/1.3 Inter,Arial,sans-serif;letter-spacing:.13em}
-body.group-portal-page .portal-booking-field select,body.group-portal-page .portal-booking-trigger{width:100%;min-width:0;height:25px;padding:0;border:0;background:transparent;color:#25231f;font:500 12px/1.3 Inter,Arial,sans-serif;text-align:left}
+body.group-portal-page .portal-booking-field>span{color:#777168;font:600 8px/1.3 var(--hlh-font-body);letter-spacing:.13em}
+body.group-portal-page .portal-booking-field select,body.group-portal-page .portal-booking-trigger{width:100%;min-width:0;height:25px;padding:0;border:0;background:transparent;color:#25231f;font:500 12px/1.3 var(--hlh-font-body);text-align:left}
 body.group-portal-page .portal-booking-field select{appearance:none;padding-right:18px;background-image:linear-gradient(45deg,transparent 50%,#7c6a52 50%),linear-gradient(135deg,#7c6a52 50%,transparent 50%);background-position:calc(100% - 8px) 10px,calc(100% - 4px) 10px;background-size:4px 4px,4px 4px;background-repeat:no-repeat;cursor:pointer}
 body.group-portal-page .portal-booking-trigger{display:flex;align-items:center;justify-content:space-between;gap:7px;cursor:pointer}
 body.group-portal-page .portal-booking-trigger:hover{color:#896c45}
 body.group-portal-page .portal-booking-trigger:focus-visible,body.group-portal-page .portal-booking-field select:focus-visible{outline:2px solid #b99b72;outline-offset:3px}
 body.group-portal-page .portal-booking-icon{flex:0 0 auto;color:#a5855a;font:400 16px/1 Georgia,serif}
-body.group-portal-page .portal-booking-submit{display:flex;min-width:0;min-height:58px;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border:1px solid #101010;background:#101010;color:#f7f5f0;font:600 9px/1.4 Inter,Arial,sans-serif;letter-spacing:.1em;text-align:left;cursor:pointer}
+body.group-portal-page .portal-booking-submit{display:flex;min-width:0;min-height:58px;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border:1px solid #101010;background:#101010;color:#f7f5f0;font:600 9px/1.4 var(--hlh-font-body);letter-spacing:.1em;text-align:left;cursor:pointer}
 body.group-portal-page .portal-booking-submit:hover{background:#745a37;border-color:#745a37;transform:translateY(-1px)}
 body.group-portal-page .portal-booking-submit>span:last-child{color:#d4b68a;font-size:17px}
 body.group-portal-page .portal-booking-capacity{grid-column:1/-1;margin:-1px 0 0;color:#777168;font-size:9px;line-height:1.4}
@@ -370,30 +370,30 @@ body.group-portal-page .portal-booking-date-field--departure .portal-booking-pan
 body.group-portal-page .portal-booking-count-field .portal-booking-panel{width:min(400px,calc(100vw - 24px))}
 @keyframes portalPanelIn{from{opacity:0}to{opacity:1}}
 body.group-portal-page .portal-calendar-header{display:grid;grid-template-columns:36px 1fr 36px;align-items:center;margin-bottom:13px}
-body.group-portal-page .portal-calendar-header p{margin:0;text-align:center;color:#514b42;font:500 12px/1.4 Inter,Arial,sans-serif}
+body.group-portal-page .portal-calendar-header p{margin:0;text-align:center;color:#514b42;font:500 12px/1.4 var(--hlh-font-body)}
 body.group-portal-page .portal-calendar-header button{width:34px;height:34px;border:1px solid #e8e2d9;background:#fbfaf7;color:#4b463e;font:400 22px/1 Georgia,serif;cursor:pointer}
 body.group-portal-page .portal-calendar-header button:hover{border-color:#b99b72;color:#805f36}
 body.group-portal-page .portal-calendar-months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-body.group-portal-page .portal-calendar-month h4{margin:0 0 10px;color:#25221d;font:500 17px/1.25 "Playfair Display",Georgia,serif;text-align:center;text-transform:capitalize}
+body.group-portal-page .portal-calendar-month h4{margin:0 0 10px;color:#25221d;font:500 17px/1.25 var(--hlh-font-heading);text-align:center;text-transform:capitalize}
 body.group-portal-page .portal-calendar-weekdays,body.group-portal-page .portal-calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;text-align:center}
-body.group-portal-page .portal-calendar-weekdays{margin-bottom:5px;color:#827b70;font:600 9px/1.8 Inter,Arial,sans-serif}
+body.group-portal-page .portal-calendar-weekdays{margin-bottom:5px;color:#827b70;font:600 9px/1.8 var(--hlh-font-body)}
 body.group-portal-page .portal-calendar-day,body.group-portal-page .portal-calendar-empty{display:grid;min-width:0;aspect-ratio:1;place-items:center}
-body.group-portal-page .portal-calendar-day{border:0;border-radius:50%;background:transparent;color:#28251f;font:400 11px/1 Inter,Arial,sans-serif;cursor:pointer}
+body.group-portal-page .portal-calendar-day{border:0;border-radius:50%;background:transparent;color:#28251f;font:400 11px/1 var(--hlh-font-body);cursor:pointer}
 body.group-portal-page .portal-calendar-day:hover:not(:disabled){background:#f0e9dc;color:#4e3e29}
 body.group-portal-page .portal-calendar-day:disabled{color:#c8c3bb;cursor:not-allowed}
 body.group-portal-page .portal-calendar-day.is-in-range{border-radius:0;background:#f4efe6}
 body.group-portal-page .portal-calendar-day.is-selected{border-radius:50%;background:#004544;color:#f4ecd0}
 body.group-portal-page .portal-calendar-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:13px;padding-top:12px;border-top:1px solid #eee9e1;color:#706a60;font-size:11px}
-body.group-portal-page .portal-booking-apply{min-height:36px;padding:9px 15px;border:1px solid #004544;background:#004544;color:#f4ecd0;font:600 9px Inter,Arial,sans-serif;letter-spacing:.12em;cursor:pointer}
+body.group-portal-page .portal-booking-apply{min-height:36px;padding:9px 15px;border:1px solid #004544;background:#004544;color:#f4ecd0;font:600 9px var(--hlh-font-body);letter-spacing:.12em;cursor:pointer}
 body.group-portal-page .portal-booking-apply:hover{border-color:#ab803c;background:#ab803c}
 body.group-portal-page .portal-counter-panel{width:min(360px,calc(100vw - 48px))}
-body.group-portal-page .portal-counter-heading{margin:0 0 9px;color:#26231e;font:500 16px/1.3 "Playfair Display",Georgia,serif}
+body.group-portal-page .portal-counter-heading{margin:0 0 9px;color:#26231e;font:500 16px/1.3 var(--hlh-font-heading)}
 body.group-portal-page .portal-counter-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid #eee9e1}
 body.group-portal-page .portal-counter-row>span:first-child{display:flex;flex-direction:column;gap:3px}
-body.group-portal-page .portal-counter-row strong{color:#2c2923;font:500 12px Inter,Arial,sans-serif}
-body.group-portal-page .portal-counter-row small{color:#888175;font:400 10px Inter,Arial,sans-serif}
+body.group-portal-page .portal-counter-row strong{color:#2c2923;font:500 12px var(--hlh-font-body)}
+body.group-portal-page .portal-counter-row small{color:#888175;font:400 10px var(--hlh-font-body)}
 body.group-portal-page .portal-counter-controls{display:flex;align-items:center;gap:10px}
-body.group-portal-page .portal-counter-controls button{width:34px;height:34px;border:1px solid #d8d1c5;border-radius:50%;background:#fff;color:#314d43;font:400 20px/1 Inter,Arial,sans-serif;cursor:pointer}
+body.group-portal-page .portal-counter-controls button{width:34px;height:34px;border:1px solid #d8d1c5;border-radius:50%;background:#fff;color:#314d43;font:400 20px/1 var(--hlh-font-body);cursor:pointer}
 body.group-portal-page .portal-counter-controls button:hover:not(:disabled){border-color:#a9885c;background:#f7f2e9}
 body.group-portal-page .portal-counter-controls button:disabled{opacity:.38;cursor:not-allowed}
 body.group-portal-page .portal-counter-controls output{min-width:18px;color:#28251f;font-size:13px;text-align:center}
@@ -403,8 +403,8 @@ body.group-portal-page .portal-modal-demo-note{margin:13px 0 0;color:#787168;fon
 body.group-portal-page .portal-slide-arrows{display:flex;align-items:center;gap:6px}
 body.group-portal-page .portal-slide-arrows button,body.group-portal-page .portal-slide-toggle{display:grid;width:30px;height:30px;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(12,13,12,.15);color:#fff;font:400 19px/1 Georgia,serif;cursor:pointer}
 body.group-portal-page .portal-slide-arrows button:hover,body.group-portal-page .portal-slide-toggle:hover{background:#f4ecd0;color:#17201c}
-body.group-portal-page .portal-slide-toggle{font:600 11px/1 Inter,Arial,sans-serif}
-body.group-portal-page .portal-hero-property{margin:0 0 15px;color:#f3dfbf;font:600 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.16em}
+body.group-portal-page .portal-slide-toggle{font:600 11px/1 var(--hlh-font-body)}
+body.group-portal-page .portal-hero-property{margin:0 0 15px;color:#f3dfbf;font:600 10px/1.4 var(--hlh-font-body);letter-spacing:.16em}
 body.group-portal-page .portal-hero-slide{will-change:opacity}
 body.group-portal-page #dialog:has(.portal-booking-modal){width:min(980px,calc(100% - 32px));max-width:980px}
 body.group-portal-page .portal-booking-modal .portal-booking-form{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -446,3 +446,24 @@ body.group-portal-page .portal-booking-modal .portal-booking-capacity,body.group
 }
 @media(max-width:620px){body.group-portal-page .portal-booking-panel{top:78px;max-height:calc(100vh - 96px)}}
 @supports(height:100dvh){@media(max-width:620px){body.group-portal-page .portal-booking-panel{max-height:calc(100dvh - 96px)}}}
+
+/* Supplied photographs, framed inside the existing hero dimensions. */
+body.group-portal-page .portal-hero-slide--astral img{object-position:center 18%}
+body.group-portal-page .portal-hero-slide--atta img{object-position:58% 60%}
+@media(max-width:740px){body.group-portal-page .portal-hero-slide--astral img{object-position:53% center}body.group-portal-page .portal-hero-slide--atta img{object-position:64% 60%}}
+body.group-portal-page .portal-hero-slide--wia img{object-fit:cover;object-position:center 48%}
+
+/* Center only the collection introduction above its three property cards. */
+body.group-portal-page #adresses .portal-section-heading{flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center}
+body.group-portal-page #adresses .portal-section-heading>div{width:100%}
+body.group-portal-page #adresses .portal-section-heading>p{max-width:none;margin:0}
+
+/* Hébergements HLH : sections par établissement, aperçu local. */
+body.group-portal-page .portal-stay-nav{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;padding-block:0 48px}body.group-portal-page .portal-stay-nav a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #bba188;padding:12px 0}body.group-portal-page .portal-stay-section{scroll-margin-top:110px;padding-block:40px 64px;max-width:1360px}body.group-portal-page .portal-stay-heading{max-width:750px;margin-bottom:32px}body.group-portal-page .portal-stay-heading h2{font:500 clamp(30px,3vw,44px)/1.15 var(--hlh-font-heading);margin:14px 0 18px}body.group-portal-page .portal-stay-heading>p:last-child{color:#74716b;line-height:1.7;max-width:660px}body.group-portal-page .portal-stay-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}body.group-portal-page .portal-stay-card{min-width:0;background:#fff;display:flex;flex-direction:column}body.group-portal-page .portal-stay-photo{margin:0;aspect-ratio:3/2;overflow:hidden;position:relative}body.group-portal-page .portal-stay-photo img{width:100%;height:100%;object-fit:cover}body.group-portal-page .portal-stay-photo figcaption{display:none}body.group-portal-page .portal-stay-copy{padding:28px;display:flex;flex-direction:column;flex:1}body.group-portal-page .portal-stay-copy h3{font:500 clamp(24px,2.2vw,32px)/1.2 var(--hlh-font-heading);margin:0 0 16px}body.group-portal-page .portal-stay-area{margin:0 0 8px;color:#88735f}body.group-portal-page .portal-stay-capacity{font-size:13px;color:#74716b;line-height:1.6;margin:0 0 20px}body.group-portal-page .portal-stay-rate{font-size:17px;margin:auto 0 24px}body.group-portal-page .portal-stay-rate span{font-size:11px;color:#74716b;display:block;margin-top:5px}body.group-portal-page .portal-stay-note{font-size:12px;color:#74716b;line-height:1.7;padding-bottom:48px}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media(max-width:740px){body.group-portal-page .portal-stay-grid{grid-template-columns:1fr;gap:28px}body.group-portal-page .portal-stay-nav{gap:12px 22px;padding-bottom:20px}body.group-portal-page .portal-stay-section{padding-block:28px 40px}body.group-portal-page .portal-stay-copy{padding:22px}body.group-portal-page .portal-stay-copy .portal-card-actions{gap:16px;flex-wrap:wrap}}
+
+/* Rythme éditorial de la page Hébergements uniquement. */
+body.group-portal-page:has(.portal-stay-nav) .portal-page-head{padding:52px 0 24px}body.group-portal-page:has(.portal-stay-nav) .portal-page-head h1{font-size:clamp(34px,4vw,52px);line-height:1.12;max-width:860px;margin:0 auto 20px}body.group-portal-page:has(.portal-stay-nav) .portal-page-intro{max-width:740px;line-height:1.65}body.group-portal-page .portal-stay-nav{padding-block:0 24px;gap:32px}body.group-portal-page .portal-stay-section{padding-block:24px 48px}body.group-portal-page .portal-stay-heading{text-align:center;margin:0 auto 30px;max-width:760px}body.group-portal-page .portal-stay-heading .eyebrow{margin:0 0 12px}body.group-portal-page .portal-stay-heading h2{margin:0 0 14px;font-size:clamp(30px,3vw,42px)}body.group-portal-page .portal-stay-heading>p:last-child{margin:0 auto;max-width:650px;line-height:1.65}body.group-portal-page .portal-stay-section+.portal-stay-section{padding-top:32px}@media(max-width:740px){body.group-portal-page:has(.portal-stay-nav) .portal-page-head{padding:34px 0 20px}body.group-portal-page .portal-stay-nav{gap:8px 18px;padding-bottom:16px}body.group-portal-page .portal-stay-nav a{font-size:10px;padding:10px 0}body.group-portal-page .portal-stay-section{padding-block:20px 32px}body.group-portal-page .portal-stay-heading{margin-bottom:24px}body.group-portal-page .portal-stay-heading>p:last-child{font-size:14px}body.group-portal-page .portal-stay-heading .eyebrow{font-size:9px;letter-spacing:.12em}}
+
+body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 22px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:22px 0 46px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container+.portal-stay-section.container{padding-top:28px}@media(max-width:740px){body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 16px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:18px 0 32px}}
+
+body.group-portal-page .portal-food-photo .portal-chef-photo{aspect-ratio:4/5;max-height:640px;margin:0}body.group-portal-page .portal-chef-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}@media(max-width:740px){body.group-portal-page .portal-food-photo .portal-chef-photo{max-height:520px}}

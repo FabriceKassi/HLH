@@ -2,9 +2,9 @@
   'use strict';
   const DAY = 86400000;
   const properties = [
-    { id: 'wia', name: 'Palais WIA', area: 'Cocody', note: ['Boutique-hôtel', 'Boutique hotel'] },
+    { id: 'astral', name: 'Hôtel Astral', area: 'Yopougon', note: ['Hôtel & séjours d’affaires', 'Hotel & business stays'] },
     { id: 'atta', name: 'Résidences ATTA', area: 'Plateau', note: ['Appartements & résidences', 'Apartments & residences'] },
-    { id: 'astral', name: 'Hôtel Astral', area: 'Yopougon', note: ['Hôtel & séjours d’affaires', 'Hotel & business stays'] }
+    { id: 'wia', name: 'Palais WIA', area: 'Cocody', note: ['Boutique-hôtel', 'Boutique hotel'] }
   ];
   const paths = {
     hotel: '<path d="M4 21V4h12v17M16 9h4v12M2 21h20M8 8h4M8 12h4M8 21v-5h4v5"/>',

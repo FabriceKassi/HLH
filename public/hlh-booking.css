@@ -3,7 +3,7 @@
 .hlh-booking-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:22px}
 body.group-portal-page .hlh-booking-heading h2{font-size:32px;line-height:1.2;margin:0}
 body.group-portal-page .hlh-booking-heading p{font-size:14px;color:#6b635b;margin:0}
-.hlh-booking{margin:0;max-width:100%;font-family:Inter,Arial,sans-serif}
+.hlh-booking{margin:0;max-width:100%;font-family:var(--hlh-font-body)}
 .hlh-booking-bar{display:grid;grid-template-columns:minmax(205px,1.5fr) minmax(140px,1fr) minmax(140px,1fr) minmax(128px,.85fr) minmax(145px,1fr) minmax(138px,.78fr);gap:12px;align-items:stretch;padding:8px;background:#fff;border:1px solid #e5dfd7;border-radius:16px;box-shadow:0 12px 36px -20px #3f30293d;position:relative}
 .hlh-booking-field{position:relative;min-width:0}
 .hlh-booking-field::after{content:"";position:absolute;right:0;top:21px;bottom:21px;width:1px;background:#e9e4de;pointer-events:none}
@@ -54,11 +54,11 @@ body.group-portal-page .hlh-booking-feedback{font-size:13px;line-height:1.5;colo
 .hlh-calendar-nav button:hover:not(:disabled){border-color:#bba188;background:#f7f5f0}
 .hlh-calendar-months{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .hlh-calendar-month{min-width:0}
-.hlh-calendar-month h4{font:500 14px/1.5 Inter,Arial,sans-serif;text-align:center;text-transform:capitalize;margin:0 0 18px}
+.hlh-calendar-month h4{font:500 14px/1.5 var(--hlh-font-body);text-align:center;text-transform:capitalize;margin:0 0 18px}
 .hlh-calendar-weekdays,.hlh-calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center}
 .hlh-calendar-weekdays{font-size:11px;color:#776b5e;margin-bottom:9px;line-height:24px}
 .hlh-calendar-days{row-gap:3px}
-.hlh-calendar-day{font:400 13px/1 Inter,Arial,sans-serif;aspect-ratio:1;border:1px solid transparent;border-radius:50%;background:#fff;color:#101010;padding:0;min-width:0}
+.hlh-calendar-day{font:400 13px/1 var(--hlh-font-body);aspect-ratio:1;border:1px solid transparent;border-radius:50%;background:#fff;color:#101010;padding:0;min-width:0}
 .hlh-calendar-day[aria-current=date]{border-color:#bba188}
 .hlh-calendar-day.in-range{background:#f0e9df;border-radius:0}
 .hlh-calendar-day:hover:not(:disabled){background:#e7d9c7}
