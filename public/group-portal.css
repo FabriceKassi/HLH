@@ -467,12 +467,3 @@ body.group-portal-page:has(.portal-stay-nav) .portal-page-head{padding:52px 0 24
 body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 22px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:22px 0 46px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container+.portal-stay-section.container{padding-top:28px}@media(max-width:740px){body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 16px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:18px 0 32px}}
 
 body.group-portal-page .portal-food-photo .portal-chef-photo{aspect-ratio:4/5;max-height:640px;margin:0}body.group-portal-page .portal-chef-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}@media(max-width:740px){body.group-portal-page .portal-food-photo .portal-chef-photo{max-height:520px}}
-
-/* Pages Restaurants et Sport : composition éditoriale harmonisée. */
-body.group-portal-page .portal-food-intro{grid-template-columns:.95fr 1.05fr}
-body.group-portal-page .portal-food-intro>.portal-food-copy{order:1}
-body.group-portal-page .portal-food-intro>.portal-food-photo{order:2}
-body.group-portal-page .portal-wellness-list .portal-wellness-row{grid-template-columns:.94fr 1.06fr}
-body.group-portal-page .portal-wellness-list .portal-wellness-row>.portal-property-copy{order:1}
-body.group-portal-page .portal-wellness-list .portal-wellness-row>.portal-media{order:2}
-@media(max-width:740px){body.group-portal-page .portal-food-intro,body.group-portal-page .portal-wellness-list .portal-wellness-row{grid-template-columns:1fr}}
