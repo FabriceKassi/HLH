@@ -45,12 +45,12 @@ const portalCopy = {
     description: "Réunions, séminaires et événements au Palais WIA et à l’Hôtel Astral, avec l’espace de coworking des Résidences ATTA au Plateau."
   },
   "/salles-de-sport": {
-    title: "Sport & bien-être à Abidjan — HLH",
-    description: "Découvrez les espaces fitness, piscines et lieux de détente du Palais WIA, des Résidences ATTA et de l’Hôtel Astral."
+    title: "Fitness et salles de sport dans nos hôtels à Abidjan | HLH",
+    description: "Découvrez les espaces fitness de l'Hôtel Astral à Yopougon, des Résidences ATTA au Plateau et du Palais WIA à Cocody, pour garder la forme pendant votre séjour."
   },
   "/contacts": {
-    title: "Contacts des hôtels HLH à Abidjan",
-    description: "Coordonnées, téléphones, emails, itinéraires Google Maps et formulaire de contact pour Palais WIA, Résidences ATTA et Hôtel Astral."
+    title: "Contactez nos établissements à Abidjan | HLH",
+    description: "Contactez l'Hôtel Astral à Yopougon, les Résidences ATTA au Plateau et le Palais WIA à Cocody. Retrouvez les coordonnées et itinéraires de nos trois adresses."
   }
 };
 window.HLH_GROUP_SEO = portalCopy;
@@ -97,6 +97,13 @@ function portalSetMeta(path) {
   setProperty('meta[property="og:title"]', "content", entry.title);
   setProperty('meta[property="og:description"]', "content", entry.description);
   setProperty('meta[property="og:site_name"]', "content", "HLH · Hotel & Luxury Housing");
+  document.querySelectorAll('meta[data-fitness-meta]').forEach(function (tag) { tag.remove(); });
+  if (path === '/salles-de-sport') {
+    [['og:image', window.HLH_SITE_LINKS.portal + 'assets/hlh-fitness-fourni-20261112/astral.png'], ['og:image:alt', 'Entraînement sur tapis de course — Hôtel Astral'], ['og:type', 'website']].forEach(function (item) {
+      const tag = document.createElement('meta');
+      tag.setAttribute('property', item[0]); tag.content = item[1]; tag.dataset.fitnessMeta = 'true'; document.head.append(tag);
+    });
+  }
 }
 function portalNav(path) {
   const aliases = { "/contact": "/contacts", "/hebergements": "/chambres-suites", "/experiences": "/restaurants", "/entreprises": "/salles-reunion" };
@@ -310,36 +317,28 @@ function renderRestaurantsPage() {
       '<p>' + portalText("Avec l’arrivée du Chef Maël Monchauzou, le Palais WIA accueille une nouvelle signature culinaire. Inspirée de ses racines méditerranéennes et de son parcours international, sa cuisine met à l’honneur la qualité des produits, la créativité et les saveurs locales.", "With the arrival of Chef Maël Monchauzou, Palais WIA welcomes a new culinary signature. Inspired by his Mediterranean roots and international experience, his cuisine celebrates quality ingredients, creativity and local flavours.") + '</p>' +
       '<div class="portal-card-actions">' + portalExternalLink("wia", tx("VISITER LE SITE DU PALAIS WIA", "VISIT PALAIS WIA"), "portal-button portal-button--outline-dark") +
       '<button type="button" class="portal-button portal-button--gold" data-inquiry="Renseignements — La Quintessence" data-kind="contact" data-hotelid="wia">' + portalText("DEMANDER UN RENSEIGNEMENT", "REQUEST INFORMATION") + '</button></div></div></section>' +
-    '<section class="portal-section portal-section--soft"><div class="container"><div class="portal-section-heading"><div><p class="eyebrow">' + portalText("LES EXPÉRIENCES DU PALAIS WIA", "PALAIS WIA EXPERIENCES") + '</p><h2>' + portalText("À chaque moment,<br><em>une expérience.</em>", "For every moment,<br><em>an experience.</em>") + '</h2></div><p>' + portalText("Horaires et modalités à confirmer auprès du Palais WIA.", "Confirm schedules and arrangements with Palais WIA.") + '</p></div>' +
-      '<div class="portal-experience-grid">' +
-        '<article><span>01</span><h3>Business Lunch</h3><p>' + portalText("Un rendez-vous autour de la table à La Quintessence.", "A dining occasion at La Quintessence.") + '</p><button type="button" class="portal-link-button" data-inquiry="Business Lunch" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + ' →</button></article>' +
-        '<article><span>02</span><h3>' + portalText("Animations", "Experiences") + '</h3><p>' + portalText("Tea Time et Afterwork s’inscrivent dans les animations du Palais WIA.", "Tea Time and Afterwork are part of Palais WIA’s programme.") + '</p><button type="button" class="portal-link-button" data-inquiry="Animations gastronomiques" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + ' →</button></article>' +
-        '<article><span>03</span><h3>Tea Time</h3><p>' + portalText("Une parenthèse proposée au Palais WIA. Les horaires sont à confirmer.", "An experience at Palais WIA. Please confirm the schedule.") + '</p><button type="button" class="portal-link-button" data-inquiry="Tea Time" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + ' →</button></article>' +
-        '<article><span>04</span><h3>Afterwork</h3><p>' + portalText("Un moment de détente au bar L’Alchimie. Informations à confirmer auprès de l’établissement.", "An evening moment at L’Alchimie bar. Contact the property for details.") + '</p><button type="button" class="portal-link-button" data-inquiry="Afterwork" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + ' →</button></article>' +
-        '<article><span>05</span><h3>Brunch</h3><p>' + portalText("Une expérience gourmande au Palais WIA. Les formules et horaires sont à confirmer.", "A food experience at Palais WIA. Confirm offers and schedules with the property.") + '</p><button type="button" class="portal-link-button" data-inquiry="Brunch" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + ' →</button></article>' +
-      '</div></div></section>' +
-    '<section class="portal-section"><div class="container portal-astral-dining"><div><p class="eyebrow">' + portalText("HÔTEL ASTRAL · YOPOUGON", "HÔTEL ASTRAL · YOPOUGON") + '</p><h2>' + portalText("Le restaurant<br><em>de l’Hôtel Astral.</em>", "Dining at<br><em>Hôtel Astral.</em>") + '</h2>' +
+    '<section class="portal-section"><div class="container portal-astral-dining" id="restaurant-astral">' + portalFigure("/assets/hlh-astral-restaurant-20261112.webp", tx("Restaurant de l’Hôtel Astral", "Hôtel Astral restaurant"), "", "portal-astral-restaurant-photo") + '<div class="portal-astral-dining-copy"><p class="eyebrow">' + portalText("HÔTEL ASTRAL · YOPOUGON", "HÔTEL ASTRAL · YOPOUGON") + '</p><h2>' + portalText("Le restaurant<br><em>de l’Hôtel Astral.</em>", "Dining at<br><em>Hôtel Astral.</em>") + '</h2>' +
       '<p>' + portalText("L’Hôtel Astral propose un restaurant, un menu du jour et des buffets les mercredis et vendredis. La composition et les modalités sont à confirmer auprès de l’établissement.", "Hôtel Astral offers a restaurant, a daily menu and buffet service on Wednesdays and Fridays. Confirm the menu and arrangements with the property.") + '</p>' +
       '<div class="portal-card-actions">' + portalExternalLink("astral", tx("VISITER LE SITE DE L’HÔTEL ASTRAL", "VISIT HÔTEL ASTRAL"), "portal-button portal-button--outline-dark") +
       '<button type="button" class="portal-button portal-button--gold" data-inquiry="Renseignements — Restaurant Astral" data-kind="contact" data-hotelid="astral">' + portalText("DEMANDER UN RENSEIGNEMENT", "REQUEST INFORMATION") + '</button></div></div>' +
-      '<div class="portal-astral-note"><span>01 / 02</span><p>' + portalText("Menu du jour", "Daily menu") + '</p><span>02 / 02</span><p>' + portalText("Buffets · mercredi & vendredi", "Buffets · Wednesday & Friday") + '</p></div></div></section>';
+      '</div></section>';
   portalPage("/restaurants", tx("RESTAURATION", "DINING"), tx("Restaurants & gastronomie", "Restaurants & dining"), tx("La Quintessence et L’Alchimie au Palais WIA, ainsi que le restaurant de l’Hôtel Astral : découvrez les expériences de restauration du groupe HLH.", "La Quintessence and L’Alchimie at Palais WIA, alongside Hôtel Astral’s restaurant: explore the dining experiences across HLH."), content);
 }
 function renderMeetingsPage() {
   const content =
     '<section class="container portal-venue-list">' +
       '<article class="portal-property-row is-reversed" id="reunions-astral">' +
-        portalFigure("/assets/atta-meeting-room-bright.png", tx("Salle de réunion — visuel d’illustration", "Meeting room — illustrative image"), tx("Visuel d’illustration · ne représente pas un espace Astral", "Illustrative image · not an Astral venue"), "portal-property-photo") +
+        portalFigure("/assets/hlh-reunions-20261112/astral.png", tx("Salle de réunion de l’Hôtel Astral, table et sièges", "Hôtel Astral meeting room, table and seating"), tx("Hôtel Astral · Salle de réunion", "Hôtel Astral · Meeting room"), "portal-property-photo") +
         '<div class="portal-property-copy"><p class="eyebrow">' + portalText("HÔTEL ASTRAL · YOPOUGON", "HÔTEL ASTRAL · YOPOUGON") + '</p><h2>' + portalText("Réunions professionnelles", "Business meetings") + '</h2><p>' +
         portalText("L’Hôtel Astral dispose d’une salle de réunion connectée pour les rendez-vous professionnels et les séminaires. Les équipements et la capacité sont à confirmer auprès de l’hôtel.", "Hôtel Astral has a connected meeting room for business appointments and seminars. Confirm equipment and capacity with the hotel.") + '</p>' +
         '<button type="button" class="portal-button portal-button--gold" data-inquiry="Demande de devis — Hôtel Astral" data-kind="business" data-hotelid="astral">' + portalText("DEMANDER UN DEVIS", "REQUEST A QUOTE") + '</button></div></article>' +
       '<article class="portal-property-row" id="coworking-atta">' +
-        portalFigure("/assets/photo1.jpg", tx("Espace intérieur — visuel d’illustration", "Interior space — illustrative image"), tx("Visuel d’illustration · espace de coworking ATTA", "Illustrative image · ATTA coworking"), "portal-property-photo") +
+        portalFigure("/assets/hlh-reunions-20261112/atta.png", tx("Salle des Résidences ATTA, table de réunion et sièges", "Résidences ATTA room, meeting table and seating"), tx("Résidences ATTA · Espace professionnel", "Résidences ATTA · Professional space"), "portal-property-photo") +
         '<div class="portal-property-copy"><p class="eyebrow">' + portalText("RÉSIDENCES ATTA · PLATEAU", "RÉSIDENCES ATTA · PLATEAU") + '</p><h2>' + portalText("Coworking au Plateau", "Coworking in Plateau") + '</h2><p>' +
         portalText("L’espace de coworking des Résidences ATTA constitue une solution complémentaire pour travailler au cœur du Plateau. Il n’est pas présenté comme une salle de conférence.", "The coworking space at Résidences ATTA is an additional option for working in the heart of Plateau. It is not presented as a conference room.") + '</p>' +
         '<button type="button" class="portal-button portal-button--outline-dark" data-inquiry="Visite coworking — Résidences ATTA" data-kind="coworking" data-hotelid="atta">' + portalText("DEMANDER UNE VISITE", "REQUEST A VISIT") + '</button></div></article>' +
-      '<article class="portal-property-row" id="evenements-wia">' +
-        portalFigure("/assets/palais-wia-banner-poster.jpg", tx("Cour intérieure — visuel d’illustration du cadre du Palais WIA", "Courtyard — illustrative image of the Palais WIA setting"), tx("Visuel d’illustration · capacité à confirmer", "Illustrative image · capacity to be confirmed"), "portal-property-photo") +
+      '<article class="portal-property-row is-reversed" id="evenements-wia">' +
+        portalFigure("/assets/hlh-reunions-20261112/wia.png", tx("Salle de réunion du Palais WIA, grande table dressée", "Palais WIA meeting room, prepared conference table"), tx("Palais WIA · Salle de réunion", "Palais WIA · Meeting room"), "portal-property-photo") +
         '<div class="portal-property-copy"><p class="eyebrow">' + portalText("PALAIS WIA · COCODY", "PALAIS WIA · COCODY") + '</p><h2>' + portalText("Réunions & événements", "Meetings & events") + '</h2><p>' +
         portalText("Le Palais WIA propose des espaces pour les réunions professionnelles, les événements privés et les célébrations. Les formats, la capacité et les prestations sont à confirmer auprès de l’établissement.", "Palais WIA offers spaces for professional meetings, private events and celebrations. Formats, capacity and services should be confirmed with the property.") + '</p>' +
         '<button type="button" class="portal-button portal-button--gold" data-inquiry="Demande de devis — Palais WIA" data-kind="business" data-hotelid="wia">' + portalText("DEMANDER UN DEVIS", "REQUEST A QUOTE") + '</button></div></article>' +
@@ -347,26 +346,16 @@ function renderMeetingsPage() {
   portalPage("/salles-reunion", tx("ENTREPRISES & CÉLÉBRATIONS", "BUSINESS & CELEBRATIONS"), tx("Réunions & événements", "Meetings & events"), tx("Des espaces professionnels au Palais WIA et à l’Hôtel Astral, et le coworking des Résidences ATTA au Plateau.", "Professional spaces at Palais WIA and Hôtel Astral, plus coworking at Résidences ATTA in Plateau."), content);
 }
 function renderWellnessPage() {
-  const content =
-    '<section class="container portal-wellness-list">' +
-      '<article class="portal-wellness-row is-reversed" id="fitness-astral">' +
-        portalFigure("/assets/atta-gym-bright.png", tx("Équipement de sport — visuel d’illustration", "Fitness equipment — illustrative image"), tx("Visuel d’illustration · équipement non spécifique à l’Hôtel Astral", "Illustrative image · not specific to Hôtel Astral"), "portal-property-photo") +
-        '<div class="portal-property-copy"><p class="eyebrow">HÔTEL ASTRAL · YOPOUGON</p><h2>' + portalText("Salle de sport", "Gym") + '</h2><p>' +
-        portalText("Une salle de sport figure parmi les services de l’Hôtel Astral. Les équipements disponibles sont à confirmer auprès de l’hôtel.", "A gym is among the services at Hôtel Astral. Confirm available equipment with the hotel.") + '</p>' +
-        '<button type="button" class="portal-button portal-button--outline-dark" data-inquiry="Renseignements — Salle de sport Astral" data-kind="contact" data-hotelid="astral">' + portalText("SE RENSEIGNER", "ENQUIRE") + '</button></div></article>' +
-      '<article class="portal-wellness-row" id="fitness-atta">' +
-        portalFigure("/assets/atta-gym-bright.png", tx("Équipement de sport — visuel d’illustration", "Fitness equipment — illustrative image"), tx("Visuel d’illustration · salle de sport Résidences ATTA", "Illustrative image · Résidences ATTA gym"), "portal-property-photo") +
-        '<div class="portal-property-copy"><p class="eyebrow">RÉSIDENCES ATTA · PLATEAU</p><h2>' + portalText("Salle de sport", "Gym") + '</h2><p>' +
-        portalText("Les Résidences ATTA disposent d’une salle de sport et d’une piscine. Les horaires et conditions d’accès sont à confirmer auprès de la résidence.", "Résidences ATTA has a gym and a pool. Confirm opening hours and access conditions with the residence.") + '</p>' +
-        '<button type="button" class="portal-button portal-button--outline-dark" data-inquiry="Renseignements — Résidences ATTA" data-kind="contact" data-hotelid="atta">' + portalText("SE RENSEIGNER", "ENQUIRE") + '</button></div></article>' +
-      '<article class="portal-wellness-row" id="fitness-wia">' +
-        portalFigure("/assets/atta-gym-bright.png", tx("Appareil de fitness — visuel d’illustration", "Fitness equipment — illustrative image"), tx("Visuel d’illustration · équipement non spécifique au Palais WIA", "Illustrative image · not specific to Palais WIA"), "portal-property-photo") +
-        '<div class="portal-property-copy"><p class="eyebrow">PALAIS WIA · COCODY</p><h2>Fitness & bien-être</h2><p>' +
-        portalText("Le Palais WIA propose un espace fitness, une piscine et un jardin de 1 500 m². Les conditions d’accès et horaires sont à confirmer auprès de l’établissement.", "Palais WIA offers a fitness area, a swimming pool and a 1,500 m² garden. Confirm access and opening hours with the property.") + '</p>' +
-        '<button type="button" class="portal-button portal-button--outline-dark" data-inquiry="Renseignements — Fitness Palais WIA" data-kind="contact" data-hotelid="wia">' + portalText("SE RENSEIGNER", "ENQUIRE") + '</button></div></article>' +
-    '</section>' +
-    '<section class="portal-section portal-section--soft"><div class="container portal-contact-cta"><div><p class="eyebrow">' + portalText("DÉTENTE & BIEN-ÊTRE", "RELAXATION & WELL-BEING") + '</p><h2>' + portalText("Piscine, jardin<br><em>et temps pour soi.</em>", "Pool, garden<br><em>and time for yourself.</em>") + '</h2><p>' + portalText("La piscine et le jardin du Palais WIA, ainsi que la piscine des Résidences ATTA, complètent les espaces de sport.", "The pool and garden at Palais WIA, along with the pool at Résidences ATTA, complement the fitness facilities.") + '</p></div><a class="portal-link" href="/contacts">' + portalText("CONTACTER UNE ADRESSE", "CONTACT A PROPERTY") + ' <span aria-hidden="true">→</span></a></div></section>';
-  portalPage("/salles-de-sport", tx("ACTIVITÉ & DÉTENTE", "FITNESS & RELAXATION"), tx("Sport & bien-être", "Fitness & well-being"), tx("Espaces fitness, piscine et jardin : découvrez les installations du groupe HLH à Abidjan.", "Fitness spaces, pools and a garden: explore HLH facilities in Abidjan."), content);
+  const properties = [
+    {id:'astral',anchor:'astral',name:'HÔTEL ASTRAL · YOPOUGON',title:["L'énergie au cœur de vos déplacements.",'Energy at the heart of your travels.'],copy:["Entre deux rendez-vous, conservez vos habitudes d'entraînement grâce à la salle de sport de l'Hôtel Astral. Une attention supplémentaire pour accompagner vos séjours professionnels à Yopougon.",'Between appointments, maintain your training routine in Hôtel Astral’s fitness room. A thoughtful addition to your business stays in Yopougon.'],cta:["DÉCOUVRIR L'HÔTEL ASTRAL",'DISCOVER HÔTEL ASTRAL']},
+    {id:'atta',anchor:'atta',name:'RÉSIDENCES ATTA · PLATEAU',title:['Votre routine, à votre rythme.','Your routine, at your own pace.'],copy:["Aux Résidences ATTA, poursuivez vos habitudes fitness tout au long de votre séjour. Un espace dédié à l'entraînement complète le confort et l'autonomie de votre appartement au cœur du Plateau.",'At Résidences ATTA, keep up your fitness routine throughout your stay. A dedicated training space complements the comfort and independence of your apartment in the heart of Plateau.'],cta:['DÉCOUVRIR LES RÉSIDENCES ATTA','DISCOVER RÉSIDENCES ATTA']},
+    {id:'wia',anchor:'palais-wia',name:'PALAIS WIA · COCODY',title:['Une parenthèse active dans un cadre singulier.','An active interlude in a distinctive setting.'],copy:["Au Palais WIA, accordez une place à votre forme au fil de votre séjour. L'espace fitness complète l'expérience de cette adresse confidentielle, située au cœur du quartier des Ambassades à Cocody.",'At Palais WIA, make time for your fitness throughout your stay. The fitness space complements the experience of this discreet address in Cocody’s Embassies district.'],cta:['DÉCOUVRIR LE PALAIS WIA','DISCOVER PALAIS WIA']}
+  ];
+  const rows = properties.map(function (p, index) {
+    const visual = portalFigure("/assets/hlh-fitness-fourni-20261112/" + p.id + ".png", tx(p.id === "astral" ? "Entraînement sur tapis de course — Hôtel Astral" : p.id === "atta" ? "Exercice avec kettlebell — Résidences ATTA" : "Espace fitness — Palais WIA, haltères et ballon", p.id === "astral" ? "Treadmill workout — Hôtel Astral" : p.id === "atta" ? "Kettlebell exercise — Résidences ATTA" : "Fitness space — Palais WIA, dumbbells and exercise ball"), p.name, "portal-property-photo");
+    return '<article class="portal-property-row' + (index !== 1 ? ' is-reversed' : '') + '" id="' + p.anchor + '"><span class="portal-fitness-legacy" id="fitness-' + p.id + '"></span>' + visual + '<div class="portal-property-copy"><p class="eyebrow">' + esc(p.name) + '</p><h2>' + portalText(p.title[0],p.title[1]) + '</h2><p>' + portalText(p.copy[0],p.copy[1]) + '</p><div class="portal-card-actions">' + portalExternalLink(p.id,tx(p.cta[0],p.cta[1]),'portal-button portal-button--gold') + '<button type="button" class="portal-link-button" data-inquiry="Renseignements fitness" data-kind="contact" data-hotelid="' + p.id + '">' + portalText('SE RENSEIGNER','ENQUIRE') + ' →</button></div></div></article>';
+  }).join('');
+  portalPage('/salles-de-sport',tx('FITNESS À ABIDJAN','FITNESS IN ABIDJAN'),tx('Gardez le rythme, même en déplacement.','Keep your rhythm, even when travelling.'),tx("À Yopougon, au Plateau et à Cocody, trois adresses HLH vous permettent de conserver vos habitudes d'entraînement pendant votre séjour à Abidjan.",'In Yopougon, Plateau and Cocody, three HLH addresses help you maintain your training routine during your stay in Abidjan.'),'<section class="container portal-venue-list portal-fitness-reference">' + rows + '</section>');
 }
 function phoneLinks(phone) {
   return String(phone || "").split(/[\/,]/).map(function (part) {
@@ -383,10 +372,10 @@ function renderContactsPage() {
       (hotel.email ? '<a href="mailto:' + esc(hotel.email) + '">' + esc(hotel.email) + '</a>' : "") +
       '<a href="' + esc(map) + '" target="_blank" rel="noopener noreferrer">' + portalText("ITINÉRAIRE GOOGLE MAPS", "GOOGLE MAPS DIRECTIONS") + ' ↗</a>' +
       '</div><div class="portal-card-actions">' + portalExternalLink(hotel.id, tx("VISITER LE SITE", "VISIT THE WEBSITE"), "portal-link") +
-      '<button type="button" class="portal-link-button" data-inquiry="' + esc(tx("Contact — ", "Contact — ") + hotel.name) + '" data-kind="contact" data-hotelid="' + esc(hotel.id) + '">' + portalText("ÉCRIRE À L’ÉQUIPE", "MESSAGE THE TEAM") + ' →</button></div></article>';
+      '<button type="button" class="portal-link-button" data-contact-hotel="' + esc(hotel.id) + '">' + portalText("ÉCRIRE À L’ÉQUIPE", "MESSAGE THE TEAM") + ' →</button></div></article>';
   }).join("");
   const hotelOptions = portalHotels().map(function (hotel) { return '<option value="' + esc(hotel.id) + '">' + esc(hotel.name) + '</option>'; }).join("");
-  const form = '<form id="group-contact-form" class="portal-contact-form modalform">' +
+  const form = '<form id="group-contact-form" class="portal-contact-form modalform" data-local-demo novalidate aria-label="' + esc(tx('Formulaire de contact de démonstration','Demonstration contact form')) + '">' +
     contactFields() +
     '<label class="full">' + portalText("Établissement concerné", "Property") + '<select name="hotel" required>' +
       '<option value="">' + portalText("Choisir une adresse", "Choose a property") + '</option><option value="all">Groupe HLH</option>' + hotelOptions +
@@ -401,11 +390,11 @@ function renderContactsPage() {
     '<label class="portal-contact-arrival" hidden>' + portalText("Date d’arrivée souhaitée", "Preferred arrival") + '<input type="date" name="arrival" value="' + esc(bookingState.arrival || "") + '" min="' + esc(iso(currentDate)) + '"></label>' +
     '<label class="portal-contact-departure" hidden>' + portalText("Date de départ souhaitée", "Preferred departure") + '<input type="date" name="departure" value="' + esc(bookingState.departure || "") + '" min="' + esc(iso(currentDate)) + '"></label>' +
     '<p class="formerror full" role="alert"></p>' +
-    '<button type="submit" class="portal-button portal-button--gold full">' + portalText("ENREGISTRER MA DEMANDE", "SUBMIT MY ENQUIRY") + '</button>' +
-      '<p class="portal-form-note full">' + portalText("Votre demande sera enregistrée sur le portail pour examen par l’équipe. Aucune notification automatique n’est envoyée dans cette version ; la demande ne constitue pas une réservation confirmée.", "Your enquiry will be recorded on the portal for the team to review. No automatic notification is sent in this version; this is not a confirmed reservation.") + '</p></form>';
+    '<button type="submit" class="portal-button portal-button--gold full">' + portalText("VÉRIFIER MA DEMANDE — DÉMO", "CHECK MY ENQUIRY — DEMO") + '</button>' +
+      '<p class="portal-form-note full">' + portalText("Démonstration : vérification locale uniquement. Aucune donnée enregistrée, aucun message envoyé. Pour nous joindre, utilisez les coordonnées ci-dessus.", "Demonstration: local checks only. No data stored and no message sent. To contact us, use the details above.") + '</p></form>';
   const content = '<section class="container"><div class="portal-contact-grid">' + cards + '</div></section>' +
-    '<section class="portal-section portal-section--soft"><div class="container portal-contact-form-layout"><div><p class="eyebrow">' + portalText("NOUS ÉCRIRE", "WRITE TO US") + '</p><h2>' + portalText("Votre demande,<br><em>à la bonne équipe.</em>", "Your enquiry,<br><em>to the right team.</em>") + '</h2><p>' + portalText("Choisissez l’établissement destinataire et précisez votre besoin. Les coordonnées bancaires ne sont jamais demandées sur ce portail.", "Choose the property and tell us what you need. This portal never asks for bank details.") + '</p></div>' + form + '</div></section>';
-  portalPage("/contacts", tx("CONTACTS", "CONTACT"), tx("Nos équipes à votre écoute", "Our teams are here to help"), tx("Retrouvez les coordonnées vérifiées des trois établissements HLH à Abidjan, consultez leur itinéraire et adressez votre demande à l’équipe concernée.", "Find verified contact details for the three HLH properties in Abidjan, get directions and send your enquiry to the right team."), content);
+    '<section class="portal-section portal-section--soft"><div class="container portal-contact-form-layout"><div><p class="eyebrow">' + portalText("NOUS ÉCRIRE", "WRITE TO US") + '</p><h2>' + portalText("Votre demande,<br><em>à la bonne équipe.</em>", "Your enquiry,<br><em>to the right team.</em>") + '</h2><p>' + portalText("Choisissez l'établissement concerné et précisez votre besoin. Cette démonstration vous permet de préparer votre demande, sans l'envoyer.", "Choose the property and tell us what you need. This demonstration lets you prepare your enquiry without sending it.") + '</p></div>' + form + '</div></section>';
+  portalPage("/contacts", tx("CONTACTS", "CONTACT"), tx("Nos équipes à votre écoute", "Our teams are here to help"), tx("Une question, une demande particulière ? Retrouvez les coordonnées de nos trois établissements à Abidjan ou contactez directement l'équipe de votre choix.", "A question or a special request? Find contact details for our three properties in Abidjan or contact your chosen team directly."), content);
   const contactForm = document.querySelector("#group-contact-form");
   if (contactForm) {
     const kindField = contactForm.elements.kind;
@@ -422,8 +411,38 @@ function renderContactsPage() {
     };
     kindField.addEventListener("change", syncRequestDates);
     syncRequestDates();
-    bindRequestForm(contactForm, function () {
-      return Object.assign({}, requestData(), { kind: kindField.value, hotel: contactForm.elements.hotel.value, arrival: arrival.value, departure: departure.value, items: [], services: [], coupon: "" });
+    // Keep the shared fields and validation constraints, but order this page independently.
+    ['name','email','phone','company','hotel','kind','country','arrival','departure','message','consent','website'].forEach(function (name) {
+      const field = contactForm.elements[name];
+      const label = field.closest('label');
+      if (name === 'hotel' || name === 'kind') label.classList.remove('full');
+      if (name === 'country') label.classList.add('portal-contact-country');
+      if (name === 'message') label.firstChild.textContent = tx('Votre message','Your message');
+      contactForm.insertBefore(label, contactForm.querySelector('.formerror'));
+    });
+    const controls = Array.from(contactForm.querySelectorAll('input:not([name="website"]),select,textarea'));
+    const showFieldError = function (field) {
+      const id = 'contact-error-' + field.name;
+      let error = contactForm.querySelector('#' + id);
+      if (!error) { error = document.createElement('span'); error.id = id; error.className = 'portal-field-error'; field.closest('label').append(error); field.setAttribute('aria-describedby',id); }
+      error.textContent = field.validity.valid ? '' : field.validationMessage;
+      field.setAttribute('aria-invalid',String(!field.validity.valid));
+    };
+    controls.forEach(function (field) { field.addEventListener('input',function () { if (field.hasAttribute('aria-invalid')) showFieldError(field); contactForm.querySelector('.formerror').textContent = ''; }); });
+    // This page is a client-only demonstration. Never call bindRequestForm or an API here.
+    contactForm.onsubmit = function (event) {
+      event.preventDefault();
+      const invalid = controls.filter(function (field) { return !field.validity.valid; });
+      controls.forEach(showFieldError);
+      if (invalid.length) { invalid[0].focus(); return; }
+      contactForm.querySelector('.formerror').textContent = tx('Vérification terminée. Démonstration uniquement : aucun message envoyé et aucune donnée enregistrée.','Checks complete. Demonstration only: no message sent and no data stored.');
+    };
+    document.querySelectorAll('[data-contact-hotel]').forEach(function (button) {
+      button.addEventListener('click',function () {
+        contactForm.elements.hotel.value = button.dataset.contactHotel;
+        contactForm.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+        contactForm.elements.hotel.focus({preventScroll:true});
+      });
     });
   }
 }

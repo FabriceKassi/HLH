@@ -467,3 +467,102 @@ body.group-portal-page:has(.portal-stay-nav) .portal-page-head{padding:52px 0 24
 body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 22px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:22px 0 46px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container+.portal-stay-section.container{padding-top:28px}@media(max-width:740px){body.innerpage.group-portal-page main .portal-page-content>.portal-stay-nav.container{padding:0 0 16px}body.innerpage.group-portal-page main .portal-page-content>.portal-stay-section.container{padding:18px 0 32px}}
 
 body.group-portal-page .portal-food-photo .portal-chef-photo{aspect-ratio:4/5;max-height:640px;margin:0}body.group-portal-page .portal-chef-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}@media(max-width:740px){body.group-portal-page .portal-food-photo .portal-chef-photo{max-height:520px}}
+
+/* Restaurants : première composition comme le premier bloc Réunions. */
+body.group-portal-page .portal-food-intro{grid-template-columns:.94fr 1.06fr}
+body.group-portal-page .portal-food-intro>.portal-food-copy{order:1}
+body.group-portal-page .portal-food-intro>.portal-food-photo{order:2}
+@media(max-width:740px){body.group-portal-page .portal-food-intro{grid-template-columns:1fr}body.group-portal-page .portal-food-intro>.portal-food-photo{order:0}body.group-portal-page .portal-food-intro>.portal-food-copy{order:0}}
+
+/* Nos hôtels : rythme éditorial, limité à cette page. */
+body.group-portal-page:has(.portal-property-list) .portal-page-head{padding:68px 0 46px}body.group-portal-page:has(.portal-property-list) .portal-page-head .eyebrow{margin-bottom:22px}body.group-portal-page:has(.portal-property-list) .portal-page-head h1{font-size:clamp(40px,5vw,66px);margin-bottom:24px}body.group-portal-page:has(.portal-property-list) .portal-page-intro{max-width:650px;line-height:1.8}
+body.group-portal-page main .portal-property-list.container{padding-top:24px;padding-bottom:88px;gap:100px;max-width:1360px}body.group-portal-page .portal-property-list .portal-property-row{gap:clamp(40px,5vw,76px);align-items:center;position:relative}body.group-portal-page .portal-property-list .portal-property-photo{aspect-ratio:5/4;max-width:none;margin:0}body.group-portal-page .portal-property-list .portal-property-photo img{height:100%;width:100%;object-fit:cover}body.group-portal-page .portal-property-list .portal-property-copy{padding:20px 0;max-width:510px}body.group-portal-page .portal-property-list .portal-property-copy>.eyebrow{line-height:1.8;margin-bottom:20px;font-size:10px}body.group-portal-page .portal-property-list .portal-property-copy h2{font-size:clamp(34px,3.7vw,52px);margin:0 0 22px;line-height:1.12}body.group-portal-page .portal-property-list .portal-property-address{margin:0 0 22px;font-size:12px}body.group-portal-page .portal-property-list .portal-property-copy>p:not(.eyebrow):not(.portal-property-address){font-size:15px;line-height:1.85;margin-bottom:26px}body.group-portal-page .portal-property-list .portal-tags{gap:8px 16px;margin:0 0 30px;padding-top:20px;border-top:1px solid #ded8ce}body.group-portal-page .portal-property-list .portal-tags span{background:none;padding:0;font-size:11px;line-height:1.7;color:#827361}body.group-portal-page .portal-property-list .portal-card-actions{gap:14px;margin-top:0}
+@media(max-width:1000px){body.group-portal-page main .portal-property-list.container{gap:72px}body.group-portal-page .portal-property-list .portal-property-row{gap:32px}body.group-portal-page .portal-property-list .portal-property-copy>p:not(.eyebrow):not(.portal-property-address){font-size:14px;line-height:1.75}body.group-portal-page .portal-property-list .portal-property-photo{aspect-ratio:4/5}}
+@media(max-width:740px){body.group-portal-page:has(.portal-property-list) .portal-page-head{padding:40px 0 28px}body.group-portal-page main .portal-property-list.container{gap:56px;padding-top:12px;padding-bottom:56px}body.group-portal-page .portal-property-list .portal-property-row{gap:24px}body.group-portal-page .portal-property-list .portal-property-photo{aspect-ratio:4/3}body.group-portal-page .portal-property-list .portal-property-copy{padding:0;max-width:none}body.group-portal-page .portal-property-list .portal-property-copy h2{font-size:36px;margin-bottom:16px}body.group-portal-page .portal-property-list .portal-property-copy>.eyebrow{margin-bottom:14px}body.group-portal-page .portal-property-list .portal-tags{margin-bottom:24px;padding-top:16px}}
+
+/* Format commun des photographies éditoriales, référence Salles de réunion. */
+body.group-portal-page .portal-property-list .portal-property-photo,body.group-portal-page .portal-venue-list .portal-property-photo,body.group-portal-page .portal-wellness-list .portal-property-photo,body.group-portal-page .portal-food-photo .portal-chef-photo{width:100%;max-width:690px;aspect-ratio:183/120;height:auto;max-height:none;margin:0;overflow:hidden}
+body.group-portal-page .portal-property-list .portal-property-photo img,body.group-portal-page .portal-venue-list .portal-property-photo img,body.group-portal-page .portal-wellness-list .portal-property-photo img,body.group-portal-page .portal-food-photo .portal-chef-photo img{width:100%;height:100%;object-fit:cover}
+body.group-portal-page .portal-food-photo .portal-chef-photo img{object-position:center 30%}
+
+body.group-portal-page .portal-astral-dining{grid-template-columns:1.06fr .94fr;gap:clamp(40px,7vw,92px)}body.group-portal-page .portal-astral-dining .portal-astral-restaurant-photo{width:100%;max-width:690px;aspect-ratio:183/120;margin:0}body.group-portal-page .portal-astral-dining-copy{max-width:530px}body.group-portal-page .portal-astral-restaurant-photo img{width:100%;height:100%;object-fit:cover}@media(max-width:740px){body.group-portal-page .portal-astral-dining{grid-template-columns:1fr;gap:28px}}
+/* Fitness editorial — isolated from the other portal pages. */
+/* Contact refresh: page-scoped to preserve the other portal compositions. */
+body.group-portal-page:has(#group-contact-form) .portal-page-head{padding:46px 0 24px}
+body.group-portal-page:has(#group-contact-form) .portal-page-head h1{font-size:clamp(36px,4vw,54px);margin:16px 0}
+body.group-portal-page:has(#group-contact-form) .portal-page-intro{max-width:760px;font-size:16px;line-height:1.75}
+body.group-portal-page:has(#group-contact-form) .portal-page-content>.container{padding-top:20px;padding-bottom:48px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-grid{gap:22px;align-items:stretch}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card{display:flex;flex-direction:column;padding:26px;box-shadow:none;border:1px solid #e2dcd3;border-top:2px solid #bba188}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card>.eyebrow{min-height:32px;font-size:10px;line-height:1.6;margin:0 0 12px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card h2{font-size:29px;margin-bottom:12px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card>p:not(.eyebrow){font-size:13px;line-height:1.65;min-height:44px;margin:0 0 19px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-links{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-links a{font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+body.group-portal-page:has(#group-contact-form) .portal-contact-links a:last-child{font-size:10px;letter-spacing:.06em;margin-top:6px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions{margin-top:auto;gap:12px;padding-top:17px;border-top:1px solid #e9e4de}
+body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions a,body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions button{font-size:11px;min-height:34px;display:inline-flex;align-items:center}
+body.group-portal-page:has(#group-contact-form) .portal-section--soft{padding:48px 0 56px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout{grid-template-columns:minmax(0,.35fr) minmax(0,.65fr);gap:48px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout h2{font-size:clamp(33px,3vw,43px);line-height:1.16;margin:16px 0 22px}
+body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout>div>p:not(.eyebrow){font-size:16px;line-height:1.8;max-width:34ch}
+body.group-portal-page #group-contact-form{min-width:0;scroll-margin-top:125px;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;padding:28px;margin:0}
+body.group-portal-page #group-contact-form label{font-size:12px;line-height:1.5;gap:6px;margin:0}
+body.group-portal-page #group-contact-form input:not([type=checkbox]),body.group-portal-page #group-contact-form select{height:46px;min-height:46px;box-sizing:border-box;margin:0;font-size:14px;padding:9px 11px}
+body.group-portal-page #group-contact-form textarea{height:120px;min-height:120px;box-sizing:border-box;margin:0;font-size:14px;padding:11px;resize:vertical}
+body.group-portal-page #group-contact-form .portal-contact-country{grid-column:1/-1;max-width:calc(50% - 9px)}
+body.group-portal-page #group-contact-form .consent{display:block;font-size:11px;line-height:1.6}
+body.group-portal-page #group-contact-form .consent input{width:17px;height:17px;vertical-align:middle}
+body.group-portal-page #group-contact-form .formerror:empty{display:none}
+body.group-portal-page #group-contact-form .formerror{font-size:13px;line-height:1.6;margin:0;color:#6b4b2c}
+body.group-portal-page #group-contact-form .portal-field-error{font-size:11px;color:#943f31;line-height:1.4}
+body.group-portal-page #group-contact-form [aria-invalid=true]{border-color:#943f31}
+body.group-portal-page #group-contact-form .portal-form-note{font-size:11px;line-height:1.6;margin:0;color:#655b51}
+body.group-portal-page #group-contact-form button[type=submit]{min-height:46px;white-space:normal;line-height:1.4}
+body.group-portal-page:has(#group-contact-form) a:focus-visible,body.group-portal-page:has(#group-contact-form) button:focus-visible{outline:2px solid #8b643b;outline-offset:4px}
+@media(max-width:1024px){body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout{grid-template-columns:1fr;gap:26px}body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout>div:first-child{max-width:650px}body.group-portal-page:has(#group-contact-form) .portal-contact-form-layout>div>p:not(.eyebrow){max-width:65ch}body.group-portal-page:has(#group-contact-form) .portal-contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:740px){body.group-portal-page:has(#group-contact-form) .portal-contact-grid{grid-template-columns:1fr}body.group-portal-page:has(#group-contact-form) .portal-page-head{padding:32px 0 18px}body.group-portal-page:has(#group-contact-form) .portal-contact-card>.eyebrow,body.group-portal-page:has(#group-contact-form) .portal-contact-card>p:not(.eyebrow){min-height:0}body.group-portal-page:has(#group-contact-form) .portal-contact-card{padding:23px}body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions{flex-direction:row;flex-wrap:wrap;gap:12px 20px}body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions a,body.group-portal-page:has(#group-contact-form) .portal-contact-card .portal-card-actions button{min-height:44px}body.group-portal-page #group-contact-form{grid-template-columns:1fr;padding:20px;gap:15px}body.group-portal-page #group-contact-form .portal-contact-country{max-width:none;grid-column:auto}body.group-portal-page:has(#group-contact-form) .portal-section--soft{padding:32px 0 40px}}
+body.group-portal-page .portal-fitness-reference .portal-property-row{position:relative;scroll-margin-top:130px}
+body.group-portal-page .portal-fitness-reference .portal-fitness-legacy{position:absolute;top:0;scroll-margin-top:130px}
+body.group-portal-page .portal-fitness-reference .portal-fitness-pending{background:#ede8df;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px;box-sizing:border-box}
+body.group-portal-page .portal-fitness-reference .portal-fitness-pending p{font-size:22px;color:#655747;letter-spacing:.05em;margin:0 0 15px}
+body.group-portal-page .portal-fitness-reference .portal-fitness-pending span{font-size:14px;color:#655747}
+@media(prefers-reduced-motion:reduce){html:has(.hlh-fitness-page){scroll-behavior:auto!important}}
+body.group-portal-page .hlh-fitness-page{--fitness-ink:#24211e;--fitness-accent:#8b7054;color:var(--fitness-ink)}
+body.group-portal-page .hlh-fitness-page .fitness-intro{display:grid;grid-template-columns:.94fr 1.06fr;align-items:center;gap:clamp(40px,6vw,88px);padding-top:64px;padding-bottom:48px}
+body.group-portal-page .hlh-fitness-page h1{font-size:clamp(40px,4.5vw,70px);line-height:1.08;letter-spacing:-.025em;margin:22px 0 28px;text-wrap:balance}
+body.group-portal-page .hlh-fitness-page h1 em,body.group-portal-page .hlh-fitness-page h2 em{color:#9b7b5d;font-weight:inherit}
+body.group-portal-page .hlh-fitness-page p{font-size:17px;line-height:1.8}
+body.group-portal-page .hlh-fitness-page .fitness-intro-copy>p:not(.eyebrow){max-width:48ch;margin-bottom:30px}
+body.group-portal-page .hlh-fitness-page .fitness-photo{margin:0;position:relative;min-width:0}
+body.group-portal-page .hlh-fitness-page .fitness-photo img{display:block;width:100%;height:auto;aspect-ratio:183/120;object-fit:cover}
+body.group-portal-page .hlh-fitness-page .fitness-photo figcaption{font-size:11px;line-height:1.5;color:#655b51;margin-top:10px}
+body.group-portal-page .hlh-fitness-page .fitness-nav{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid #d7cfc4;border-bottom:1px solid #d7cfc4;padding-top:22px;padding-bottom:22px}
+body.group-portal-page .hlh-fitness-page .fitness-nav a{font-size:12px;letter-spacing:.1em;color:#40362d;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s ease}
+body.group-portal-page .hlh-fitness-page .fitness-nav a:hover{border-color:#8b7054}
+body.group-portal-page .hlh-fitness-page a:focus-visible,body.group-portal-page .hlh-fitness-page button:focus-visible{outline:2px solid #8b643b;outline-offset:6px}
+body.group-portal-page .hlh-fitness-page .fitness-property{position:relative;scroll-margin-top:145px;outline-offset:8px}
+body.group-portal-page .hlh-fitness-page .fitness-legacy-anchor{position:absolute;top:0;scroll-margin-top:145px}
+body.group-portal-page .hlh-fitness-page .fitness-astral{display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:clamp(40px,7vw,92px);padding-top:88px;padding-bottom:96px}
+body.group-portal-page .hlh-fitness-page h2{font-size:clamp(34px,3.3vw,50px);line-height:1.16;letter-spacing:-.02em;margin:0 0 26px;text-wrap:balance}
+body.group-portal-page .hlh-fitness-page .fitness-property-name{display:block;font-family:inherit;font-size:11px;font-style:normal;font-weight:600;line-height:1.6;letter-spacing:.16em;color:#80674f;margin-bottom:25px}
+body.group-portal-page .hlh-fitness-page .fitness-copy>p{max-width:55ch;margin:0 0 30px}
+body.group-portal-page .hlh-fitness-page .fitness-actions{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+body.group-portal-page .hlh-fitness-page .fitness-actions a,body.group-portal-page .hlh-fitness-page .fitness-actions button{font-size:11px;letter-spacing:.06em;max-width:100%;text-align:left}
+body.group-portal-page .hlh-fitness-page .fitness-enquiry{color:#6b635b}
+body.group-portal-page .hlh-fitness-page .fitness-atta{background:#292521;color:#f7f5f0;padding:86px 0}
+body.group-portal-page .hlh-fitness-page .fitness-atta-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,9vw,140px);align-items:center}
+body.group-portal-page .hlh-fitness-page .fitness-atta .fitness-property-name{color:#d0b89f}
+body.group-portal-page .hlh-fitness-page .fitness-atta h2 em{color:#d0b89f}
+body.group-portal-page .hlh-fitness-page .fitness-atta .fitness-copy>p{color:#e1d9cf}
+body.group-portal-page .hlh-fitness-page .fitness-atta a,body.group-portal-page .hlh-fitness-page .fitness-atta button{color:#f7f5f0}
+body.group-portal-page .hlh-fitness-page .fitness-place{font-size:clamp(42px,6vw,90px);line-height:1.05;letter-spacing:-.025em;margin:0 0 24px}
+body.group-portal-page .hlh-fitness-page .fitness-place span{color:#d0b89f;font-size:.52em;letter-spacing:.13em}
+body.group-portal-page .hlh-fitness-page .fitness-place-note{color:#e1d9cf;font-size:15px;border-top:1px solid #6b5c4f;padding-top:24px;max-width:34ch}
+body.group-portal-page .hlh-fitness-page .fitness-wia{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,9vw,140px);align-items:start;padding-top:96px;padding-bottom:100px}
+body.group-portal-page .hlh-fitness-page .fitness-wia-location{border-top:1px solid #bba188;padding-top:24px}
+body.group-portal-page .hlh-fitness-page .fitness-wia-location>p:last-child{font-size:clamp(26px,3vw,42px);line-height:1.35;margin:26px 0;color:#80674f}
+body.group-portal-page .hlh-fitness-page .fitness-wia .fitness-copy{padding-top:24px}
+@media(max-width:1024px){body.group-portal-page .hlh-fitness-page .fitness-intro,body.group-portal-page .hlh-fitness-page .fitness-astral{gap:36px}body.group-portal-page .hlh-fitness-page h1{font-size:46px}body.group-portal-page .hlh-fitness-page .fitness-atta-inner,body.group-portal-page .hlh-fitness-page .fitness-wia{gap:48px}body.group-portal-page .hlh-fitness-page p{font-size:16px}}
+@media(max-width:740px){body.group-portal-page .hlh-fitness-page .fitness-intro{grid-template-columns:1fr;padding-top:40px;padding-bottom:30px;gap:32px}body.group-portal-page .hlh-fitness-page h1{font-size:42px}body.group-portal-page .hlh-fitness-page .fitness-nav{gap:12px 24px;padding-top:16px;padding-bottom:16px}body.group-portal-page .hlh-fitness-page .fitness-nav a{font-size:10px}body.group-portal-page .hlh-fitness-page .fitness-astral{grid-template-columns:1fr;gap:30px;padding-top:48px;padding-bottom:52px}body.group-portal-page .hlh-fitness-page .fitness-atta{padding:48px 0}body.group-portal-page .hlh-fitness-page .fitness-atta-inner,body.group-portal-page .hlh-fitness-page .fitness-wia{grid-template-columns:1fr;gap:32px}body.group-portal-page .hlh-fitness-page .fitness-place{font-size:44px}body.group-portal-page .hlh-fitness-page .fitness-place-note{margin-bottom:0}body.group-portal-page .hlh-fitness-page h2{font-size:35px}body.group-portal-page .hlh-fitness-page .fitness-wia{padding-top:52px;padding-bottom:56px}body.group-portal-page .hlh-fitness-page .fitness-wia .fitness-copy{padding-top:0}body.group-portal-page .hlh-fitness-page .fitness-property{scroll-margin-top:120px}}
+@media(prefers-reduced-motion:reduce){body.group-portal-page .hlh-fitness-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -28,7 +28,7 @@ const group=path.join(out,'group-pages.js');
 let groupJs=fs.readFileSync(group,'utf8');
 groupJs=groupJs.replace('Votre demande sera enregistrée sur le portail pour examen par l’équipe. Aucune notification automatique n’est envoyée dans cette version ; la demande ne constitue pas une réservation confirmée.','Démonstration : aucune demande enregistrée ni transmise. Contactez directement votre établissement.').replace('Your enquiry will be recorded on the portal for the team to review.','Demonstration: no enquiry recorded or transmitted.');
 fs.writeFileSync(group,groupJs);
-const demoScript=`function protectDemo(){for(const f of document.querySelectorAll('#group-contact-form,#newsletter')){for(const el of f.querySelectorAll('input,textarea,select,button'))el.disabled=true;const b=f.querySelector('button[type=submit],button');if(b&&b.textContent!=='Demo - envoi desactive')b.textContent='Demo - envoi desactive';}}new MutationObserver(protectDemo).observe(document.body,{childList:true,subtree:true});protectDemo();`;
+const demoScript=`function protectDemo(){for(const f of document.querySelectorAll('#group-contact-form:not([data-local-demo]),#newsletter')){for(const el of f.querySelectorAll('input,textarea,select,button'))el.disabled=true;const b=f.querySelector('button[type=submit],button');if(b&&b.textContent!=='Demo - envoi desactive')b.textContent='Demo - envoi desactive';}}new MutationObserver(protectDemo).observe(document.body,{childList:true,subtree:true});protectDemo();`;
 fs.writeFileSync(path.join(out,'demo-mode.js'),demoScript);
 fs.writeFileSync(path.join(out,'index.html'),fs.readFileSync(path.join(out,'index.html'),'utf8').replace('</body>','<script src="/demo-mode.js"></script></body>'));
 
