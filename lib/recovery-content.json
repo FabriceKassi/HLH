@@ -215,7 +215,7 @@
     {
       "id": "astral-appartement",
       "hotel": "astral",
-      "name": "Appartement 2 pièces",
+      "name": "Appartement",
       "description": "Un appartement de 60 m² pour prolonger votre séjour.",
       "surface": 60,
       "capacity": null,
