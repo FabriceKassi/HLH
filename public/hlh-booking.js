@@ -33,8 +33,8 @@
     if (!properties.some(item => item.id === state.property)) return { field: 'property', code: 'property_required' };
     if (!validDate(state.arrival) || state.arrival < today()) return { field: 'arrival', code: 'invalid_arrival' };
     if (!validDate(state.departure) || state.departure <= state.arrival) return { field: 'departure', code: 'invalid_departure' };
-    if (!Number.isSafeInteger(state.rooms) || state.rooms < 1) return { field: 'rooms', code: 'invalid_rooms' };
-    if (!Number.isSafeInteger(state.adults) || state.adults < 1 || !Number.isSafeInteger(state.children) || state.children < 0 || state.adults + state.children > 3) return { field: 'guests', code: 'invalid_guests' };
+    if (!Number.isSafeInteger(state.rooms) || state.rooms < 1 || state.property === 'wia' && state.rooms > 9) return { field: 'rooms', code: 'invalid_rooms' };
+    if (!Number.isSafeInteger(state.adults) || state.adults < 1 || !Number.isSafeInteger(state.children) || state.children < 0 || (state.property !== 'wia' && state.adults + state.children > 3)) return { field: 'guests', code: 'invalid_guests' };
     return null;
   }
   function destinationURL(criteria, registry) {
@@ -73,11 +73,12 @@
     let active = '', visibleMonth = monthOf(today()), pending = false, opener = null;
     const abort = new AbortController();
     const on = (target, type, fn, options = {}) => target.addEventListener(type, fn, { ...options, signal: abort.signal });
-    const query = selector => form.querySelector(selector);
+    const query = selector => form.querySelector(selector) || root.querySelector(selector);
     const trigger = field => query('[data-hlh-open="' + field + '"]');
     const panel = field => query('[data-hlh-panel="' + field + '"]');
     const feedback = query('[data-hlh-feedback]');
     const formatDate = key => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(date(key));
+    const guestNote = () => state.property === 'wia' ? t('Capacité à vérifier selon la catégorie choisie.', 'Capacity depends on the selected category.') : t('3 voyageurs maximum pour ce parcours de démonstration.', 'Maximum 3 guests for this demo flow.');
     const nights = () => state.arrival && state.departure ? (date(state.departure) - date(state.arrival)) / DAY : 0;
     const plural = (amount, singular, multiple) => amount + ' ' + (amount === 1 ? singular : multiple);
 
@@ -90,7 +91,7 @@
       const anchorRect = anchor.getBoundingClientRect();
       const viewportWidth = document.documentElement.clientWidth;
       const viewportHeight = window.visualViewport?.height || window.innerHeight;
-      const mobile = matchMedia('(max-width: 700px)').matches;
+      const mobile = matchMedia('(max-width: 1000px)').matches;
 
       // The popover is viewport-anchored so it can never be clipped by its
       // field/container. It is repositioned on scroll and closed as soon as
@@ -110,7 +111,7 @@
       const width = Math.min(panelRect.width || (mobile ? 400 : (active === 'property' ? 390 : ['arrival', 'departure'].includes(active) ? 650 : 360)), viewportWidth - 24);
       const preferredLeft = !mobile && ['rooms', 'guests'].includes(active) ? anchorRect.right - width : anchorRect.left;
       const left = Math.max(12, Math.min(preferredLeft, viewportWidth - width - 12));
-      const usableTop = Math.max(headerBottom + 8, 8);
+      const usableTop = form.closest('dialog') ? 8 : Math.max(headerBottom + 8, 8);
       const gap = 10;
       const naturalHeight = Math.min(content.scrollHeight, viewportHeight * 0.72, 620);
       const below = viewportHeight - anchorRect.bottom - gap - 8;
@@ -154,15 +155,15 @@
       query('[data-hlh-value="rooms"]').textContent = plural(state.rooms, t('chambre', 'room'), t('chambres', 'rooms'));
       query('[data-hlh-value="guests"]').textContent = plural(state.adults + state.children, t('voyageur', 'guest'), t('voyageurs', 'guests'));
       trigger('guests').title = plural(state.adults, t('adulte', 'adult'), t('adultes', 'adults')) + ' · ' + plural(state.children, t('enfant', 'child'), t('enfants', 'children'));
-      query('[data-hlh-stay]').textContent = nights() ? plural(nights(), t('nuit', 'night'), t('nuits', 'nights')) + ' · ' + plural(state.adults + state.children, t('voyageur', 'guest'), t('voyageurs', 'guests')) : t('Jusqu’à 3 voyageurs, pour l’ensemble du séjour.', 'Up to 3 guests for the entire booking.');
+      query('[data-hlh-stay]').textContent = nights() ? plural(nights(), t('nuit', 'night'), t('nuits', 'nights')) + ' · ' + plural(state.adults + state.children, t('voyageur', 'guest'), t('voyageurs', 'guests')) : guestNote();
       if (active === 'rooms' || active === 'guests') {
         form.querySelectorAll('[data-hlh-count]').forEach(button => {
           const name = button.dataset.hlhCount, delta = Number(button.dataset.delta);
-          button.disabled = pending || (delta < 0 ? state[name] <= (name === 'children' ? 0 : 1) : name === 'rooms' ? state.rooms >= Number.MAX_SAFE_INTEGER : state.adults + state.children >= 3);
+          button.disabled = pending || (delta < 0 ? state[name] <= (name === 'children' ? 0 : 1) : name === 'rooms' ? state.rooms >= (state.property === 'wia' ? 9 : Number.MAX_SAFE_INTEGER) : state.property !== 'wia' && state.adults + state.children >= 3);
         });
         form.querySelectorAll('[data-hlh-number]').forEach(item => { item.textContent = state[item.dataset.hlhNumber]; });
         const limit = query('[data-hlh-limit]');
-        if (limit) limit.classList.toggle('at-limit', state.adults + state.children === 3);
+        if (limit) limit.classList.toggle('at-limit', state.property !== 'wia' && state.adults + state.children === 3);
       }
       position();
     }
@@ -187,7 +188,7 @@
     }
     function counters() {
       const fields = active === 'rooms' ? [['rooms', t('Chambres', 'Rooms'), t('Nombre d’unités souhaitées', 'Number of units requested')]] : [['adults', t('Adultes', 'Adults'), t('13 ans et plus', '13 and over')], ['children', t('Enfants', 'Children'), t('Jusqu’à 12 ans', 'Up to 12')]];
-      return '<div class="hlh-panel-heading"><span>' + (active === 'rooms' ? t('Votre hébergement', 'Your accommodation') : t('Qui voyage avec vous ?', 'Who is travelling?')) + '</span></div>' + fields.map(([field, title, note]) => '<div class="hlh-counter-row"><span><strong>' + title + '</strong><small>' + note + '</small></span><div class="hlh-counter-controls"><button type="button" data-hlh-count="' + field + '" data-delta="-1" aria-label="' + t('Réduire : ', 'Decrease: ') + title + '">' + icon('minus') + '</button><output data-hlh-number="' + field + '" aria-live="polite">' + state[field] + '</output><button type="button" data-hlh-count="' + field + '" data-delta="1" aria-label="' + t('Augmenter : ', 'Increase: ') + title + '">' + icon('plus') + '</button></div></div>').join('') + (active === 'guests' ? '<p class="hlh-guest-limit" data-hlh-limit>' + t('Maximum 3 voyageurs', 'Maximum 3 guests') + '<small>' + t('Toutes chambres confondues.', 'Across all rooms.') + '</small></p>' : '') + '<button class="hlh-booking-apply" type="button" data-hlh-close>' + t('APPLIQUER', 'APPLY') + icon('check') + '</button>';
+      return '<div class="hlh-panel-heading"><span>' + (active === 'rooms' ? t('Votre hébergement', 'Your accommodation') : t('Qui voyage avec vous ?', 'Who is travelling?')) + '</span></div>' + fields.map(([field, title, note]) => '<div class="hlh-counter-row"><span><strong>' + title + '</strong><small>' + note + '</small></span><div class="hlh-counter-controls"><button type="button" data-hlh-count="' + field + '" data-delta="-1" aria-label="' + t('Réduire : ', 'Decrease: ') + title + '">' + icon('minus') + '</button><output data-hlh-number="' + field + '" aria-live="polite">' + state[field] + '</output><button type="button" data-hlh-count="' + field + '" data-delta="1" aria-label="' + t('Augmenter : ', 'Increase: ') + title + '">' + icon('plus') + '</button></div></div>').join('') + (active === 'guests' ? '<p class="hlh-guest-limit" data-hlh-limit>' + guestNote() + '<small>' + (state.property === 'wia' ? t('Aucune disponibilité confirmée ici.', 'No confirmed availability here.') : t('Toutes chambres confondues.', 'Across all rooms.')) + '</small></p>' : '') + '<button class="hlh-booking-apply" type="button" data-hlh-close>' + t('APPLIQUER', 'APPLY') + icon('check') + '</button>';
     }
     function open(field, focus) {
       if (pending) return;
@@ -213,7 +214,7 @@
       invalid_arrival: t('Choisissez une date d’arrivée à partir d’aujourd’hui.', 'Choose a check-in date from today onwards.'),
       invalid_departure: t('Choisissez un départ après votre arrivée.', 'Choose a check-out date after check-in.'),
       invalid_rooms: t('Choisissez au moins une chambre.', 'Choose at least one room.'),
-      invalid_guests: t('Sélectionnez 1 à 3 voyageurs, dont au moins un adulte.', 'Select 1 to 3 guests, including at least one adult.')
+      invalid_guests: t('Vérifiez les voyageurs : au moins un adulte ; ATTA et Astral sont limités à 3 dans leur démonstration.', 'Check guests: at least one adult; ATTA and Astral demo flows allow up to 3 guests.')
     };
     function error(issue) {
       feedback.textContent = messages[issue.code] || t('Vérifiez les informations de votre séjour.', 'Check your booking details.');
@@ -234,7 +235,8 @@
       if (button.dataset.hlhProperty) { state.property = button.dataset.hlhProperty; changed(); close(true); return; }
       if (button.dataset.hlhCount) {
         const name = button.dataset.hlhCount, delta = Number(button.dataset.delta), next = state[name] + delta;
-        if (!Number.isSafeInteger(next) || next < (name === 'children' ? 0 : 1) || name !== 'rooms' && state.adults + state.children + delta > 3) return;
+        if (name === 'rooms' && state.property === 'wia' && next > 9) return;
+        if (!Number.isSafeInteger(next) || next < (name === 'children' ? 0 : 1) || name !== 'rooms' && state.property !== 'wia' && state.adults + state.children + delta > 3) return;
         state[name] = next;
         changed();
         return;
@@ -284,6 +286,7 @@
       }
       if (event.key === 'Tab') setTimeout(() => { if (active && !panel(active).contains(document.activeElement) && !trigger(active).contains(document.activeElement)) close(false); }, 0);
     });
+    on(form.closest('dialog') || form, 'cancel', event => { if (active) { event.preventDefault(); close(true); } });
     on(window, 'resize', position);
     on(window, 'scroll', closeIfAnchorLeavesView, { passive: true, capture: true });
     if (window.visualViewport) {

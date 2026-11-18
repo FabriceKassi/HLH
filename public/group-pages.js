@@ -676,14 +676,38 @@ function initPortalBookingForms(root) {
   });
 }
 function openBookingChooser(preferred) {
-  const markup = '<div class="portal-booking-modal"><p class="eyebrow">' + portalText("RÉSERVATION · HOTEL & LUXURY HOUSING", "BOOKING · HOTEL & LUXURY HOUSING") + '</p><h2>' + portalText("Préparez votre séjour", "Plan your stay") + '</h2><p class="portal-modal-intro">' + portalText("Choisissez une adresse pour accéder à son propre système de disponibilité. HLH ne centralise pas les stocks.", "Choose a property to check availability in its own booking system. HLH does not centralize inventory.") + '</p>' + portalBookingFormMarkup(preferred || "") + '<p class="portal-modal-demo-note">' + portalText("La recherche est transmise à l’établissement sélectionné ; aucune disponibilité n’est affichée par le portail HLH.", "Your search is sent to the selected property; HLH does not display shared availability.") + '</p></div>';
   if (location.pathname === "/" && document.getElementById("portal-booking")) {
     window.HLHBookingPremium.choose(preferred || "");
-    document.getElementById("portal-booking").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    document.getElementById("portal-booking").scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
-  open(markup);
-  initPortalBookingForms(document.getElementById("dialogcontent"));
+  const returnFocus = document.activeElement;
+  const dialog = document.getElementById("dialog");
+  open(window.HLHBookingPremium.markup(lang === "en"));
+  dialog.classList.add("hlh-stay-dialog");
+  dialog.setAttribute("aria-labelledby", "hlh-booking-title");
+  document.body.classList.add("hlh-stay-open");
+  const content = document.getElementById("dialogcontent");
+  const controller = window.HLHBookingPremium.mount(content, lang === "en");
+  const form = content.querySelector("form");
+  form.id = "hlh-stay-form";
+  const foot = document.createElement("footer");
+  foot.className = "hlh-stay-actions";
+  const submit = form.querySelector(".hlh-booking-search");
+  submit.setAttribute("form", form.id);
+  submit.setAttribute("aria-label", portalText("Continuer vers l’établissement", "Continue to property"));
+  submit.querySelector("span").textContent = portalText("CONTINUER VERS L’ÉTABLISSEMENT", "CONTINUE TO PROPERTY");
+  foot.append(submit);
+  content.append(foot);
+  content.querySelector(".hlh-booking-heading p").textContent = portalText("Choisissez vos critères, puis poursuivez sur le site de votre établissement. Parcours de démonstration.", "Choose your criteria, then continue on your property's website. Demonstration only.");
+  controller.choose(preferred || "");
+  dialog.addEventListener("close", function cleanup() {
+    controller.destroy();
+    dialog.classList.remove("hlh-stay-dialog");
+    dialog.removeAttribute("aria-labelledby");
+    document.body.classList.remove("hlh-stay-open");
+    returnFocus?.focus({preventScroll:true});
+  }, {once:true});
 }
 function portalHeroSlider() {
   const root = document.querySelector(".portal-hero");
