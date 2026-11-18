@@ -2,8 +2,8 @@
 window.HLH_SITE_LINKS = Object.freeze({
   portal: "https://hlh-portail-v17-preview.netlify.app/",
   wia: {
-    site: "https://palais-wia-preview.netlify.app/",
-    reservation: "https://palais-wia-preview.netlify.app/reservation/",
+    site: "https://palais-wia-concept-b.netlify.app/",
+    reservation: "https://palais-wia-concept-b.netlify.app/chambres-suites/",
     bookingParams: { arrival: "arrival", departure: "departure", rooms: "rooms", adults: "adults", children: "children" }
   },
   atta: {
@@ -303,7 +303,7 @@ function renderRoomsPage() {
   const navigation = '<nav class="portal-stay-nav container" aria-label="Choisir un établissement">' + groups.map(g=>'<a href="#sejour-'+g.id+'">'+esc(g.name)+'</a>').join('')+'</nav>';
   const sections = groups.map((g,index)=>'<section class="portal-stay-section container" id="sejour-'+g.id+'" aria-labelledby="titre-'+g.id+'"><header class="portal-stay-heading"><p class="eyebrow">0'+(index+1)+' · '+esc(g.location)+'</p><h2 id="titre-'+g.id+'">'+esc(g.name)+'</h2><p>'+esc(g.intro)+'</p></header><div class="portal-stay-grid">'+g.rooms.map((r,i)=>{
     const category=['classic','executive','junior','presidential'][i];
-    const discovery=g.id==='wia'?'https://palais-wia-preview.netlify.app/suites/':window.HLH_SITE_LINKS[g.id].site;
+    const discovery=g.id==='wia'?'https://palais-wia-concept-b.netlify.app/chambres-suites/':window.HLH_SITE_LINKS[g.id].site;
     return '<article class="portal-stay-card">'+portalFigure('/assets/hlh-hebergements/'+r[1],r[0]+' — '+g.name,'Photographie du projet de référence','portal-stay-photo')+'<div class="portal-stay-copy"><h3>'+esc(r[0])+'</h3>'+(r[2]?'<p class="portal-stay-area">'+esc(r[2])+'</p>':'')+(g.id==='wia'?'':'<p class="portal-stay-rate">'+new Intl.NumberFormat('fr-FR').format(r[3])+' FCFA <span>/ nuit · tarif de démonstration</span></p>')+'<div class="portal-card-actions"><a class="portal-link" href="'+esc(discovery)+'" target="_blank" rel="noopener noreferrer">DÉCOUVRIR <span aria-hidden="true">↗</span></a>'+portalButton('VOIR LES DISPONIBILITÉS',g.id)+'</div></div></article>';
   }).join('')+'</div></section>').join('');
   portalPage('/chambres-suites','HÉBERGEMENTS HLH','Trois adresses, autant de façons de séjourner.',"De l’hôtel d’affaires aux appartements haut de gamme, jusqu’aux chambres et suites du Palais WIA, découvrez des hébergements adaptés à chaque séjour à Abidjan.",navigation+sections+'<p class="container portal-stay-note">Présentation de démonstration : tarifs non contractuels, disponibilités et conditions à confirmer auprès des établissements. Aucune réservation ni aucun paiement réel.</p>');

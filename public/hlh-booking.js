@@ -78,7 +78,7 @@
     const panel = field => query('[data-hlh-panel="' + field + '"]');
     const feedback = query('[data-hlh-feedback]');
     const formatDate = key => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(date(key));
-    const guestNote = () => state.property === 'wia' ? t('Capacité à vérifier selon la catégorie choisie.', 'Capacity depends on the selected category.') : t('3 voyageurs maximum pour ce parcours de démonstration.', 'Maximum 3 guests for this demo flow.');
+    const guestNote = () => state.property === 'wia' ? t('Vous poursuivrez sur le Palais WIA Concept B. Dates et voyageurs seront à renseigner dans son formulaire.', 'Continue on Palais WIA Concept B. Enter your dates and guests again in its booking form.') : t('3 voyageurs maximum pour ce parcours de démonstration.', 'Maximum 3 guests for this demo flow.');
     const nights = () => state.arrival && state.departure ? (date(state.departure) - date(state.arrival)) / DAY : 0;
     const plural = (amount, singular, multiple) => amount + ' ' + (amount === 1 ? singular : multiple);
 

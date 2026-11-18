@@ -8,7 +8,7 @@ vm.runInContext(registry,context);
 vm.runInContext(readFileSync(new URL('../public/hlh-booking.js',import.meta.url),'utf8'),context);
 const links=context.window.HLH_SITE_LINKS;
 assert.equal(links.portal,'https://hlh-portail-v17-preview.netlify.app/');
-const expected={wia:['https://palais-wia-preview.netlify.app/','/reservation/','rooms'],atta:['https://residences-atta-preview.netlify.app/atta','/atta/reserver','rooms'],astral:['https://hotel-astral-preview.netlify.app/hotel-astral','/hotel-astral/reserver','quantity']};
+const expected={wia:['https://palais-wia-concept-b.netlify.app/','/chambres-suites/','rooms'],atta:['https://residences-atta-preview.netlify.app/atta','/atta/reserver','rooms'],astral:['https://hotel-astral-preview.netlify.app/hotel-astral','/hotel-astral/reserver','quantity']};
 const day=offset=>new Date(Date.now()+offset*86400000).toISOString().slice(0,10);
 for(const [property,[site,path,roomKey]] of Object.entries(expected)){
  assert.equal(links[property].site,site);
@@ -19,9 +19,12 @@ for(const [property,[site,path,roomKey]] of Object.entries(expected)){
  for(const key of ['arrival','departure','adults','children'])assert.equal(destination.searchParams.get(key),String(criteria[key]));
  assert.equal(destination.searchParams.get(roomKey),'2');
  if(property==='astral')assert.equal(destination.searchParams.get('phase'),'dates');
- assert.ok(!destination.href.includes('concept-b'));
+ if(property==='wia')assert.equal(destination.hostname,'palais-wia-concept-b.netlify.app');
+ else assert.ok(!destination.href.includes('concept-b'));
 }
 for(const file of readdirSync(new URL('../public/',import.meta.url)).filter(n=>/\.(js|html)$/.test(n))){
  assert.ok(!/https:\/\/[^\s"'<>]+\.chatgpt\.site/.test(readFileSync(new URL('../public/'+file,import.meta.url),'utf8')),file+' contient encore une destination Sites');
 }
-console.log('Destinations Netlify : trois établissements, paramètres conservés, Concept B indépendant, aucune ancienne URL Sites dans les JS/HTML publics.');
+console.log('Destinations Netlify : trois établissements, paramètres conservés, WIA vers Concept B V9, aucune ancienne URL Sites dans les JS/HTML publics.');
+
+assert.ok(!group.includes('palais-wia-preview.netlify.app'), 'Ancienne destination WIA encore présente');
