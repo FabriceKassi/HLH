@@ -27,6 +27,6 @@ export function validateHLHSearch(input: unknown, today = abidjanToday()):
   if (!realDate(data.arrival) || data.arrival < today) return { ok: false, field: 'arrival', code: 'invalid_arrival' };
   if (!realDate(data.departure) || data.departure <= data.arrival) return { ok: false, field: 'departure', code: 'invalid_departure' };
   if (!Number.isSafeInteger(data.rooms) || Number(data.rooms) < 1 || data.property === 'wia' && Number(data.rooms) > 9) return { ok: false, field: 'rooms', code: 'invalid_rooms' };
-  if (!Number.isSafeInteger(data.adults) || Number(data.adults) < 1 || !Number.isSafeInteger(data.children) || Number(data.children) < 0 || (data.property !== 'wia' && Number(data.adults) + Number(data.children) > 3)) return { ok: false, field: 'guests', code: 'invalid_guests' };
+  if (!Number.isSafeInteger(data.adults) || Number(data.adults) < 1 || !Number.isSafeInteger(data.children) || Number(data.children) < 0 || Number(data.adults) + Number(data.children) > 3) return { ok: false, field: 'guests', code: 'invalid_guests' };
   return { ok: true, criteria: { property: data.property as HLHSearch['property'], arrival: data.arrival, departure: data.departure, rooms: data.rooms as number, adults: data.adults as number, children: data.children as number } };
 }

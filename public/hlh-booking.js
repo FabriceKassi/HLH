@@ -34,7 +34,7 @@
     if (!validDate(state.arrival) || state.arrival < today()) return { field: 'arrival', code: 'invalid_arrival' };
     if (!validDate(state.departure) || state.departure <= state.arrival) return { field: 'departure', code: 'invalid_departure' };
     if (!Number.isSafeInteger(state.rooms) || state.rooms < 1 || state.property === 'wia' && state.rooms > 9) return { field: 'rooms', code: 'invalid_rooms' };
-    if (!Number.isSafeInteger(state.adults) || state.adults < 1 || !Number.isSafeInteger(state.children) || state.children < 0 || (state.property !== 'wia' && state.adults + state.children > 3)) return { field: 'guests', code: 'invalid_guests' };
+    if (!Number.isSafeInteger(state.adults) || state.adults < 1 || !Number.isSafeInteger(state.children) || state.children < 0 || state.adults + state.children > 3) return { field: 'guests', code: 'invalid_guests' };
     return null;
   }
   function destinationURL(criteria, registry) {
@@ -78,7 +78,7 @@
     const panel = field => query('[data-hlh-panel="' + field + '"]');
     const feedback = query('[data-hlh-feedback]');
     const formatDate = key => new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(date(key));
-    const guestNote = () => state.property === 'wia' ? t('Vous poursuivrez sur le Palais WIA Concept B. Dates et voyageurs seront à renseigner dans son formulaire.', 'Continue on Palais WIA Concept B. Enter your dates and guests again in its booking form.') : t('3 voyageurs maximum pour ce parcours de démonstration.', 'Maximum 3 guests for this demo flow.');
+    const guestNote = () => t('3 voyageurs maximum pour ce parcours de démonstration.', 'Maximum 3 guests for this demo flow.') + (state.property === 'wia' ? ' ' + t('Vous poursuivrez sur le Palais WIA Concept B. Dates et voyageurs seront à renseigner dans son formulaire.', 'Continue on Palais WIA Concept B. Enter your dates and guests again in its booking form.') : '');
     const nights = () => state.arrival && state.departure ? (date(state.departure) - date(state.arrival)) / DAY : 0;
     const plural = (amount, singular, multiple) => amount + ' ' + (amount === 1 ? singular : multiple);
 
@@ -159,11 +159,11 @@
       if (active === 'rooms' || active === 'guests') {
         form.querySelectorAll('[data-hlh-count]').forEach(button => {
           const name = button.dataset.hlhCount, delta = Number(button.dataset.delta);
-          button.disabled = pending || (delta < 0 ? state[name] <= (name === 'children' ? 0 : 1) : name === 'rooms' ? state.rooms >= (state.property === 'wia' ? 9 : Number.MAX_SAFE_INTEGER) : state.property !== 'wia' && state.adults + state.children >= 3);
+          button.disabled = pending || (delta < 0 ? state[name] <= (name === 'children' ? 0 : 1) : name === 'rooms' ? state.rooms >= (state.property === 'wia' ? 9 : Number.MAX_SAFE_INTEGER) : state.adults + state.children >= 3);
         });
         form.querySelectorAll('[data-hlh-number]').forEach(item => { item.textContent = state[item.dataset.hlhNumber]; });
         const limit = query('[data-hlh-limit]');
-        if (limit) limit.classList.toggle('at-limit', state.property !== 'wia' && state.adults + state.children === 3);
+        if (limit) limit.classList.toggle('at-limit', state.adults + state.children === 3);
       }
       position();
     }
@@ -214,7 +214,7 @@
       invalid_arrival: t('Choisissez une date d’arrivée à partir d’aujourd’hui.', 'Choose a check-in date from today onwards.'),
       invalid_departure: t('Choisissez un départ après votre arrivée.', 'Choose a check-out date after check-in.'),
       invalid_rooms: t('Choisissez au moins une chambre.', 'Choose at least one room.'),
-      invalid_guests: t('Vérifiez les voyageurs : au moins un adulte ; ATTA et Astral sont limités à 3 dans leur démonstration.', 'Check guests: at least one adult; ATTA and Astral demo flows allow up to 3 guests.')
+      invalid_guests: t('Vérifiez les voyageurs : au moins un adulte ; 3 maximum, adultes et enfants compris, pour ce parcours de démonstration.', 'Check guests: at least one adult; maximum 3 guests, adults and children combined, for this demo flow.')
     };
     function error(issue) {
       feedback.textContent = messages[issue.code] || t('Vérifiez les informations de votre séjour.', 'Check your booking details.');
@@ -236,7 +236,7 @@
       if (button.dataset.hlhCount) {
         const name = button.dataset.hlhCount, delta = Number(button.dataset.delta), next = state[name] + delta;
         if (name === 'rooms' && state.property === 'wia' && next > 9) return;
-        if (!Number.isSafeInteger(next) || next < (name === 'children' ? 0 : 1) || name !== 'rooms' && state.property !== 'wia' && state.adults + state.children + delta > 3) return;
+        if (!Number.isSafeInteger(next) || next < (name === 'children' ? 0 : 1) || name !== 'rooms' && state.adults + state.children + delta > 3) return;
         state[name] = next;
         changed();
         return;

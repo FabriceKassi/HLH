@@ -39,7 +39,7 @@ for (const property of ['wia','atta','astral']) {
   for(let i=1;i<adults;i++)f.click('[data-hlh-count="adults"][data-delta="1"]');
   for(let i=0;i<children;i++)f.click('[data-hlh-count="children"][data-delta="1"]');
   check(`UI ${property} accepts ${adults}+${children}`,()=>{assert.equal(f.q('[data-hlh-number="adults"]').textContent,String(adults));assert.equal(f.q('[data-hlh-number="children"]').textContent,String(children));assert.equal(f.q('[data-hlh-value="guests"]').textContent,`${adults+children} voyageur${adults+children>1?'s':''}`);});
-  if(property!=='wia' && adults+children===3) check(`UI ${property} locks both + at ${adults}+${children}`,()=>{for(const name of ['adults','children'])assert.equal(f.q(`[data-hlh-count="${name}"][data-delta="1"]`).disabled,true);});
+  if(adults+children===3) check(`UI ${property} locks both + at ${adults}+${children}`,()=>{for(const name of ['adults','children'])assert.equal(f.q(`[data-hlh-count="${name}"][data-delta="1"]`).disabled,true);});
   f.click('[data-hlh-close]');
  }
 }
@@ -64,13 +64,13 @@ f.q('form').dispatchEvent(new f.w.Event('submit',{cancelable:true}));
 check('loading prevents duplicate submissions',()=>{assert.equal(f.q('form').getAttribute('aria-busy'),'true');assert.equal(f.q('[type="submit"]').disabled,true);f.q('form').dispatchEvent(new f.w.Event('submit',{cancelable:true}));});
 release({ok:false,json:async()=>({ok:false,field:'guests',code:'invalid_guests'})});
 await new Promise(resolve=>setTimeout(resolve,5));
-check('server rejection is surfaced without navigation',()=>{assert.match(f.q('[data-hlh-feedback]').textContent,/limités à 3/);assert.equal(f.navigations,1);assert.equal(f.q('[data-hlh-panel="guests"]').hidden,false);});
+check('server rejection is surfaced without navigation',()=>{assert.match(f.q('[data-hlh-feedback]').textContent,/3 maximum/);assert.equal(f.navigations,1);assert.equal(f.q('[data-hlh-panel="guests"]').hidden,false);});
 f.w.fetch=async()=>{throw new Error('offline');};
 f.q('form').dispatchEvent(new f.w.Event('submit',{cancelable:true}));
 await new Promise(resolve=>setTimeout(resolve,5));
 check('network errors recover the search control',()=>{assert.match(f.q('[data-hlh-feedback]').textContent,/Réessayez/);assert.equal(f.q('[type="submit"]').disabled,false);assert.equal(f.q('form').hasAttribute('aria-busy'),false);assert.equal(f.navigations,1);});
 check('English interface is usable',()=>{const en=fixture(true);assert.match(en.q('[data-hlh-value="rooms"]').textContent,/1 room/);en.click('[data-hlh-open="guests"]');assert.match(en.q('[data-hlh-limit]').textContent,/Maximum 3 guests/);en.dom.window.close();});
-check('Palais WIA does not inherit ATTA guest ceiling',()=>assert.equal(validateHLHSearch({...base,property:'wia',adults:4}).ok,true));
+for(const property of ['wia','atta','astral'])for(const [adults,children] of [[4,0],[3,1],[2,2],[1,3]])check(`server rejects more than three guests for ${property}: ${adults}+${children}`,()=>assert.equal(validateHLHSearch({...base,property,rooms:3,adults,children}).ok,false));
 check('Palais WIA retains nine room limit',()=>assert.equal(f.api.validate({...base,property:'wia',rooms:10}).code,'invalid_rooms'));
 const months=fixture();
 months.api.choose('atta');
