@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..');
+process.chdir(root);
+if(process.argv.length>2)throw Error('Aucun argument accepté : initialisation locale uniquement.');
+const hosting=JSON.parse(fs.readFileSync('.openai/hosting.json','utf8'));
+if(hosting.d1!=='DB')throw Error('Binding DB inattendu : vérifier la source.');
+fs.mkdirSync('.sites-runtime',{recursive:true});
+const config=path.join(root,'.sites-runtime/recovery-local-db.json');
+fs.writeFileSync(config,JSON.stringify({name:'hlh-local-recovery',compatibility_date:'2026-05-15',d1_databases:[{binding:'DB',database_name:'site-creator-d1',database_id:'00000000-0000-4000-8000-000000000000',migrations_dir:'../drizzle'}]},null,2));
+const result=spawnSync(process.execPath,['--import',path.join(root,'scripts/sites-env.mjs'),path.join(root,'node_modules/wrangler/bin/wrangler.js'),'d1','migrations','apply','DB','--local','--persist-to',path.join(root,'.wrangler/state'),'--config',config],{stdio:'inherit',env:{...process.env,CI:'true',WRANGLER_SEND_METRICS:'false',CLOUDFLARE_CF_FETCH_ENABLED:'false'}});
+if(result.error)throw result.error;
+if(result.status!==0)process.exit(result.status||1);
+console.log('Migrations locales terminées. Aucune base distante ciblée.');
