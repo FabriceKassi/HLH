@@ -118,7 +118,7 @@ function portalNav(path) {
 function portalFigure(src, alt, caption, extraClass) {
   return '<figure class="portal-media ' + (extraClass || "") + '">' +
     '<img src="' + esc(src) + '" alt="' + esc(alt) + '" loading="lazy" decoding="async">' +
-    '<figcaption>' + esc(caption || tx("Visuel d’illustration", "Illustrative image")) + '</figcaption>' +
+    (caption ? '<figcaption>' + esc(caption) + '</figcaption>' : '') +
   '</figure>';
 }
 function portalButton(label, target) {
@@ -220,7 +220,7 @@ function renderGroupHome(path) {
   const hotelCards = hotels.map(function (hotel, index) {
     const image = ({astral: "/assets/hlh-collection-astral-20261108.webp", atta: "/assets/hlh-collection-atta-20261108.webp", wia: "/assets/hlh-collection-wia-20261108.webp"})[hotel.id] || hotel.image || portalImages[hotel.id];
     return '<article class="portal-hotel-card portal-reveal">' +
-      portalFigure(image, hotel.name + " — " + hotel.location, tx("Visuel d’illustration", "Illustrative image"), "portal-hotel-photo") +
+      portalFigure(image, hotel.name + " — " + hotel.location, "", "portal-hotel-photo") +
       '<div class="portal-hotel-copy"><p class="eyebrow">0' + (index + 1) + ' · ' + esc(hotel.location) + '</p>' +
         '<h3>' + esc(hotel.name) + '</h3><p>' + esc(tr(hotel.description)) + '</p>' +
         '<div class="portal-card-actions"><a class="portal-link" href="/nos-hotels#hotel-' + esc(hotel.id) + '">' + portalText("DÉCOUVRIR", "DISCOVER") + ' <span aria-hidden="true">→</span></a>' +
@@ -241,7 +241,7 @@ function renderGroupHome(path) {
       '</div><button type="button" class="portal-slide-toggle" aria-label="' + portalText("Mettre le diaporama en pause", "Pause slideshow") + '" aria-pressed="false" data-slide-toggle>Ⅱ</button></div></section>' +
     portalBookingSection() +
     '<section class="portal-section portal-intro-section"><div class="container portal-intro-grid">' +
-      portalFigure("/assets/hlh-presentation-living-20261108.webp", tx("Salon des Résidences ATTA — photographie retouchée", "Résidences ATTA lounge — retouched photograph"), tx("Photographie retouchée", "Retouched photograph"), "portal-intro-photo portal-reveal") +
+      portalFigure("/assets/hlh-presentation-living-20261108.webp", tx("Salon des Résidences ATTA", "Résidences ATTA lounge"), "", "portal-intro-photo portal-reveal") +
       '<div class="portal-intro-copy portal-reveal"><p class="eyebrow">HOTEL & LUXURY HOUSING · ABIDJAN</p><h2>' + portalText("Des adresses différentes.<br><em>Une même attention.</em>", "Different addresses.<br><em>The same care.</em>") + '</h2>' +
         '<p>' + portalText("Hotel and Luxury Housing (HLH) réunit trois adresses aux identités complémentaires à Abidjan : l'Hôtel Astral à Yopougon, les Résidences ATTA au Plateau et le Palais WIA à Cocody.", "Hotel and Luxury Housing (HLH) brings together three complementary addresses in Abidjan: H\u00f4tel Astral in Yopougon, R\u00e9sidences ATTA in Plateau and Palais WIA in Cocody.") + '</p><p>' + portalText("De l'hôtellerie d'affaires au séjour en appart'hôtel, jusqu'au boutique-hôtel de luxe, HLH partage une même ambition : offrir des expériences d'hospitalité aux standards internationaux, ancrées dans l'excellence ivoirienne.", "From business hotels and aparthotel stays to luxury boutique hospitality, HLH shares one ambition: to offer hospitality experiences of international standards, rooted in Ivorian excellence.") + '</p>' +
         '<a class="portal-link" href="/nos-hotels">' + portalText("DÉCOUVRIR LE GROUPE HLH", "DISCOVER THE HLH GROUP") + ' <span aria-hidden="true">→</span></a></div></div></section>' +
@@ -254,14 +254,14 @@ function renderGroupHome(path) {
       portalFigure("/assets/hlh-gastronomie-original-20261108-v2.jpg", tx("Service au buffet du restaurant", "Restaurant buffet service"), "", "portal-dining-photo portal-reveal") +
     '</div></section>' +
     '<section class="portal-section portal-section--soft" id="reunions"><div class="container portal-editorial-grid">' +
-      portalFigure("/assets/hlh-reunion-fournie-20261108.png", tx("Salle de réunion — photographie retouchée", "Meeting room — retouched photograph"), tx("Photographie retouchée", "Retouched photograph"), "portal-editorial-photo portal-reveal") +
+      portalFigure("/assets/hlh-reunion-fournie-20261108.png", tx("Salle de réunion", "Meeting room"), "", "portal-editorial-photo portal-reveal") +
       '<div class="portal-editorial-copy portal-reveal"><p class="eyebrow">' + portalText("RÉUNIONS & COWORKING", "MEETINGS & COWORKING") + '</p><h2>' + portalText("Des espaces pensés<br><em>pour vos échanges.</em>", "Spaces designed<br><em>for your discussions.</em>") + '</h2>' +
       '<p>' + portalText("À l'Hôtel Astral, aux Résidences ATTA et au Palais WIA, découvrez des salles de réunion adaptées à vos rencontres professionnelles. Au Plateau, les Résidences ATTA proposent également un espace de coworking pour travailler et collaborer dans un environnement dédié.", "At Hôtel Astral, Résidences ATTA and Palais WIA, discover meeting rooms suited to your professional gatherings. In Plateau, Résidences ATTA also offers a coworking space for working and collaborating in a dedicated environment.") + '</p>' +
       '<a class="portal-link" href="/salles-reunion">' + portalText("DÉCOUVRIR NOS ESPACES", "DISCOVER OUR SPACES") + ' <span aria-hidden="true">→</span></a></div></div></section>' +
     '<section class="portal-section" id="bien-etre"><div class="container portal-wellness-grid">' +
       '<div class="portal-wellness-copy"><p class="eyebrow">' + portalText("SPORT & FITNESS", "SPORT & FITNESS") + '</p><h2>' + portalText("Gardez le rythme,<br><em>où que vous séjourniez.</em>", "Keep your rhythm,<br><em>wherever you stay.</em>") + '</h2><p>' +
       portalText("Que vous séjourniez à l'Hôtel Astral, aux Résidences ATTA ou au Palais WIA, profitez d'un espace fitness pour maintenir vos habitudes sportives et prendre soin de votre forme, même en déplacement.", "Whether you stay at Hôtel Astral, Résidences ATTA or Palais WIA, enjoy a fitness space to maintain your exercise routine and stay in shape, even when travelling.") + '</p><a class="portal-link" href="/salles-de-sport">' + portalText("DÉCOUVRIR NOS SALLES DE SPORT", "DISCOVER OUR FITNESS ROOMS") + ' <span aria-hidden="true">→</span></a></div>' +
-      '<div class="portal-wellness-visual"><div class="portal-wellness-image">' + portalFigure("/assets/atta-gym-bright.png", tx("Équipement de fitness — visuel d’illustration", "Fitness equipment — illustrative image"), tx("Visuel d’illustration", "Illustrative image"), "portal-wellness-photo") + '</div><div class="portal-wellness-index"><span>01</span><span>ABIDJAN · CÔTE D’IVOIRE</span></div></div>' +
+      '<div class="portal-wellness-visual"><div class="portal-wellness-image">' + portalFigure("/assets/atta-gym-bright.png", tx("Équipement de fitness", "Fitness equipment"), "", "portal-wellness-photo") + '</div><div class="portal-wellness-index"><span>01</span><span>ABIDJAN · CÔTE D’IVOIRE</span></div></div>' +
     '</div></section>' +
     '<section class="portal-contact-band"><div class="container"><p class="eyebrow">' + portalText("UNE RELATION DIRECTE", "A DIRECT CONNECTION") + '</p><h2>' + portalText("Votre séjour commence<br><em>par le bon contact.</em>", "Your stay starts<br><em>with the right contact.</em>") + '</h2><a class="portal-button portal-button--gold" href="/contacts">' + portalText("CONTACTER NOS ÉQUIPES", "CONTACT OUR TEAMS") + ' <span aria-hidden="true">↗</span></a></div></section></div>';
   main.innerHTML = page;
@@ -281,7 +281,7 @@ function renderHotelsPage() {
     const description = id === "astral" ? tx("Situé à l’entrée de la zone industrielle de Yopougon, à Abidjan, l’Hôtel Astral vous accueille dans un cadre moderne et confortable, idéal pour vos séjours d’affaires et vos déplacements professionnels. L’établissement propose des chambres et appartements équipés, un restaurant avec menu du jour et buffet, une salle de réunion connectée ainsi qu’une salle de sport. Un environnement pensé pour allier travail, détente et confort tout au long de votre séjour.", "Located at the entrance to Yopougon’s industrial zone in Abidjan, Hôtel Astral welcomes you to a modern, comfortable setting, ideal for business stays and professional travel. The hotel offers equipped rooms and apartments, a restaurant with a daily menu and buffet, a connected meeting room and a fitness room. A setting designed to combine work, relaxation and comfort throughout your stay.") : tr(hotel.details || hotel.description);
     const image = ({astral: "/assets/hlh-collection-astral-20261108.webp", atta: "/assets/hlh-collection-atta-20261108.webp", wia: "/assets/hlh-collection-wia-20261108.webp"})[id] || hotel.image || portalImages[id];
     const amenities = (hotel.amenities || []).slice(0, 6);
-    const imageBlock = portalFigure(image, hotel.name + " — " + hotel.location, tx("Visuel d’illustration", "Illustrative image"), "portal-property-photo");
+    const imageBlock = portalFigure(image, hotel.name + " — " + hotel.location, "", "portal-property-photo");
     const body = '<div class="portal-property-copy"><p class="eyebrow">0' + (index + 1) + ' · ' + esc(hotel.location) + '</p><h2>' + esc(hotel.name) + '</h2><p class="portal-property-address">' + esc(hotel.address) + '</p><p>' + esc(description) + '</p>' +
       portalTags(amenities) + '<div class="portal-card-actions">' + portalExternalLink(id, tx("VISITER LE SITE", "VISIT THE WEBSITE"), "portal-button portal-button--outline-dark") +
       portalButton(tx("RÉSERVER", "BOOK"), id) + '</div></div>';
@@ -292,7 +292,7 @@ function renderHotelsPage() {
 }
 function roomCardMarkup(item) {
   return '<article class="portal-room-card portal-reveal" data-group-property="' + esc(item.property) + '" data-group-kind="' + esc(item.kind) + '">' +
-    portalFigure(item.image, item.name + " — " + item.propertyName, tx("Visuel d’illustration", "Illustrative image"), "portal-room-photo") +
+    portalFigure(item.image, item.name + " — " + item.propertyName, "", "portal-room-photo") +
     '<div class="portal-room-card-copy"><p class="eyebrow">' + esc(item.propertyName) + '</p><h2>' + esc(item.name) + '</h2><p>' + esc(tx(item.description, item.descriptionEn || item.description)) + '</p>' +
       (item.facts ? '<p class="portal-room-fact">' + esc(item.facts) + '</p>' : "") +
       '<div class="portal-card-actions"><a class="portal-link" href="/nos-hotels#hotel-' + esc(item.property) + '">' + portalText("DÉCOUVRIR", "DISCOVER") + ' <span aria-hidden="true">→</span></a>' +
