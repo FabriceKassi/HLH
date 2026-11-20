@@ -230,7 +230,7 @@ function renderGroupHome(path) {
   const intro = esc(tr(site.brand.intro || "Hotel & Luxury Housing réunit trois établissements complémentaires à Abidjan."));
   const page = '<div class="portal-home-flow"><section class="portal-hero" role="region" aria-roledescription="carousel" aria-label="' + portalText("Trois adresses à Abidjan", "Three addresses in Abidjan") + '">' +
       '<div class="portal-hero-slides">' + slideMarkup + '</div><div class="portal-hero-shade"></div>' +
-      '<div class="container portal-hero-copy"><h1><span>chaque séjour une expérience,</span><span>chaque adresse une signature</span></h1>' +
+      '<div class="container portal-hero-copy"><h1><span>CHAQUE SÉJOUR UNE EXPÉRIENCE,</span><span>CHAQUE ADRESSE UNE SIGNATURE</span></h1>' +
         '<a class="portal-button portal-button--light" href="/nos-hotels">' + portalText("DÉCOUVRIR NOS ADRESSES", "DISCOVER OUR ADDRESSES") + ' <span aria-hidden="true">↗</span></a>' +
       '</div><div class="portal-hero-foot">' +
       '<div class="portal-slide-arrows"><button type="button" aria-label="' + portalText("Image précédente", "Previous image") + '" data-slide-prev>‹</button><button type="button" aria-label="' + portalText("Image suivante", "Next image") + '" data-slide-next>›</button></div>' +
