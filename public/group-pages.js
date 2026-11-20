@@ -278,7 +278,7 @@ function renderHotelsPage() {
   const hotels = portalHotels();
   const content = '<section class="container portal-property-list">' + hotels.map(function (hotel, index) {
     const id = hotel.id;
-    const description = tr(hotel.details || hotel.description);
+    const description = id === "astral" ? tx("Situé à l’entrée de la zone industrielle de Yopougon, à Abidjan, l’Hôtel Astral vous accueille dans un cadre moderne et confortable, idéal pour vos séjours d’affaires et vos déplacements professionnels. L’établissement propose des chambres et appartements équipés, un restaurant avec menu du jour et buffet, une salle de réunion connectée ainsi qu’une salle de sport. Un environnement pensé pour allier travail, détente et confort tout au long de votre séjour.", "Located at the entrance to Yopougon’s industrial zone in Abidjan, Hôtel Astral welcomes you to a modern, comfortable setting, ideal for business stays and professional travel. The hotel offers equipped rooms and apartments, a restaurant with a daily menu and buffet, a connected meeting room and a fitness room. A setting designed to combine work, relaxation and comfort throughout your stay.") : tr(hotel.details || hotel.description);
     const image = ({astral: "/assets/hlh-collection-astral-20261108.webp", atta: "/assets/hlh-collection-atta-20261108.webp", wia: "/assets/hlh-collection-wia-20261108.webp"})[id] || hotel.image || portalImages[id];
     const amenities = (hotel.amenities || []).slice(0, 6);
     const imageBlock = portalFigure(image, hotel.name + " — " + hotel.location, tx("Visuel d’illustration", "Illustrative image"), "portal-property-photo");
@@ -311,7 +311,7 @@ function renderRoomsPage() {
 function renderRestaurantsPage() {
   const content =
     '<section class="container portal-food-intro"><div class="portal-food-photo">' +
-      portalFigure("/assets/hlh-chef-mael-fourni-20261119.png", tx("Chef Maël Monchauzou au dressage d’un plat", "Chef Maël Monchauzou plating a dish"), tx("Chef Maël Monchauzou · Palais WIA", "Chef Maël Monchauzou · Palais WIA"), "portal-chef-photo") +
+      portalFigure("/assets/hlh-restaurant-palais-wia-fourni-20261120.jpg", tx("Table dressée au restaurant La Quintessence du Palais WIA", "A table set at La Quintessence restaurant, Palais WIA"), tx("La Quintessence · Palais WIA", "La Quintessence · Palais WIA"), "portal-chef-photo") +
       '</div><div class="portal-food-copy"><p class="eyebrow">' + portalText("PALAIS WIA · COCODY", "PALAIS WIA · COCODY") + '</p><h2>La Quintessence<br><em>& L’Alchimie</em></h2>' +
       '<p>' + portalText("Plongez dans une expérience gastronomique d’exception où chaque déjeuner ou dîner se transforme en un moment de pur plaisir.", "Immerse yourself in an exceptional gastronomic experience, where every lunch or dinner becomes a moment of pure pleasure.") + '</p>' +
       '<p>' + portalText("Avec l’arrivée du Chef Maël Monchauzou, le Palais WIA accueille une nouvelle signature culinaire. Inspirée de ses racines méditerranéennes et de son parcours international, sa cuisine met à l’honneur la qualité des produits, la créativité et les saveurs locales.", "With the arrival of Chef Maël Monchauzou, Palais WIA welcomes a new culinary signature. Inspired by his Mediterranean roots and international experience, his cuisine celebrates quality ingredients, creativity and local flavours.") + '</p>' +
